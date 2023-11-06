@@ -33,5 +33,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "countries", "~> 1.0"
   spec.add_dependency "money", "~> 6.9"
+  spec.add_dependency "tty-pager"
   spec.add_dependency 'tzinfo', '~> 1.2', '>= 1.2.2'
 end
