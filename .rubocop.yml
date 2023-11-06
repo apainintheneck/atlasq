@@ -1,5 +1,29 @@
 AllCops:
+  NewCops: enable
   TargetRubyVersion: 2.6
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Enabled: true
+  CountAsOne: ['array', 'heredoc', 'method_call']
+
+Metrics/ClassLength:
+  Enabled: true
+  CountAsOne: ['array', 'heredoc', 'method_call']
+
+Metrics/MethodLength:
+  Enabled: true
+  CountAsOne: ['array', 'heredoc', 'method_call']
+  Max: 20
+
+Metrics/ModuleLength:
+  Enabled: true
+  CountAsOne: ['array', 'heredoc', 'method_call']
+
+Style/Documentation:
+  Enabled: false
 
 Style/StringLiterals:
   Enabled: true
@@ -8,6 +32,3 @@ Style/StringLiterals:
 Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120

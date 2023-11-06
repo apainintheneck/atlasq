@@ -4,5 +4,7 @@ require_relative "atlasq/version"
 
 module Atlasq
   class Error < StandardError; end
-  # Your code goes here...
+
+  autoload :command, "atlasq/command"
+  autoload :shell, "atlasq/shell"
 end
