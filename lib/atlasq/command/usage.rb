@@ -5,6 +5,12 @@ require_relative "base"
 module Atlasq
   module Command
     class Usage < Base
+      # @return [Boolean]
+      def self.to_pager?
+        false
+      end
+
+      # @return [String]
       def content
         <<~USAGE
           atlasq is a utility to query country info

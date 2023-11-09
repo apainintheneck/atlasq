@@ -9,7 +9,7 @@ module Atlasq
     autoload :Timezone, "atlasq/command/mimezone"
     autoload :Help, "atlasq/command/help"
     autoload :Usage, "atlasq/command/usage"
-    autoload :Version, "atlasq/command/usage"
+    autoload :Version, "atlasq/command/version"
 
     def self.lookup(command)
       case command
@@ -25,24 +25,13 @@ module Atlasq
       end
     end
 
-    Options = Struct.new(:command, :args, :debug, :verbose, keyword_init: true)
+    Options = Struct.new(:command, :args, keyword_init: true)
 
     def self.parse(args)
-      debug = true if args.delete("-d")
-      debug = true if args.delete("--debug")
-
-      verbose = true if args.delete("-v")
-      verbose = true if args.delete("--verbose")
-
       command = parse_command(args.first)
       args.shift unless %i[usage any].include?(command)
 
-      Options.new(
-        command: command,
-        args: args,
-        debug: debug,
-        verbose: verbose
-      ).freeze
+      Options.new(command: command, args: args).freeze
     end
 
     def self.parse_command(command)

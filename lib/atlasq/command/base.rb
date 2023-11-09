@@ -9,6 +9,11 @@ module Atlasq
         new(options).content
       end
 
+      # @return [Boolean]
+      def self.to_pager?
+        true
+      end
+
       # @param options [Atlasq::Command::Options]
       def initialize(options)
         @options = options
