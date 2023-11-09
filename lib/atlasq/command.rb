@@ -2,21 +2,27 @@
 
 module Atlasq
   module Command
-    LOOKUP = {
-      any: Command::Any,
-      country: Command::Country,
-      region: Command::Region,
-      money: Command::Money,
-      timezone: Command::Money,
-      help: Command::Help,
-      usage: Command::Usage
-    }.freeze
-    private_constant :LOOKUP
+    autoload :Any, "atlasq/command/any"
+    autoload :Country, "atlasq/command/country"
+    autoload :Region, "atlasq/command/region"
+    autoload :Money, "atlasq/command/money"
+    autoload :Timezone, "atlasq/command/mimezone"
+    autoload :Help, "atlasq/command/help"
+    autoload :Usage, "atlasq/command/usage"
+    autoload :Version, "atlasq/command/usage"
 
     def self.lookup(command)
-      raise Error, "Unknown command: #{command}" unless LOOKUP.key?(command)
-
-      LOOKUP.fetch(command)
+      case command
+      when :any then Any
+      when :country then Country
+      when :region then Region
+      when :money then Money
+      when :timezone then TimeZone
+      when :help then Help
+      when :usage then Usage
+      when :version then Version
+      else raise Error, "Unknown command: #{command}"
+      end
     end
 
     Options = Struct.new(:command, :args, :debug, :verbose, keyword_init: true)
@@ -49,6 +55,8 @@ module Atlasq
         :money
       when "-t", "-z", "--tz", "--timezone", "--timezones"
         :timezone
+      when "-v", "--version"
+        :version
       when "-h", "--help"
         :help
       when nil

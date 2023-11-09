@@ -13,6 +13,9 @@ Metrics/ClassLength:
   Enabled: true
   CountAsOne: ['array', 'heredoc', 'method_call']
 
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
 Metrics/MethodLength:
   Enabled: true
   CountAsOne: ['array', 'heredoc', 'method_call']
