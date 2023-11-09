@@ -23,6 +23,13 @@ module Atlasq
       def content
         NotImplementedError
       end
+
+      # @param message [#to_s]
+      # @param exit_code [Integer]
+      def die(message, exit_code: 1)
+        warn message
+        exit exit_code
+      end
     end
   end
 end
