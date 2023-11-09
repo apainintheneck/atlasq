@@ -18,6 +18,7 @@ module Atlasq
           usage:
             atlasq query...
             atlasq [command] query...
+            atlasq -i/--interactive
             atlasq -h/--help
             atlasq -v/--version
 

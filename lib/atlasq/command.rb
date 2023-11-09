@@ -7,9 +7,10 @@ module Atlasq
     autoload :Region, "atlasq/command/region"
     autoload :Money, "atlasq/command/money"
     autoload :Timezone, "atlasq/command/mimezone"
+    autoload :Interactive, "atlasq/command/interactive"
+    autoload :Version, "atlasq/command/version"
     autoload :Help, "atlasq/command/help"
     autoload :Usage, "atlasq/command/usage"
-    autoload :Version, "atlasq/command/version"
 
     def self.lookup(command)
       case command
@@ -18,9 +19,10 @@ module Atlasq
       when :region then Region
       when :money then Money
       when :timezone then TimeZone
+      when :interactive then Interactive
+      when :version then Version
       when :help then Help
       when :usage then Usage
-      when :version then Version
       else raise Error, "Unknown command: #{command}"
       end
     end
@@ -44,6 +46,8 @@ module Atlasq
         :money
       when "-t", "-z", "--tz", "--timezone", "--timezones"
         :timezone
+      when "-i", "--interactive"
+        :interactive
       when "-v", "--version"
         :version
       when "-h", "--help"
