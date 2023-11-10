@@ -3,21 +3,31 @@
 module Atlasq
   module Shell
     SKIP_PAGER = %i[usage version].freeze
+
     def self.start!(args = ARGV)
-      warn "DEBUG: ARGV: #{ARGV}" if DEBUG
+      warn "DEBUG: args: #{args}" if DEBUG
       options = Command.parse(args)
       warn "DEBUG: options: #{options}" if DEBUG
-      command = Command.lookup(options.command)
-      content = command.run(options)
+      content = options.command.run(options.args)
 
-      exit(1) if content.empty?
-
-      if $stdout.tty? && command.to_pager?
+      if content.empty?
+        Atlasq.failed!
+      elsif use_pager?(options, content)
         require "tty-pager"
         TTY::Pager.page(content)
       else
         puts content
       end
+
+      exit(1) if Atlasq.failed?
+    end
+
+    DEFAULT_SHELL_HEIGHT = 24
+
+    def self.use_pager?(options, content)
+      $stdout.tty? &&
+        options.command.to_pager? &&
+        content.count("\n") >= DEFAULT_SHELL_HEIGHT
     end
   end
 end

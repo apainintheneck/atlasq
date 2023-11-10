@@ -7,26 +7,12 @@ module Atlasq
     autoload :Region, "atlasq/command/region"
     autoload :Money, "atlasq/command/money"
     autoload :Timezone, "atlasq/command/mimezone"
-    autoload :Interactive, "atlasq/command/interactive"
     autoload :Version, "atlasq/command/version"
     autoload :Help, "atlasq/command/help"
     autoload :Usage, "atlasq/command/usage"
 
-    def self.lookup(command)
-      case command
-      when :any then Any
-      when :country then Country
-      when :region then Region
-      when :money then Money
-      when :timezone then TimeZone
-      when :interactive then Interactive
-      when :version then Version
-      when :help then Help
-      when :usage then Usage
-      else raise Error, "Unknown command: #{command}"
-      end
-    end
-
+    # @param command [Atlasq::Command::Base]
+    # @param args [Array<String>]
     Options = Struct.new(:command, :args, keyword_init: true)
 
     def self.parse(args)
@@ -39,23 +25,21 @@ module Atlasq
     def self.parse_command(command)
       case command
       when "-c", "--country", "--countries"
-        :country
+        Country
       when "-r", "--region", "--regions"
-        :region
+        Region
       when "-m", "--money"
-        :money
+        Money
       when "-t", "-z", "--tz", "--timezone", "--timezones"
-        :timezone
-      when "-i", "--interactive"
-        :interactive
+        TimeZone
       when "-v", "--version"
-        :version
+        Version
       when "-h", "--help"
-        :help
+        Help
       when nil
-        :usage
+        Usage
       else
-        :any
+        Any
       end
     end
   end

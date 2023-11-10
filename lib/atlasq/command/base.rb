@@ -3,12 +3,12 @@
 module Atlasq
   module Command
     class Base
-      attr_reader :options
+      attr_reader :search_terms
 
-      # @param options [Atlasq::Command::Options]
+      # @param term [Array<String>]
       # @return [String]
-      def self.run(options)
-        new(options).content
+      def self.run(terms)
+        new(terms).content
       end
 
       # @return [Boolean]
@@ -16,21 +16,14 @@ module Atlasq
         true
       end
 
-      # @param options [Atlasq::Command::Options]
-      def initialize(options)
-        @options = options
+      # @param search_terms [Array<String>]
+      def initialize(search_terms)
+        @search_terms = search_terms
       end
 
       # @return [String]
       def content
         NotImplementedError
-      end
-
-      # @param message [#to_s]
-      # @param exit_code [Integer]
-      def die(message, exit_code: 1)
-        warn message
-        exit exit_code
       end
     end
   end

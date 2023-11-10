@@ -7,5 +7,15 @@ module Atlasq
   DEBUG = ENV.key?("ATLASQ_DEBUG")
 
   autoload :Command, "atlasq/command"
+  autoload :Data, "atlasq/data"
+  autoload :Format, "atlasq/format"
   autoload :Shell, "atlasq/shell"
+
+  def self.failed!
+    @failed = true
+  end
+
+  def self.failed?
+    !!@failed
+  end
 end
