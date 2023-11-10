@@ -3,8 +3,9 @@ PATH
   specs:
     atlasq (0.1.0)
       countries (~> 1.0)
+      iso-639 (~> 0.3)
       money (~> 6.9)
-      tty-pager
+      tty-pager (~> 0.14)
       tzinfo (~> 1.2, >= 1.2.2)
 
 GEM
@@ -19,6 +20,7 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     i18n_data (0.7.0)
+    iso-639 (0.3.6)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
     minitest (5.20.0)

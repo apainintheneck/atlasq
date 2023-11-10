@@ -32,8 +32,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "countries", "~> 1.0"
+  spec.add_dependency "iso-639", "~> 0.3"
   spec.add_dependency "money", "~> 6.9"
-  spec.add_dependency "tty-pager"
+  spec.add_dependency "tty-pager", "~> 0.14"
   spec.add_dependency "tzinfo", "~> 1.2", ">= 1.2.2"
   spec.metadata["rubygems_mfa_required"] = "true"
 end

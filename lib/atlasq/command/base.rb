@@ -3,6 +3,8 @@
 module Atlasq
   module Command
     class Base
+      attr_reader :options
+
       # @param options [Atlasq::Command::Options]
       # @return [String]
       def self.run(options)
