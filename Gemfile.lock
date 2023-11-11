@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     atlasq (0.1.0)
-      countries (~> 1.0)
+      countries (~> 5.7)
       iso-639 (~> 0.3)
       money (~> 6.9)
       tty-pager (~> 0.14)
@@ -13,13 +13,10 @@ GEM
   specs:
     ast (2.4.2)
     concurrent-ruby (1.2.2)
-    countries (1.2.5)
-      currencies (~> 0.4.2)
-      i18n_data (~> 0.7.0)
-    currencies (0.4.2)
+    countries (5.7.0)
+      unaccent (~> 0.3)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    i18n_data (0.7.0)
     iso-639 (0.3.6)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
@@ -61,6 +58,7 @@ GEM
     tty-screen (0.8.1)
     tzinfo (1.2.11)
       thread_safe (~> 0.1)
+    unaccent (0.4.0)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
 

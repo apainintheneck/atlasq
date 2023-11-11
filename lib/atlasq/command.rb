@@ -33,7 +33,7 @@ module Atlasq
         Region
       when "-m", "--money"
         Money
-      when "-t", "--tz", "--timezone", "--timezones"
+      when "-t", "--timezone", "--timezones"
         TimeZone
       when "-v", "--version"
         Version

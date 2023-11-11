@@ -24,7 +24,7 @@ module Atlasq
         ISO3166::Country.find_country_by_alpha3(term) ||
         ISO3166::Country.find_country_by_gec(term) ||
         ISO3166::Country.find_country_by_number(term) ||
-        ISO3166::Country.find_country_by_translated_names(term)
+        ISO3166::Country.find_country_by_any_name(term)
     end
 
     # @return [Array<ISO3166::Country>]
@@ -47,6 +47,19 @@ module Atlasq
         )
       end
       nil
+    end
+
+    # @return [Hash<String, Array<ISO3166::Country>>] Ex. { "Central Asia" => [...], ... }
+    def self.all_subregions
+      all_countries
+        .group_by(&:subregion)
+        .tap do |subregions|
+          # Multiple countries do not have a valid subregion so shouldn't be shown.
+          # (010 | AQ | ATA | Antarctica)
+          # (074 | BV | BVT | Bouvet Island)
+          # (334 | HM | HMD | Heard Island and McDonald Islands)
+          subregions.delete("")
+        end
     end
   end
 end

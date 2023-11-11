@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.executables = ["atlasq"]
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "countries", "~> 1.0"
+  spec.add_dependency "countries", "~> 5.7"
   spec.add_dependency "iso-639", "~> 0.3"
   spec.add_dependency "money", "~> 6.9"
   spec.add_dependency "tty-pager", "~> 0.14"

@@ -2,6 +2,8 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
+
+require "atlasq"
 require "countries"
 require "iso-639"
 require "money"
