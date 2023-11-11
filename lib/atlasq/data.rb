@@ -22,6 +22,7 @@ module Atlasq
     def self.country(term)
       ISO3166::Country.find_country_by_alpha2(term) ||
         ISO3166::Country.find_country_by_alpha3(term) ||
+        ISO3166::Country.find_country_by_gec(term) ||
         ISO3166::Country.find_country_by_number(term) ||
         ISO3166::Country.find_country_by_translated_names(term)
     end
