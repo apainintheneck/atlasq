@@ -11,17 +11,20 @@ module Atlasq
     # (attr1 | attr2 | attr3)
     #
     # @param title [String]
-    # @param rows [Array<Array<String>>]
+    # @param elements [Array<Array<String>>]
     # @return [String]
-    def self.brief_template(title:, rows:)
-      rows = rows.map { |row| "(#{row.join(" | ")})" }
+    def self.brief_template(title:, elements:)
+      rows = []
 
-      <<~TEMPLATE
-        *
-        * #{title}
-        * #{"* " * ((title.size / 2) + 2)}
-        #{rows.join("\n")}
-      TEMPLATE
+      rows << "*"
+      rows << "* #{title}"
+      rows << "* #{"* " * ((title.size / 2) + 2)}"
+
+      elements.each do |elem|
+        rows << "(#{elem.join(" | ")})"
+      end
+
+      rows.join("\n")
     end
 
     # @example
@@ -36,7 +39,7 @@ module Atlasq
     #
     # @param title [String]
     # @param attributes [Array<String>]
-    # @param info [Hash<String,String>]
+    # @param info [Hash<String, String>]
     # @return [String]
     def self.verbose_template(title:, attributes:, info:)
       info_ladder = info.map.with_index do |(name, value), index|
@@ -51,18 +54,6 @@ module Atlasq
         (#{attributes.join(" | ")})
         #{info_ladder.join("\n")}
       TEMPLATE
-    end
-
-    # @param any
-    # @param search_term [String]
-    # @preturn [String]
-    def self.any(any, search_term)
-      case any
-      when ISO3166::Country
-        Format.country(any, search_term)
-      else
-        raise Error, "Cannot format unknown type: #{any.class}"
-      end
     end
 
     # @param country [ISO3166::Country]
@@ -88,21 +79,42 @@ module Atlasq
       )
     end
 
-    # @param countries [Atlasq::Data::Countries]
+    # @param countries [Array<ISO3166::Country|Hash>]
     # @param title [String]
     # @return [String]
-    def self.countries(countries, title)
+    def self.countries(countries, title:)
       Format.brief_template(
         title: title,
-        rows: countries.map do |country|
-          [
-            country.number,
-            country.alpha2,
-            country.alpha3,
-            country.iso_short_name
-          ]
+        elements: countries.map do |country|
+          case country
+          when ISO3166::Country
+            [
+              country.number,
+              country.alpha2,
+              country.alpha3,
+              country.iso_short_name
+            ]
+          when Hash
+            country.slice(
+              "number",
+              "alpha2",
+              "alpha3",
+              "iso_short_name"
+            ).values
+          else
+            raise Error, "Unknown country type: #{country.class}"
+          end
         end
       )
+    end
+
+    # @param region [Atlasq::Data::Region]
+    # @return [String]
+    def self.region(region)
+      type = Util::String.titleize(region.type)
+      title = "#{type}: #{region.name}"
+
+      Format.countries(region.countries, title: title)
     end
 
     # @param language_codes [Array<String>] Ex. ["id"]

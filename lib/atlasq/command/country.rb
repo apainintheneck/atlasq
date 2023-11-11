@@ -9,7 +9,7 @@ module Atlasq
       def content
         if search_terms.empty?
           countries = Data.all_countries
-          Format.countries(countries, "All Countries")
+          Format.countries(countries, title: "All Countries")
         else
           search_terms.map do |search_term|
             country = Data.country(search_term)

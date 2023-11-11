@@ -10,6 +10,7 @@ module Atlasq
   autoload :Data, "atlasq/data"
   autoload :Format, "atlasq/format"
   autoload :Shell, "atlasq/shell"
+  autoload :Util, "atlasq/util"
 
   def self.failed!
     @failed = true
