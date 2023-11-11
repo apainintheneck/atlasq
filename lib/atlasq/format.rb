@@ -56,6 +56,20 @@ module Atlasq
       TEMPLATE
     end
 
+    # @param value
+    # @param search_term [String]
+    # @return [String]
+    def self.any(value, search_term)
+      case value
+      when ISO3166::Country
+        Format.country(value, search_term)
+      when Atlasq::Data::Region
+        Format.region(value)
+      else
+        raise Error, "Unknown format type: #{value.class}"
+      end
+    end
+
     # @param country [ISO3166::Country]
     # @param search_term [String]
     # @return [String]

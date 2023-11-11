@@ -11,6 +11,13 @@ module Atlasq
     autoload :Region, "atlasq/data/region"
 
     # @param term [String]
+    # @return nilable
+    def self.any(term)
+      Data.country(term) ||
+        Data.region(term)
+    end
+
+    # @param term [String]
     # @return [ISO3166::Country, nil]
     def self.country(term)
       ISO3166::Country.find_country_by_alpha2(term) ||

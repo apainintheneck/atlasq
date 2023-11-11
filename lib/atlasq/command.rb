@@ -15,9 +15,12 @@ module Atlasq
     # @param args [Array<String>]
     Options = Struct.new(:command, :args, keyword_init: true)
 
+    # No need to remove the command argument from the argument list.
+    NO_SHIFT_COMMANDS = %w[Atlasq::Command::Any Atlasq::Command::Usage].freeze
+
     def self.parse(args)
       command = parse_command(args.first)
-      args.shift unless %i[usage any].include?(command)
+      args.shift unless NO_SHIFT_COMMANDS.include?(command.to_s)
 
       Options.new(command: command, args: args).freeze
     end
@@ -30,7 +33,7 @@ module Atlasq
         Region
       when "-m", "--money"
         Money
-      when "-t", "-z", "--tz", "--timezone", "--timezones"
+      when "-t", "--tz", "--timezone", "--timezones"
         TimeZone
       when "-v", "--version"
         Version

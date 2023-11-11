@@ -11,13 +11,14 @@ module Atlasq
           countries = Data.all_countries
           Format.countries(countries, title: "All Countries")
         else
-          search_terms.map do |search_term|
-            country = Data.country(search_term)
+          search_terms.map do |term|
+            country = Data.country(term)
+
             if country
-              Format.country(country, search_term)
+              Format.country(country, term)
             else
               Atlasq.failed!
-              "Unknown country: #{search_term}"
+              "Unknown country: #{term}"
             end
           end.join("\n\n")
         end
