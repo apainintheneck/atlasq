@@ -12,7 +12,7 @@ module Atlasq
         else
           search_terms.map do |term|
             region = Data.region(term)
-  
+
             if region
               Format.region(region)
             else

@@ -178,11 +178,8 @@ module Atlasq
     # @param subregions [Hash<String, Array<ISO3166::Country>>]
     # @return [String]
     def self.subregions(subregions)
-      subregions = subregions.to_h do |subregion, countries|
-        [
-          subregion,
-          countries.map(&Format.method(:one_line_country))
-        ]
+      subregions.transform_values! do |countries|
+        countries.map(&Format.method(:one_line_country))
       end
 
       Format.brief_template(title: "All Subregions", elements: subregions)

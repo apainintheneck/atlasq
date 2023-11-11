@@ -3,7 +3,12 @@ AllCops:
   TargetRubyVersion: 2.6
 
 Layout/LineLength:
+  Enabled: true
   Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
 
 Metrics/AbcSize:
   Enabled: false
