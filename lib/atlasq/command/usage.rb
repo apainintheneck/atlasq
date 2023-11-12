@@ -26,7 +26,6 @@ module Atlasq
             -c/--country  : find a country
             -r/--region   : find a region
             -m/--money    : currency <> country
-            -t/--timezone : timezone <> country
         USAGE
       end
     end

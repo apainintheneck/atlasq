@@ -4,8 +4,6 @@ require "countries"
 require "iso-639"
 require "money"
 require "money-heuristics"
-require "tzinfo"
-require "tzinfo/data"
 
 ISO3166.configuration.enable_currency_extension!
 

@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["apainintheneck@gmail.com"]
 
   spec.summary = "Query for regional info at the command line."
-  spec.description = "Country, state, currency and timezone info at your fingertips. Based on data from ISO standards."
+  spec.description = "Country, state, and currency info at your fingertips. Query for regional info and see which countries show up."
   # spec.homepage = "TODO: Put your gem's website or public repo URL here."
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
@@ -36,7 +36,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "money", "~> 6.9"
   spec.add_dependency "money-heuristics", "~> 0.1.1"
   spec.add_dependency "tty-pager", "~> 0.14"
-  spec.add_dependency "tzinfo", "~> 1.2", ">= 1.2.2"
-  spec.add_dependency "tzinfo-data"
+
   spec.metadata["rubygems_mfa_required"] = "true"
 end
