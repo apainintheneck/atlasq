@@ -155,22 +155,28 @@ module Atlasq
       case country
       when ISO3166::Country
         [
+          country.emoji_flag,
           country.number,
           country.alpha2,
           country.alpha3,
           country.iso_short_name
         ]
       when Hash
-        country.slice(
+        values = country.slice(
           "number",
           "alpha2",
           "alpha3",
           "iso_short_name"
         ).values
+
+        [
+          Data.emoji_flag(country.fetch("number")),
+          *values
+        ]
       else
         raise Error, "Unknown country type: #{country.class}"
       end.then do |country_values|
-        "(#{country_values.join(" | ")})"
+        "(#{country_values.compact.join(" | ")})"
       end
     end
 

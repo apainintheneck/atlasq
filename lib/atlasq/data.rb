@@ -83,5 +83,15 @@ module Atlasq
           Currency.new(countries: countries, currency_code: currency_code)
         end
     end
+
+    # @param number [String] ISO 3166-1 numeric code
+    # @return [String|nil]
+    def self.emoji_flag(iso_number)
+      @emoji_flag ||= all_countries
+        .to_h { |country| [country.number, country.emoji_flag] }
+        .freeze
+
+      @emoji_flag[iso_number]
+    end
   end
 end

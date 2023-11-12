@@ -6,7 +6,7 @@ module Atlasq
     autoload :Country, "atlasq/command/country"
     autoload :Region, "atlasq/command/region"
     autoload :Money, "atlasq/command/money"
-    autoload :Timezone, "atlasq/command/mimezone"
+    autoload :Timezone, "atlasq/command/timezone"
     autoload :Version, "atlasq/command/version"
     autoload :Help, "atlasq/command/help"
     autoload :Usage, "atlasq/command/usage"
