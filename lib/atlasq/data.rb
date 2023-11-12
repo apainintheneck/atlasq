@@ -4,6 +4,8 @@ require "countries"
 require "iso-639"
 require "money"
 require "money-heuristics"
+require "tzinfo"
+require "tzinfo/data"
 
 ISO3166.configuration.enable_currency_extension!
 
@@ -32,7 +34,7 @@ module Atlasq
 
     # @return [Array<ISO3166::Country>]
     def self.all_countries
-      ISO3166::Country.all
+      @all_countries ||= ISO3166::Country.all
     end
 
     # Region types for querying ISO3166::Country

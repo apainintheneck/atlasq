@@ -8,6 +8,7 @@ PATH
       money-heuristics (~> 0.1.1)
       tty-pager (~> 0.14)
       tzinfo (~> 1.2, >= 1.2.2)
+      tzinfo-data
 
 GEM
   remote: https://rubygems.org/
@@ -63,6 +64,8 @@ GEM
     tty-screen (0.8.1)
     tzinfo (1.2.11)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2023.3)
+      tzinfo (>= 1.0.0)
     unaccent (0.4.0)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)

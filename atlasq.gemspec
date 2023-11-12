@@ -37,5 +37,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "money-heuristics", "~> 0.1.1"
   spec.add_dependency "tty-pager", "~> 0.14"
   spec.add_dependency "tzinfo", "~> 1.2", ">= 1.2.2"
+  spec.add_dependency "tzinfo-data"
   spec.metadata["rubygems_mfa_required"] = "true"
 end
