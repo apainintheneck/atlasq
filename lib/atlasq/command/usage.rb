@@ -23,9 +23,9 @@ module Atlasq
             atlasq -v/--version
 
           commands:
-            -c/--country  : find a country
-            -r/--region   : find a region
-            -m/--money    : currency <> country
+            -c/--country  : find countries
+            -r/--region   : find countries by region
+            -m/--money    : find countries by currency
         USAGE
       end
     end

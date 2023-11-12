@@ -8,8 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors = ["Kevin Robell"]
   spec.email = ["apainintheneck@gmail.com"]
 
-  spec.summary = "Query for regional info at the command line."
-  spec.description = "Country, state, and currency info at your fingertips. Query for regional info and see which countries show up."
+  spec.summary = "Query for countries info at the command line."
+  spec.description = "Country, region, and currency info at your fingertips. " \
+                     "Query for regional info and see which countries show up."
   # spec.homepage = "TODO: Put your gem's website or public repo URL here."
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"

@@ -12,7 +12,7 @@ module Atlasq
       attr_reader :countries
 
       # @param countries [Array<Hash>]
-      # @param currency_code [String] ISO 4217 currency code
+      # @param currency_code [String] ISO4217 currency code
       def initialize(countries:, currency_code:)
         @countries = countries
         @currency_code = currency_code
