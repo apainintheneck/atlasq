@@ -7,6 +7,7 @@ require "atlasq"
 require "countries"
 require "iso-639"
 require "money"
+require "money-heuristics"
 
 require "irb"
 IRB.start(__FILE__)

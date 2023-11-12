@@ -5,14 +5,20 @@ require "delegate"
 module Atlasq
   module Data
     class Region < DelegateClass(Array)
-      # TODO: Find out how to better document the types here
-      attr_reader :type, :name, :countries
+      # @return [Symbol]
+      attr_reader :type
+
+      # @return [String|nil]
+      attr_reader :name
+
+      # @return [Array<Hash>]
+      attr_reader :countries
 
       # @param countries [Array<Hash>]
       # @param type [Symbol] in Atlasq::Data::REGION_TYPES
       def initialize(countries:, type:)
-        @type = type.to_s
-        @name = countries.dig(0, @type)
+        @type = type
+        @name = countries.dig(0, @type.to_s)
         @countries = countries
 
         super(countries)

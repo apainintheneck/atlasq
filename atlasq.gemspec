@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Country, state, currency and timezone info at your fingertips. Based on data from ISO standards."
   # spec.homepage = "TODO: Put your gem's website or public repo URL here."
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
@@ -34,6 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "countries", "~> 5.7"
   spec.add_dependency "iso-639", "~> 0.3"
   spec.add_dependency "money", "~> 6.9"
+  spec.add_dependency "money-heuristics", "~> 0.1.1"
   spec.add_dependency "tty-pager", "~> 0.14"
   spec.add_dependency "tzinfo", "~> 1.2", ">= 1.2.2"
   spec.metadata["rubygems_mfa_required"] = "true"

@@ -8,8 +8,9 @@ module Atlasq
       def content
         search_terms.map do |term|
           data = Data.any(term)
+          empty = data.empty? if data.respond_to?(:empty?)
 
-          if data
+          if data && !empty
             Format.any(data, term)
           else
             Atlasq.failed!

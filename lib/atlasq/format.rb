@@ -39,14 +39,20 @@ module Atlasq
     # @param elements [Array<String>|Hash<String, Array<String>>]
     # @return [String]
     def self.brief_template(title:, elements:)
-      if elements.is_a?(Hash)
-        elements = elements
-          .sort_by(&:first)
-          .each_with_object([]) do |(key, values), array|
-            array << "- #{key}"
-            values.sort.each { |value| array << "  #{value}" }
-          end
-      end
+      elements =
+        case elements
+        when Array
+          elements.sort
+        when Hash
+          elements
+            .sort_by(&:first)
+            .each_with_object([]) do |(key, values), array|
+              array << "- #{key}"
+              values.sort.each { |value| array << "    #{value}" }
+            end
+        else
+          raise Error, "Unknown elements type: #{elements.class}"
+        end
 
       [
         Format.title(title),
@@ -86,10 +92,12 @@ module Atlasq
     # @return [String]
     def self.any(value, search_term)
       case value
-      when ISO3166::Country
+      in ISO3166::Country
         Format.country(value, search_term)
-      when Atlasq::Data::Region
+      in Atlasq::Data::Region
         Format.region(value)
+      in [Atlasq::Data::Currency, *]
+        Format.currencies(value)
       else
         raise Error, "Unknown format type: #{value.class}"
       end
@@ -104,7 +112,7 @@ module Atlasq
         attributes: Format.one_line_country(country),
         info: {
           "Search Term" => search_term,
-          "Languages" => Format.language_codes(country.languages),
+          "Languages" => Format.languages(country.languages),
           "Nationality" => country.nationality,
           "Region" => country.subregion,
           "Continent" => country.continent,
@@ -120,7 +128,7 @@ module Atlasq
     # @example "English / Shona / Ndebele, North; North Ndebele"
     # @param language_codes [Array<String>] Ex. ["id"]
     # @return [String]
-    def self.language_codes(language_codes)
+    def self.languages(language_codes)
       language_codes
         .take(4) # arbitrary limit to avoid long lines
         .map do |lang|
@@ -183,6 +191,27 @@ module Atlasq
       end
 
       Format.brief_template(title: "All Subregions", elements: subregions)
+    end
+
+    # @param currencies [Array<Atlasq::Data::Currencies]
+    # @return [String]
+    def self.currencies(currencies)
+      currencies = currencies.to_h do |currency_class|
+        currency = Money::Currency.new(currency_class.currency_code)
+
+        [
+          "[#{currency.iso_code}] #{currency.symbol} #{currency.name}",
+          currency_class.countries.map(&Format.method(:one_line_country))
+        ]
+      end
+
+      if currencies.size == 1
+        title, elements = currencies.first
+        title = "Currency: #{title}"
+        Format.brief_template(title: title, elements: elements)
+      else
+        Format.brief_template(title: "Currencies", elements: currencies)
+      end
     end
   end
 end
