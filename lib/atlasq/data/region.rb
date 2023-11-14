@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require "delegate"
-
 module Atlasq
   module Data
-    class Region < DelegateClass(Array)
+    class Region
       # @return [Symbol]
       attr_reader :type
 
@@ -20,8 +18,6 @@ module Atlasq
         @type = type
         @name = countries.dig(0, @type.to_s)
         @countries = countries
-
-        super(countries)
       end
     end
   end

@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require "delegate"
-
 module Atlasq
   module Data
-    class Currency < DelegateClass(Array)
+    class Currency
       # @return [String]
       attr_reader :currency_code
 
@@ -16,8 +14,6 @@ module Atlasq
       def initialize(countries:, currency_code:)
         @countries = countries
         @currency_code = currency_code
-
-        super(countries)
       end
     end
   end
