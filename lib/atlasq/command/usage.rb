@@ -18,14 +18,13 @@ module Atlasq
           usage:
             atlasq query...
             atlasq [command] query...
-            atlasq -i/--interactive
             atlasq -h/--help
             atlasq -v/--version
 
           commands:
-            -c/--country  : find countries
-            -r/--region   : find countries by region
-            -m/--money    : find countries by currency
+            -c/--country : find countries
+            -r/--region  : find countries by region
+            -m/--money   : find countries by currency
         USAGE
       end
     end
