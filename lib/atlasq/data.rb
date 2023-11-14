@@ -43,7 +43,6 @@ module Atlasq
     def self.country(term)
       ISO3166::Country.find_country_by_alpha2(term) ||
         ISO3166::Country.find_country_by_alpha3(term) ||
-        ISO3166::Country.find_country_by_gec(term) ||
         ISO3166::Country.find_country_by_number(term) ||
         ISO3166::Country.find_country_by_any_name(term)
     end
@@ -84,7 +83,6 @@ module Atlasq
     # @return [Array<Atlasq::Data::Currency>]
     def self.currencies(term)
       currency_codes = Money::Currency.analyze(term)
-      currency_codes = [term] if currency_codes.empty?
       currency_codes.filter_map do |currency_code|
         countries = ISO3166::Country.find_all_by(:currency_code, currency_code)
         next if countries.empty?
