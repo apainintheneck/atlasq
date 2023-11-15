@@ -14,3 +14,9 @@ require "rubocop/rake_task"
 RuboCop::RakeTask.new
 
 task default: %i[test rubocop]
+
+desc "Shortcut for `rake rubocop`"
+task lint: :rubocop
+
+desc "Shortcut for `rake rubocop:autocorrect`"
+task fix: :"rubocop:autocorrect"
