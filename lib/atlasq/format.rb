@@ -13,7 +13,7 @@ module Atlasq
       [
         "*",
         "* #{title}",
-        "* " * ((title.size / 2) + 3)
+        "*#{" *" * ((title.size / 2) + 2)}"
       ].join("\n")
     end
 
