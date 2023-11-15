@@ -13,7 +13,7 @@ module Atlasq
       # @return [String]
       def content
         <<~USAGE
-          atlasq is a utility to query country info
+          atlasq -- a utility to query country info
 
           usage:
             atlasq query...

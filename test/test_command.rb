@@ -3,6 +3,9 @@
 require "test_helper"
 
 class CommandTest < Minitest::Test
+  #
+  # ARG PARSING
+  #
   def command_args
     %w[one two three]
   end
