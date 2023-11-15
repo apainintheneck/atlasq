@@ -14,12 +14,9 @@ module Atlasq
     # @param args [Array<String>]
     Options = Struct.new(:command, :args, keyword_init: true)
 
-    # No need to remove the command argument from the argument list.
-    NO_SHIFT_COMMANDS = %w[Atlasq::Command::Any Atlasq::Command::Usage].freeze
-
     def self.parse(args)
       command = parse_command(args.first)
-      args.shift unless NO_SHIFT_COMMANDS.include?(command.to_s)
+      args.shift unless command.to_s == "Atlasq::Command::Any"
 
       Options.new(command: command, args: args).freeze
     end
