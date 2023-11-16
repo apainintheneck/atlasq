@@ -51,4 +51,63 @@ class AtlasqTest < Minitest::Test
 
     assert_command args: [], expected_stdout: expected_output
   end
+
+  def test_country_success
+    expected_output = <<~OUTPUT
+      *
+      * Country: The Republic of Chile
+      * * * * * * * * * * * * * * * * * *
+      (🇨🇱 | 152 | CL | CHL | Chile)
+       | Search Term: chile
+        | Languages: Spanish; Castilian
+         | Nationality: Chilean
+          | Region: South America
+           | Continent: South America
+            | Currency: $ Chilean Peso
+             |________________________________________
+    OUTPUT
+
+    [
+      %w[chile],
+      %w[-c chile]
+    ].each do |args|
+      assert_command args: args, expected_stdout: expected_output
+    end
+  end
+
+  def test_region_success
+    expected_output = <<~OUTPUT
+      *
+      * Subregion: Australia and New Zealand
+      * * * * * * * * * * * * * * * * * * * * *
+      (🇦🇺 | 036 | AU | AUS | Australia)
+      (🇨🇨 | 166 | CC | CCK | Cocos (Keeling) Islands)
+      (🇨🇽 | 162 | CX | CXR | Christmas Island)
+      (🇳🇫 | 574 | NF | NFK | Norfolk Island)
+      (🇳🇿 | 554 | NZ | NZL | New Zealand)
+    OUTPUT
+
+    [
+      ["australia and new zealand"],
+      ["-r", "australia and new zealand"]
+    ].each do |args|
+      assert_command args: args, expected_stdout: expected_output
+    end
+  end
+
+  def test_currency_success
+    expected_output = <<~OUTPUT
+      *
+      * Currency: [CAD] $ Canadian Dollar
+      * * * * * * * * * * * * * * * * * * *
+      (🇨🇦 | 124 | CA | CAN | Canada)
+    OUTPUT
+
+    [
+      ["canadian dollar"],
+      ["-m", "canadian dollar"]
+    ].each do |args|
+      assert_command args: args, expected_stdout: expected_output
+    end
+  end
 end
