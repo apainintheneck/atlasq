@@ -18,9 +18,9 @@ class AtlasqTest < Minitest::Test
   def assert_command(args:, expected_stdout: "", expected_stderr: "", expected_status: 0)
     stdout, stderr, status = Open3.capture3(executable_path, *args)
 
-    assert_equal expected_status, status.exitstatus
-    assert_equal expected_stderr, stderr
     assert_equal expected_stdout, stdout
+    assert_equal expected_stderr, stderr
+    assert_equal expected_status, status.exitstatus
   end
 
   #
@@ -50,6 +50,14 @@ class AtlasqTest < Minitest::Test
     OUTPUT
 
     assert_command args: [], expected_stdout: expected_output
+  end
+
+  def test_help
+    stdout, stderr, status = Open3.capture3(executable_path, "-h")
+
+    refute_empty stdout
+    assert_empty stderr
+    assert_equal 0, status.exitstatus
   end
 
   def test_country_success
