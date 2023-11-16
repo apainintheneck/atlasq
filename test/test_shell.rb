@@ -191,4 +191,27 @@ class ShellTest < Minitest::Test
       assert_equal expected_output, actual_output
     end
   end
+
+  #
+  # Currency
+  #
+  def test_currency_output
+    expected_output = <<~OUTPUT
+      *
+      * Currency: [BHD] د.ب Bahraini Dinar
+      * * * * * * * * * * * * * * * * * * * *
+      (🇧🇭 | 048 | BH | BHR | Bahrain)
+    OUTPUT
+
+    commands = %w[-m --money]
+    currencies = ["BHD", "Bahraini Dinar"]
+
+    commands.product(currencies).each do |args|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!(args)
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
 end
