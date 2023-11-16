@@ -15,10 +15,10 @@ class AtlasqTest < Minitest::Test
   # @param expected_stdout [String]
   # @param expected_stderr [String]
   # @param expected_status [Integer]
-  def assert_command(args:, expected_stdout:, expected_stderr: "", expected_status: 0)
+  def assert_command(args:, expected_stdout: "", expected_stderr: "", expected_status: 0)
     stdout, stderr, status = Open3.capture3(executable_path, *args)
 
-    assert_equal expected_status, status
+    assert_equal expected_status, status.exitstatus
     assert_equal expected_stderr, stderr
     assert_equal expected_stdout, stdout
   end
@@ -75,6 +75,12 @@ class AtlasqTest < Minitest::Test
     end
   end
 
+  def test_country_failure
+    assert_command args: %w[-c atlantis],
+                   expected_stdout: "Unknown country: atlantis\n",
+                   expected_status: 1
+  end
+
   def test_region_success
     expected_output = <<~OUTPUT
       *
@@ -95,6 +101,12 @@ class AtlasqTest < Minitest::Test
     end
   end
 
+  def test_region_failure
+    assert_command args: %w[-r Pyrrus],
+                   expected_stdout: "Unknown region: Pyrrus\n",
+                   expected_status: 1
+  end
+
   def test_currency_success
     expected_output = <<~OUTPUT
       *
@@ -109,5 +121,17 @@ class AtlasqTest < Minitest::Test
     ].each do |args|
       assert_command args: args, expected_stdout: expected_output
     end
+  end
+
+  def test_currency_failure
+    assert_command args: ["-m", "Double Dollars"],
+                   expected_stdout: "Unknown currency: Double Dollars\n",
+                   expected_status: 1
+  end
+
+  def test_any_failure
+    assert_command args: ["Grand Line"],
+                   expected_stdout: "Unknown search term: Grand Line\n",
+                   expected_status: 1
   end
 end
