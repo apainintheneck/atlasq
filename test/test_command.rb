@@ -3,13 +3,14 @@
 require "test_helper"
 
 class CommandTest < Minitest::Test
-  #
-  # ARG PARSING
-  #
+  # @return [Array<String>]
   def command_args
     %w[one two three]
   end
 
+  #
+  # ARG PARSING
+  #
   def test_parse_country
     %w[-c --country --countries].each do |command|
       result = Atlasq::Command::Options.new(
