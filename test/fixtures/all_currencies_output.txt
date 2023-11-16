@@ -1,0 +1,404 @@
+*
+* Currencies
+* * * * * * * *
+- [AED] د.إ United Arab Emirates Dirham
+    (🇦🇪 | 784 | AE | ARE | United Arab Emirates)
+- [AFN] ؋ Afghan Afghani
+    (🇦🇫 | 004 | AF | AFG | Afghanistan)
+- [ALL] L Albanian Lek
+    (🇦🇱 | 008 | AL | ALB | Albania)
+- [AMD] դր. Armenian Dram
+    (🇦🇲 | 051 | AM | ARM | Armenia)
+- [ANG] ƒ Netherlands Antillean Gulden
+    (🇨🇼 | 531 | CW | CUW | Curaçao)
+    (🇸🇽 | 534 | SX | SXM | Sint Maarten (Dutch part))
+- [AOA] Kz Angolan Kwanza
+    (🇦🇴 | 024 | AO | AGO | Angola)
+- [ARS] $ Argentine Peso
+    (🇦🇷 | 032 | AR | ARG | Argentina)
+- [AUD] $ Australian Dollar
+    (🇦🇺 | 036 | AU | AUS | Australia)
+    (🇨🇨 | 166 | CC | CCK | Cocos (Keeling) Islands)
+    (🇨🇽 | 162 | CX | CXR | Christmas Island)
+    (🇭🇲 | 334 | HM | HMD | Heard Island and McDonald Islands)
+    (🇰🇮 | 296 | KI | KIR | Kiribati)
+    (🇳🇫 | 574 | NF | NFK | Norfolk Island)
+    (🇳🇷 | 520 | NR | NRU | Nauru)
+    (🇹🇻 | 798 | TV | TUV | Tuvalu)
+- [AWG] ƒ Aruban Florin
+    (🇦🇼 | 533 | AW | ABW | Aruba)
+- [AZN] ₼ Azerbaijani Manat
+    (🇦🇿 | 031 | AZ | AZE | Azerbaijan)
+- [BAM] КМ Bosnia and Herzegovina Convertible Mark
+    (🇧🇦 | 070 | BA | BIH | Bosnia and Herzegovina)
+- [BBD] $ Barbadian Dollar
+    (🇧🇧 | 052 | BB | BRB | Barbados)
+- [BDT] ৳ Bangladeshi Taka
+    (🇧🇩 | 050 | BD | BGD | Bangladesh)
+- [BGN] лв. Bulgarian Lev
+    (🇧🇬 | 100 | BG | BGR | Bulgaria)
+- [BHD] د.ب Bahraini Dinar
+    (🇧🇭 | 048 | BH | BHR | Bahrain)
+- [BIF] Fr Burundian Franc
+    (🇧🇮 | 108 | BI | BDI | Burundi)
+- [BMD] $ Bermudian Dollar
+    (🇧🇲 | 060 | BM | BMU | Bermuda)
+- [BND] $ Brunei Dollar
+    (🇧🇳 | 096 | BN | BRN | Brunei Darussalam)
+- [BOB] Bs. Bolivian Boliviano
+    (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
+- [BRL] R$ Brazilian Real
+    (🇧🇷 | 076 | BR | BRA | Brazil)
+- [BSD] $ Bahamian Dollar
+    (🇧🇸 | 044 | BS | BHS | Bahamas)
+- [BTN] Nu. Bhutanese Ngultrum
+    (🇧🇹 | 064 | BT | BTN | Bhutan)
+- [BWP] P Botswana Pula
+    (🇧🇼 | 072 | BW | BWA | Botswana)
+- [BYN] Br Belarusian Ruble
+    (🇧🇾 | 112 | BY | BLR | Belarus)
+- [BZD] $ Belize Dollar
+    (🇧🇿 | 084 | BZ | BLZ | Belize)
+- [CAD] $ Canadian Dollar
+    (🇨🇦 | 124 | CA | CAN | Canada)
+- [CDF] Fr Congolese Franc
+    (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
+- [CHF] CHF Swiss Franc
+    (🇨🇭 | 756 | CH | CHE | Switzerland)
+    (🇱🇮 | 438 | LI | LIE | Liechtenstein)
+- [CLP] $ Chilean Peso
+    (🇨🇱 | 152 | CL | CHL | Chile)
+- [CNY] ¥ Chinese Renminbi Yuan
+    (🇨🇳 | 156 | CN | CHN | China)
+- [COP] $ Colombian Peso
+    (🇨🇴 | 170 | CO | COL | Colombia)
+- [CRC] ₡ Costa Rican Colón
+    (🇨🇷 | 188 | CR | CRI | Costa Rica)
+- [CUP] $ Cuban Peso
+    (🇨🇺 | 192 | CU | CUB | Cuba)
+- [CVE] $ Cape Verdean Escudo
+    (🇨🇻 | 132 | CV | CPV | Cabo Verde)
+- [CZK] Kč Czech Koruna
+    (🇨🇿 | 203 | CZ | CZE | Czechia)
+- [DJF] Fdj Djiboutian Franc
+    (🇩🇯 | 262 | DJ | DJI | Djibouti)
+- [DKK] kr. Danish Krone
+    (🇩🇰 | 208 | DK | DNK | Denmark)
+    (🇫🇴 | 234 | FO | FRO | Faroe Islands)
+    (🇬🇱 | 304 | GL | GRL | Greenland)
+- [DOP] $ Dominican Peso
+    (🇩🇴 | 214 | DO | DOM | Dominican Republic)
+- [DZD] د.ج Algerian Dinar
+    (🇩🇿 | 012 | DZ | DZA | Algeria)
+- [EGP] ج.م Egyptian Pound
+    (🇪🇬 | 818 | EG | EGY | Egypt)
+- [ETB] Br Ethiopian Birr
+    (🇪🇷 | 232 | ER | ERI | Eritrea)
+    (🇪🇹 | 231 | ET | ETH | Ethiopia)
+- [EUR] € Euro
+    (🇦🇩 | 020 | AD | AND | Andorra)
+    (🇦🇹 | 040 | AT | AUT | Austria)
+    (🇦🇽 | 248 | AX | ALA | Åland Islands)
+    (🇧🇪 | 056 | BE | BEL | Belgium)
+    (🇧🇱 | 652 | BL | BLM | Saint Barthélemy)
+    (🇨🇾 | 196 | CY | CYP | Cyprus)
+    (🇩🇪 | 276 | DE | DEU | Germany)
+    (🇪🇪 | 233 | EE | EST | Estonia)
+    (🇪🇸 | 724 | ES | ESP | Spain)
+    (🇫🇮 | 246 | FI | FIN | Finland)
+    (🇫🇷 | 250 | FR | FRA | France)
+    (🇬🇫 | 254 | GF | GUF | French Guiana)
+    (🇬🇵 | 312 | GP | GLP | Guadeloupe)
+    (🇬🇷 | 300 | GR | GRC | Greece)
+    (🇭🇷 | 191 | HR | HRV | Croatia)
+    (🇮🇪 | 372 | IE | IRL | Ireland)
+    (🇮🇹 | 380 | IT | ITA | Italy)
+    (🇱🇹 | 440 | LT | LTU | Lithuania)
+    (🇱🇺 | 442 | LU | LUX | Luxembourg)
+    (🇱🇻 | 428 | LV | LVA | Latvia)
+    (🇲🇨 | 492 | MC | MCO | Monaco)
+    (🇲🇪 | 499 | ME | MNE | Montenegro)
+    (🇲🇫 | 663 | MF | MAF | Saint Martin (French part))
+    (🇲🇶 | 474 | MQ | MTQ | Martinique)
+    (🇲🇹 | 470 | MT | MLT | Malta)
+    (🇳🇱 | 528 | NL | NLD | Netherlands)
+    (🇵🇲 | 666 | PM | SPM | Saint Pierre and Miquelon)
+    (🇵🇹 | 620 | PT | PRT | Portugal)
+    (🇷🇪 | 638 | RE | REU | Réunion)
+    (🇸🇮 | 705 | SI | SVN | Slovenia)
+    (🇸🇰 | 703 | SK | SVK | Slovakia)
+    (🇸🇲 | 674 | SM | SMR | San Marino)
+    (🇹🇫 | 260 | TF | ATF | French Southern Territories)
+    (🇻🇦 | 336 | VA | VAT | Holy See)
+    (🇾🇹 | 175 | YT | MYT | Mayotte)
+- [FJD] $ Fijian Dollar
+    (🇫🇯 | 242 | FJ | FJI | Fiji)
+- [FKP] £ Falkland Pound
+    (🇫🇰 | 238 | FK | FLK | Falkland Islands (Malvinas))
+- [GBP] £ British Pound
+    (🇬🇧 | 826 | GB | GBR | United Kingdom of Great Britain and Northern Ireland)
+    (🇬🇬 | 831 | GG | GGY | Guernsey)
+    (🇬🇸 | 239 | GS | SGS | South Georgia and the South Sandwich Islands)
+    (🇮🇲 | 833 | IM | IMN | Isle of Man)
+    (🇯🇪 | 832 | JE | JEY | Jersey)
+- [GEL] ლ Georgian Lari
+    (🇬🇪 | 268 | GE | GEO | Georgia)
+- [GHS] ₵ Ghanaian Cedi
+    (🇬🇭 | 288 | GH | GHA | Ghana)
+- [GIP] £ Gibraltar Pound
+    (🇬🇮 | 292 | GI | GIB | Gibraltar)
+- [GMD] D Gambian Dalasi
+    (🇬🇲 | 270 | GM | GMB | Gambia)
+- [GNF] Fr Guinean Franc
+    (🇬🇳 | 324 | GN | GIN | Guinea)
+- [GTQ] Q Guatemalan Quetzal
+    (🇬🇹 | 320 | GT | GTM | Guatemala)
+- [GYD] $ Guyanese Dollar
+    (🇬🇾 | 328 | GY | GUY | Guyana)
+- [HKD] $ Hong Kong Dollar
+    (🇭🇰 | 344 | HK | HKG | Hong Kong)
+- [HNL] L Honduran Lempira
+    (🇭🇳 | 340 | HN | HND | Honduras)
+- [HTG] G Haitian Gourde
+    (🇭🇹 | 332 | HT | HTI | Haiti)
+- [HUF] Ft Hungarian Forint
+    (🇭🇺 | 348 | HU | HUN | Hungary)
+- [IDR] Rp Indonesian Rupiah
+    (🇮🇩 | 360 | ID | IDN | Indonesia)
+    (🇹🇱 | 626 | TL | TLS | Timor-Leste)
+- [ILS] ₪ Israeli New Sheqel
+    (🇮🇱 | 376 | IL | ISR | Israel)
+    (🇵🇸 | 275 | PS | PSE | Palestine, State of)
+- [INR] ₹ Indian Rupee
+    (🇮🇳 | 356 | IN | IND | India)
+- [IQD] ع.د Iraqi Dinar
+    (🇮🇶 | 368 | IQ | IRQ | Iraq)
+- [IRR] ﷼ Iranian Rial
+    (🇮🇷 | 364 | IR | IRN | Iran (Islamic Republic of))
+- [ISK] kr. Icelandic Króna
+    (🇮🇸 | 352 | IS | ISL | Iceland)
+- [JMD] $ Jamaican Dollar
+    (🇯🇲 | 388 | JM | JAM | Jamaica)
+- [JOD] د.ا Jordanian Dinar
+    (🇯🇴 | 400 | JO | JOR | Jordan)
+- [JPY] ¥ Japanese Yen
+    (🇯🇵 | 392 | JP | JPN | Japan)
+- [KES] KSh Kenyan Shilling
+    (🇰🇪 | 404 | KE | KEN | Kenya)
+- [KGS] som Kyrgyzstani Som
+    (🇰🇬 | 417 | KG | KGZ | Kyrgyzstan)
+- [KHR] ៛ Cambodian Riel
+    (🇰🇭 | 116 | KH | KHM | Cambodia)
+- [KMF] Fr Comorian Franc
+    (🇰🇲 | 174 | KM | COM | Comoros)
+- [KPW] ₩ North Korean Won
+    (🇰🇵 | 408 | KP | PRK | Korea (Democratic People's Republic of))
+- [KRW] ₩ South Korean Won
+    (🇰🇷 | 410 | KR | KOR | Korea (Republic of))
+- [KWD] د.ك Kuwaiti Dinar
+    (🇰🇼 | 414 | KW | KWT | Kuwait)
+- [KYD] $ Cayman Islands Dollar
+    (🇰🇾 | 136 | KY | CYM | Cayman Islands)
+- [KZT] ₸ Kazakhstani Tenge
+    (🇰🇿 | 398 | KZ | KAZ | Kazakhstan)
+- [LAK] ₭ Lao Kip
+    (🇱🇦 | 418 | LA | LAO | Lao People's Democratic Republic)
+- [LBP] ل.ل Lebanese Pound
+    (🇱🇧 | 422 | LB | LBN | Lebanon)
+- [LKR] ₨ Sri Lankan Rupee
+    (🇱🇰 | 144 | LK | LKA | Sri Lanka)
+- [LRD] $ Liberian Dollar
+    (🇱🇷 | 430 | LR | LBR | Liberia)
+- [LSL] L Lesotho Loti
+    (🇱🇸 | 426 | LS | LSO | Lesotho)
+- [LYD] ل.د Libyan Dinar
+    (🇱🇾 | 434 | LY | LBY | Libya)
+- [MAD] د.م. Moroccan Dirham
+    (🇪🇭 | 732 | EH | ESH | Western Sahara)
+    (🇲🇦 | 504 | MA | MAR | Morocco)
+- [MDL] L Moldovan Leu
+    (🇲🇩 | 498 | MD | MDA | Moldova (Republic of))
+- [MGA] Ar Malagasy Ariary
+    (🇲🇬 | 450 | MG | MDG | Madagascar)
+- [MKD] ден Macedonian Denar
+    (🇲🇰 | 807 | MK | MKD | North Macedonia)
+- [MMK] K Myanmar Kyat
+    (🇲🇲 | 104 | MM | MMR | Myanmar)
+- [MNT] ₮ Mongolian Tögrög
+    (🇲🇳 | 496 | MN | MNG | Mongolia)
+- [MOP] P Macanese Pataca
+    (🇲🇴 | 446 | MO | MAC | Macao)
+- [MRU] UM Mauritanian Ouguiya
+    (🇲🇷 | 478 | MR | MRT | Mauritania)
+- [MUR] ₨ Mauritian Rupee
+    (🇲🇺 | 480 | MU | MUS | Mauritius)
+- [MVR] MVR Maldivian Rufiyaa
+    (🇲🇻 | 462 | MV | MDV | Maldives)
+- [MWK] MK Malawian Kwacha
+    (🇲🇼 | 454 | MW | MWI | Malawi)
+- [MXN] $ Mexican Peso
+    (🇲🇽 | 484 | MX | MEX | Mexico)
+- [MYR] RM Malaysian Ringgit
+    (🇲🇾 | 458 | MY | MYS | Malaysia)
+- [MZN] MTn Mozambican Metical
+    (🇲🇿 | 508 | MZ | MOZ | Mozambique)
+- [NAD] $ Namibian Dollar
+    (🇳🇦 | 516 | NA | NAM | Namibia)
+- [NGN] ₦ Nigerian Naira
+    (🇳🇬 | 566 | NG | NGA | Nigeria)
+- [NIO] C$ Nicaraguan Córdoba
+    (🇳🇮 | 558 | NI | NIC | Nicaragua)
+- [NOK] kr Norwegian Krone
+    (🇧🇻 | 074 | BV | BVT | Bouvet Island)
+    (🇳🇴 | 578 | NO | NOR | Norway)
+    (🇸🇯 | 744 | SJ | SJM | Svalbard and Jan Mayen)
+- [NPR] Rs. Nepalese Rupee
+    (🇳🇵 | 524 | NP | NPL | Nepal)
+- [NZD] $ New Zealand Dollar
+    (🇨🇰 | 184 | CK | COK | Cook Islands)
+    (🇳🇺 | 570 | NU | NIU | Niue)
+    (🇳🇿 | 554 | NZ | NZL | New Zealand)
+    (🇵🇳 | 612 | PN | PCN | Pitcairn)
+    (🇹🇰 | 772 | TK | TKL | Tokelau)
+- [OMR] ر.ع. Omani Rial
+    (🇴🇲 | 512 | OM | OMN | Oman)
+- [PAB] B/. Panamanian Balboa
+    (🇵🇦 | 591 | PA | PAN | Panama)
+- [PEN] S/ Peruvian Sol
+    (🇵🇪 | 604 | PE | PER | Peru)
+- [PGK] K Papua New Guinean Kina
+    (🇵🇬 | 598 | PG | PNG | Papua New Guinea)
+- [PHP] ₱ Philippine Peso
+    (🇵🇭 | 608 | PH | PHL | Philippines)
+- [PKR] ₨ Pakistani Rupee
+    (🇵🇰 | 586 | PK | PAK | Pakistan)
+- [PLN] zł Polish Złoty
+    (🇵🇱 | 616 | PL | POL | Poland)
+- [PYG] ₲ Paraguayan Guaraní
+    (🇵🇾 | 600 | PY | PRY | Paraguay)
+- [QAR] ر.ق Qatari Riyal
+    (🇶🇦 | 634 | QA | QAT | Qatar)
+- [RON] Lei Romanian Leu
+    (🇷🇴 | 642 | RO | ROU | Romania)
+- [RSD] РСД Serbian Dinar
+    (🇷🇸 | 688 | RS | SRB | Serbia)
+- [RUB] ₽ Russian Ruble
+    (🇷🇺 | 643 | RU | RUS | Russian Federation)
+- [RWF] FRw Rwandan Franc
+    (🇷🇼 | 646 | RW | RWA | Rwanda)
+- [SAR] ر.س Saudi Riyal
+    (🇸🇦 | 682 | SA | SAU | Saudi Arabia)
+- [SBD] $ Solomon Islands Dollar
+    (🇸🇧 | 090 | SB | SLB | Solomon Islands)
+- [SCR] ₨ Seychellois Rupee
+    (🇸🇨 | 690 | SC | SYC | Seychelles)
+- [SDG] £ Sudanese Pound
+    (🇸🇩 | 729 | SD | SDN | Sudan)
+- [SEK] kr Swedish Krona
+    (🇸🇪 | 752 | SE | SWE | Sweden)
+- [SGD] $ Singapore Dollar
+    (🇸🇬 | 702 | SG | SGP | Singapore)
+- [SHP] £ Saint Helenian Pound
+    (🇸🇭 | 654 | SH | SHN | Saint Helena, Ascension and Tristan da Cunha)
+- [SLL] Le Sierra Leonean Leone
+    (🇸🇱 | 694 | SL | SLE | Sierra Leone)
+- [SOS] Sh Somali Shilling
+    (🇸🇴 | 706 | SO | SOM | Somalia)
+- [SRD] $ Surinamese Dollar
+    (🇸🇷 | 740 | SR | SUR | Suriname)
+- [SSP] £ South Sudanese Pound
+    (🇸🇸 | 728 | SS | SSD | South Sudan)
+- [STD] Db São Tomé and Príncipe Dobra
+    (🇸🇹 | 678 | ST | STP | Sao Tome and Principe)
+- [SYP] £S Syrian Pound
+    (🇸🇾 | 760 | SY | SYR | Syrian Arab Republic)
+- [SZL] E Swazi Lilangeni
+    (🇸🇿 | 748 | SZ | SWZ | Eswatini)
+- [THB] ฿ Thai Baht
+    (🇹🇭 | 764 | TH | THA | Thailand)
+- [TJS] ЅМ Tajikistani Somoni
+    (🇹🇯 | 762 | TJ | TJK | Tajikistan)
+- [TMT] T Turkmenistani Manat
+    (🇹🇲 | 795 | TM | TKM | Turkmenistan)
+- [TND] د.ت Tunisian Dinar
+    (🇹🇳 | 788 | TN | TUN | Tunisia)
+- [TOP] T$ Tongan Paʻanga
+    (🇹🇴 | 776 | TO | TON | Tonga)
+- [TRY] ₺ Turkish Lira
+    (🇹🇷 | 792 | TR | TUR | Türkiye)
+- [TTD] $ Trinidad and Tobago Dollar
+    (🇹🇹 | 780 | TT | TTO | Trinidad and Tobago)
+- [TWD] $ New Taiwan Dollar
+    (🇹🇼 | 158 | TW | TWN | Taiwan, Province of China)
+- [TZS] Sh Tanzanian Shilling
+    (🇹🇿 | 834 | TZ | TZA | Tanzania, United Republic of)
+- [UAH] ₴ Ukrainian Hryvnia
+    (🇺🇦 | 804 | UA | UKR | Ukraine)
+- [UGX] USh Ugandan Shilling
+    (🇺🇬 | 800 | UG | UGA | Uganda)
+- [USD] $ United States Dollar
+    (🇦🇶 | 010 | AQ | ATA | Antarctica)
+    (🇦🇸 | 016 | AS | ASM | American Samoa)
+    (🇧🇶 | 535 | BQ | BES | Bonaire, Sint Eustatius and Saba)
+    (🇪🇨 | 218 | EC | ECU | Ecuador)
+    (🇫🇲 | 583 | FM | FSM | Micronesia (Federated States of))
+    (🇬🇺 | 316 | GU | GUM | Guam)
+    (🇮🇴 | 086 | IO | IOT | British Indian Ocean Territory)
+    (🇲🇭 | 584 | MH | MHL | Marshall Islands)
+    (🇲🇵 | 580 | MP | MNP | Northern Mariana Islands)
+    (🇵🇷 | 630 | PR | PRI | Puerto Rico)
+    (🇵🇼 | 585 | PW | PLW | Palau)
+    (🇸🇻 | 222 | SV | SLV | El Salvador)
+    (🇹🇨 | 796 | TC | TCA | Turks and Caicos Islands)
+    (🇺🇲 | 581 | UM | UMI | United States Minor Outlying Islands)
+    (🇺🇸 | 840 | US | USA | United States of America)
+    (🇻🇬 | 092 | VG | VGB | Virgin Islands (British))
+    (🇻🇮 | 850 | VI | VIR | Virgin Islands (U.S.))
+    (🇿🇼 | 716 | ZW | ZWE | Zimbabwe)
+- [UYU] $U Uruguayan Peso
+    (🇺🇾 | 858 | UY | URY | Uruguay)
+- [UZS] so'm Uzbekistan Som
+    (🇺🇿 | 860 | UZ | UZB | Uzbekistan)
+- [VES] Bs Venezuelan Bolívar Soberano
+    (🇻🇪 | 862 | VE | VEN | Venezuela (Bolivarian Republic of))
+- [VND] ₫ Vietnamese Đồng
+    (🇻🇳 | 704 | VN | VNM | Viet Nam)
+- [VUV] Vt Vanuatu Vatu
+    (🇻🇺 | 548 | VU | VUT | Vanuatu)
+- [WST] T Samoan Tala
+    (🇼🇸 | 882 | WS | WSM | Samoa)
+- [XAF] CFA Central African Cfa Franc
+    (🇨🇫 | 140 | CF | CAF | Central African Republic)
+    (🇨🇬 | 178 | CG | COG | Congo)
+    (🇨🇲 | 120 | CM | CMR | Cameroon)
+    (🇬🇦 | 266 | GA | GAB | Gabon)
+    (🇬🇶 | 226 | GQ | GNQ | Equatorial Guinea)
+    (🇹🇩 | 148 | TD | TCD | Chad)
+- [XCD] $ East Caribbean Dollar
+    (🇦🇬 | 028 | AG | ATG | Antigua and Barbuda)
+    (🇦🇮 | 660 | AI | AIA | Anguilla)
+    (🇩🇲 | 212 | DM | DMA | Dominica)
+    (🇬🇩 | 308 | GD | GRD | Grenada)
+    (🇰🇳 | 659 | KN | KNA | Saint Kitts and Nevis)
+    (🇱🇨 | 662 | LC | LCA | Saint Lucia)
+    (🇲🇸 | 500 | MS | MSR | Montserrat)
+    (🇻🇨 | 670 | VC | VCT | Saint Vincent and the Grenadines)
+- [XOF] Fr West African Cfa Franc
+    (🇧🇫 | 854 | BF | BFA | Burkina Faso)
+    (🇧🇯 | 204 | BJ | BEN | Benin)
+    (🇨🇮 | 384 | CI | CIV | Côte d'Ivoire)
+    (🇬🇼 | 624 | GW | GNB | Guinea-Bissau)
+    (🇲🇱 | 466 | ML | MLI | Mali)
+    (🇳🇪 | 562 | NE | NER | Niger)
+    (🇸🇳 | 686 | SN | SEN | Senegal)
+    (🇹🇬 | 768 | TG | TGO | Togo)
+- [XPF] Fr Cfp Franc
+    (🇳🇨 | 540 | NC | NCL | New Caledonia)
+    (🇵🇫 | 258 | PF | PYF | French Polynesia)
+    (🇼🇫 | 876 | WF | WLF | Wallis and Futuna)
+- [YER] ﷼ Yemeni Rial
+    (🇾🇪 | 887 | YE | YEM | Yemen)
+- [ZAR] R South African Rand
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- [ZMW] K Zambian Kwacha
+    (🇿🇲 | 894 | ZM | ZMB | Zambia)

@@ -36,6 +36,18 @@ class ShellTest < Minitest::Test
     end
   end
 
+  def test_all_countries_output
+    expected_output = fixture("all_countries_output.txt")
+
+    %w[-c --country --countries].each do |command|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!([command])
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
+
   #
   # Region
   #
@@ -192,6 +204,18 @@ class ShellTest < Minitest::Test
     end
   end
 
+  def test_all_regions_output
+    expected_output = fixture("all_regions_output.txt")
+
+    %w[-r --region --regions].each do |command|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!([command])
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
+
   #
   # Currency
   #
@@ -209,6 +233,18 @@ class ShellTest < Minitest::Test
     commands.product(currencies).each do |args|
       actual_output, _err = capture_io do
         Atlasq::Shell.start!(args)
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
+
+  def test_all_currencies_output
+    expected_output = fixture("all_currencies_output.txt")
+
+    %w[-m --money].each do |command|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!([command])
       end
 
       assert_equal expected_output, actual_output
