@@ -2,6 +2,7 @@
 
 require "bundler/gem_tasks"
 require "rake/testtask"
+require "tempfile"
 
 Rake::TestTask.new(:test) do |t|
   t.libs << "test"
@@ -13,10 +14,26 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: %i[test rubocop]
+task default: %i[test lint]
 
 desc "Shortcut for `rake rubocop`"
 task lint: :rubocop
 
 desc "Shortcut for `rake rubocop:autocorrect`"
 task fix: :"rubocop:autocorrect"
+
+namespace "readme" do
+  task :outdated do
+    Tempfile.open("readme") do |file|
+      sh "bin/generate_readme > #{ file.path }"
+      sh "diff -q README.md #{ file.path }"
+    end
+  end
+
+  task :generate do
+    Tempfile.open("readme") do |file|
+      sh "bin/generate_readme > #{ file.path }"
+      mv file.path, "README.md"
+    end
+  end
+end
