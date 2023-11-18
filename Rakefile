@@ -23,16 +23,18 @@ desc "Shortcut for `rake rubocop:autocorrect`"
 task fix: :"rubocop:autocorrect"
 
 namespace "readme" do
+  desc "Check if the readme needs to be regenerated"
   task :outdated do
     Tempfile.open("readme") do |file|
-      sh "bin/generate_readme > #{ file.path }"
-      sh "diff -q README.md #{ file.path }"
+      sh "bin/generate_readme > #{file.path}"
+      sh "diff -q README.md #{file.path}"
     end
   end
 
+  desc "Regenerate the readme"
   task :generate do
     Tempfile.open("readme") do |file|
-      sh "bin/generate_readme > #{ file.path }"
+      sh "bin/generate_readme > #{file.path}"
       mv file.path, "README.md"
     end
   end

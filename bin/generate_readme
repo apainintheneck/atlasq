@@ -22,13 +22,13 @@ puts <<~README
   Query for country info at the command line.
 
   ```console
-  #{ atlasq }
+  #{atlasq}
   ```
 
   ## Documentation
 
   ```console
-  #{ atlasq "--help" }
+  #{atlasq "--help"}
   ```
 
   ## Examples
@@ -36,39 +36,39 @@ puts <<~README
   ### Countries
 
   ```console
-  #{ atlasq "--country", "418" }
+  #{atlasq "--country", "418"}
   ```
 
   ```console
-  #{ atlasq "--country", "AM" }
+  #{atlasq "--country", "AM"}
   ```
 
   ```console
-  #{ atlasq "--country", "honduras" }
+  #{atlasq "--country", "honduras"}
   ```
 
   ### Regions
 
   ```console
-  #{ atlasq "--region", "melanesia" }
+  #{atlasq "--region", "melanesia"}
   ```
 
   ```console
-  #{ atlasq "--region", "antarctica" }
+  #{atlasq "--region", "antarctica"}
   ```
 
   ### Currencies
 
   ```console
-  #{ atlasq "--money", "ANG" }
+  #{atlasq "--money", "ANG"}
   ```
 
   ```console
-  #{ atlasq "--money", "฿" }
+  #{atlasq "--money", "฿"}
   ```
 
   ```console
-  #{ atlasq "--money", "Surinamese Dollar" }
+  #{atlasq "--money", "Surinamese Dollar"}
   ```
 
   ## Development
