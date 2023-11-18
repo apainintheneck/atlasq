@@ -17,4 +17,4 @@ jobs:
         bundler-cache: true
 
     - name: Outdated readme check
-      run: bundle exec readme:outdated
+      run: bundle exec rake readme:outdated
