@@ -68,7 +68,7 @@ GEM
     unicode_utils (1.4.0)
 
 PLATFORMS
-  x86_64-darwin-19
+  ruby
 
 DEPENDENCIES
   atlasq!
