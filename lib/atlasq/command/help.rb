@@ -31,7 +31,7 @@ module Atlasq
               : Search for countries by the following criteria
                 1. country  (like --country)
                 2. region   (like --region)
-                3. currency (like --currency)
+                3. currency (like --money)
 
             -c/--country
               : Display all countries

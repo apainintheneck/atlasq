@@ -46,7 +46,7 @@ OPTIONS
     : Search for countries by the following criteria
       1. country  (like --country)
       2. region   (like --region)
-      3. currency (like --currency)
+      3. currency (like --money)
 
   -c/--country
     : Display all countries
@@ -194,11 +194,23 @@ $ atlasq --money Surinamese\ Dollar
 
 ```
 
+## Data
+
+Country data is sourced from the [countries](https://github.com/countries/countries) gem which provides country and region information and implements the ISO3166 standard country codes and names.
+
+Currency data is sourced from from the [money](https://github.com/RubyMoney/money) and [money-heuristics](https://github.com/RubyMoney/money-heuristics) gems which provide information about currency names and symbols.
+
+Language data is sourced from the [ISO-639](https://github.com/xwmx/iso-639) gem which implements the ISO369 standard for language codes and names.
+
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. Use either `rake lint` to lint the code or `rake fix` to automatically fix simple linter errors.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`.
+
+This file gets generated with the `rake readme:generate` command to make sure the example output is always up-to-date. We even check for this on CI with the `rake readme:outdated` command.
 
 ## Contributing
 
