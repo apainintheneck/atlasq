@@ -4,7 +4,22 @@ on:
     branches: master
   pull_request:
 jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@main
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '2.7'
+        bundler-cache: true
+
+    - name: Outdated readme check
+      run: bundle exec rake readme:outdated
   tests:
+    needs: docs
     strategy:
       matrix:
         platform: ["ubuntu-latest", "macos-latest"]
