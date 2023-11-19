@@ -27,6 +27,12 @@ module Atlasq
               - ISO639  : Alpha and numeric codes for languages
 
           OPTIONS
+            [none]
+              : Search for countries by the following criteria
+                1. country  (like --country)
+                2. region   (like --region)
+                3. currency (like --currency)
+
             -c/--country
               : Display all countries
             -c/--country [query ...]

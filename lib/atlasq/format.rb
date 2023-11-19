@@ -36,7 +36,7 @@ module Atlasq
     #   (attr1 | attr2 | attr3)
     #
     # @param title [String]
-    # @param elements [Array<String>|Hash<String, Array<String>>]
+    # @param elements [Array<String>, Hash<String, Array<String>>]
     # @return [String]
     def self.brief_template(title:, elements:)
       elements =

@@ -6,7 +6,7 @@ module Atlasq
       # @return [Symbol]
       attr_reader :type
 
-      # @return [String|nil]
+      # @return [String, nil]
       attr_reader :name
 
       # @return [Array<Hash>]

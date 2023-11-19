@@ -31,7 +31,7 @@ module Atlasq
     autoload :Region, "atlasq/data/region"
 
     # @param term [String]
-    # @return [ISO3166::Country|Atlasq::Data::Region|Atlasq::Data::Currency|nil]
+    # @return [ISO3166::Country, Atlasq::Data::Region, Atlasq::Data::Currency, nil]
     def self.any(term)
       Data.country(term) ||
         Data.region(term) ||
@@ -101,7 +101,7 @@ module Atlasq
     end
 
     # @param number [String] ISO3166-1 numeric country code
-    # @return [String|nil]
+    # @return [String, nil]
     def self.emoji_flag(iso_number)
       @emoji_flag ||= all_countries
         .to_h { |country| [country.number, country.emoji_flag] }
