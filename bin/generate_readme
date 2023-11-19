@@ -73,9 +73,13 @@ puts <<~README
 
   ## Development
 
-  After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+  After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. Use either `rake lint` to lint the code or `rake fix` to automatically fix simple linter errors.
+
+  You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
   To install this gem onto your local machine, run `bundle exec rake install`.
+
+  This file gets generated with the `rake readme:generate` command to make sure the example output is always up-to-date. We even check for this on CI with the `rake readme:outdated` command.
 
   ## Contributing
 
