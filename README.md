@@ -1,4 +1,5 @@
 # Atlasq
+[![Gem Version](https://badge.fury.io/rb/atlasq.svg)](https://badge.fury.io/rb/atlasq)
 
 Query for country info at the command line.
 
@@ -18,6 +19,8 @@ commands:
   -m/--money   : find countries by currency
 
 ```
+
+Install the gem from RubyGems with `gem install atlasq`.
 
 ## Documentation
 
