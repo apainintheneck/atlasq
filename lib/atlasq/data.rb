@@ -39,12 +39,18 @@ module Atlasq
     end
 
     # @param term [String]
-    # @return [ISO3166::Country|nil]
+    # @return [ISO3166::Country, nil]
     def self.country(term)
       ISO3166::Country.find_country_by_alpha2(term) ||
         ISO3166::Country.find_country_by_alpha3(term) ||
         ISO3166::Country.find_country_by_number(term) ||
         ISO3166::Country.find_country_by_any_name(term)
+    end
+
+    # @param code [String] 3 digit country id
+    # @return [ISO3166::Country, nil]
+    def self.country_by_code(code)
+      ISO3166::Country.find_country_by_number(code)
     end
 
     # @return [Array<ISO3166::Country>]
@@ -55,7 +61,7 @@ module Atlasq
     # Region types for querying ISO3166::Country
     REGION_TYPES = %i[region subregion world_region continent].freeze
 
-    # @return [Atlasq::Data::Region|nil]
+    # @return [Atlasq::Data::Region, nil]
     def self.region(term)
       REGION_TYPES.each do |region_type|
         countries = ISO3166::Country.find_all_by(region_type, term)

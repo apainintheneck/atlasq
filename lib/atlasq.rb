@@ -9,6 +9,7 @@ module Atlasq
   autoload :Command, "atlasq/command"
   autoload :Data, "atlasq/data"
   autoload :Format, "atlasq/format"
+  autoload :PartialMatch, "atlasq/partial_match"
   autoload :Shell, "atlasq/shell"
   autoload :Util, "atlasq/util"
 
