@@ -17,6 +17,7 @@ module Atlasq
     def self.parse(args)
       command = parse_command(args.first)
       args.shift unless command.to_s == "Atlasq::Command::Any"
+      args.map!(&:strip)
 
       Options.new(command: command, args: args).freeze
     end

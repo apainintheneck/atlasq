@@ -260,7 +260,7 @@ class ShellTest < Minitest::Test
     OUTPUT
 
     commands = %w[-m --money]
-    currencies = ["BHD", "Bahraini Dinar"]
+    currencies = ["BHD", "048", "Bahraini Dinar"]
 
     commands.product(currencies).each do |args|
       actual_output, _err = capture_io do

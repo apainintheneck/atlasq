@@ -88,13 +88,22 @@ module Atlasq
     # @param term [String]
     # @return [Array<Atlasq::Data::Currency>]
     def self.currencies(term)
-      currency_codes = Money::Currency.analyze(term)
-      currency_codes.filter_map do |currency_code|
+      currency_codes = currency_code_by_number(term) || Money::Currency.analyze(term)
+      Array(currency_codes).filter_map do |currency_code|
         countries = ISO3166::Country.find_all_by(:currency_code, currency_code)
         next if countries.empty?
 
         Currency.new(countries: countries.values, currency_code: currency_code)
       end
+    end
+
+    # @param term [String] 3 digit currency code (ISO4217)
+    # @return [String, nil] 3 letter currency code (ISO4217)
+    def self.currency_code_by_number(term)
+      @currency_code_by_number ||= all_countries
+        .to_h { |country| [country.currency.iso_numeric, country.currency.iso_code] }
+
+      @currency_code_by_number[term]
     end
 
     # @param code [String] 3 letter currency code (ISO4217)
