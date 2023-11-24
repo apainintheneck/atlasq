@@ -11,13 +11,16 @@ module Atlasq
           Format.currencies(currencies)
         else
           search_terms.map do |term|
-            currencies = Data.currencies(term)
-
-            if currencies.empty?
+            if (currencies = Data.currencies(term)).any?
+              Format.currencies(currencies)
+            elsif (currency_codes = PartialMatch.currencies(term)).any?
+              currencies = currency_codes.filter_map do |code|
+                Data.currency_by_code(code)
+              end
+              Format.currencies(currencies, partial_match: true)
+            else
               Atlasq.failed!
               "Unknown currency: #{term}"
-            else
-              Format.currencies(currencies)
             end
           end.join("\n\n")
         end

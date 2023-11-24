@@ -200,8 +200,9 @@ module Atlasq
     end
 
     # @param currencies [Array<Atlasq::Data::Currencies]
+    # @param partial_match [Boolean] defaults to false
     # @return [String]
-    def self.currencies(currencies)
+    def self.currencies(currencies, partial_match: false)
       currencies = currencies.to_h do |currency_class|
         currency = Money::Currency.new(currency_class.currency_code)
 
@@ -211,12 +212,13 @@ module Atlasq
         ]
       end
 
-      if currencies.size == 1
+      if !partial_match && currencies.size == 1
         title, elements = currencies.first
         title = "Currency: #{title}"
         Format.brief_template(title: title, elements: elements)
       else
-        Format.brief_template(title: "Currencies", elements: currencies)
+        title = partial_match ? "Currencies (Partial Match)" : "Currencies"
+        Format.brief_template(title: title, elements: currencies)
       end
     end
   end

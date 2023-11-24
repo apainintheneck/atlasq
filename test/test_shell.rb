@@ -45,6 +45,29 @@ class ShellTest < Minitest::Test
     end
   end
 
+  def test_country_partial_match_output
+    expected_output = <<~OUTPUT
+      *
+      * Countries (Partial Match)
+      * * * * * * * * * * * * * * *
+      (🇦🇪 | 784 | AE | ARE | United Arab Emirates)
+      (🇬🇧 | 826 | GB | GBR | United Kingdom of Great Britain and Northern Ireland)
+      (🇲🇽 | 484 | MX | MEX | Mexico)
+      (🇹🇿 | 834 | TZ | TZA | Tanzania, United Republic of)
+      (🇺🇲 | 581 | UM | UMI | United States Minor Outlying Islands)
+      (🇺🇸 | 840 | US | USA | United States of America)
+      (🇻🇮 | 850 | VI | VIR | Virgin Islands (U.S.))
+    OUTPUT
+
+    %w[-c --country --countries].each do |command|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!([command, "united"])
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
+
   def test_all_countries_output
     expected_output = fixture("all_countries_output.txt")
 
@@ -237,11 +260,49 @@ class ShellTest < Minitest::Test
     OUTPUT
 
     commands = %w[-m --money]
-    currencies = ["BHD", "Bahraini Dinar"]
+    currencies = ["BHD", "048", "Bahraini Dinar"]
 
     commands.product(currencies).each do |args|
       actual_output, _err = capture_io do
         Atlasq::Shell.start!(args)
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
+
+  def test_currency_partial_match_output
+    expected_output = <<~OUTPUT
+      *
+      * Currencies (Partial Match)
+      * * * * * * * * * * * * * * * *
+      - [EGP] ج.م Egyptian Pound
+          (🇪🇬 | 818 | EG | EGY | Egypt)
+      - [FKP] £ Falkland Pound
+          (🇫🇰 | 238 | FK | FLK | Falkland Islands (Malvinas))
+      - [GBP] £ British Pound
+          (🇬🇧 | 826 | GB | GBR | United Kingdom of Great Britain and Northern Ireland)
+          (🇬🇬 | 831 | GG | GGY | Guernsey)
+          (🇬🇸 | 239 | GS | SGS | South Georgia and the South Sandwich Islands)
+          (🇮🇲 | 833 | IM | IMN | Isle of Man)
+          (🇯🇪 | 832 | JE | JEY | Jersey)
+      - [GIP] £ Gibraltar Pound
+          (🇬🇮 | 292 | GI | GIB | Gibraltar)
+      - [LBP] ل.ل Lebanese Pound
+          (🇱🇧 | 422 | LB | LBN | Lebanon)
+      - [SDG] £ Sudanese Pound
+          (🇸🇩 | 729 | SD | SDN | Sudan)
+      - [SHP] £ Saint Helenian Pound
+          (🇸🇭 | 654 | SH | SHN | Saint Helena, Ascension and Tristan da Cunha)
+      - [SSP] £ South Sudanese Pound
+          (🇸🇸 | 728 | SS | SSD | South Sudan)
+      - [SYP] £S Syrian Pound
+          (🇸🇾 | 760 | SY | SYR | Syrian Arab Republic)
+    OUTPUT
+
+    %w[-m --money].each do |command|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!([command, "pound"])
       end
 
       assert_equal expected_output, actual_output

@@ -12,10 +12,13 @@ module Atlasq
           Format.countries(countries, title: "All Countries")
         else
           search_terms.map do |term|
-            country = Data.country(term)
-
-            if country
+            if (country = Data.country(term))
               Format.country(country, term)
+            elsif (country_codes = PartialMatch.countries(term)).any?
+              countries = country_codes.map do |code|
+                Data.country_by_code(code)
+              end
+              Format.countries(countries, title: "Countries (Partial Match)")
             else
               Atlasq.failed!
               "Unknown country: #{term}"
