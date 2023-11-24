@@ -59,6 +59,7 @@ OPTIONS
       2. alpha3 (ISO3166 standard 3 letter code)
       3. number (ISO3166 standard 3 digit code)
       4. name   (common, localized, unofficial)
+      5. partial match on name
 
   -r/--region
     : Display all countries by subregion
@@ -76,6 +77,7 @@ OPTIONS
       1. code   (ISO4127 standard 3 letter code)
       2. name   (ISO4127 standard name)
       3. symbol
+      4. partial match on name
 
   -h/--help
     : Display this page
