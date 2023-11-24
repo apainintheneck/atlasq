@@ -45,6 +45,29 @@ class ShellTest < Minitest::Test
     end
   end
 
+  def test_country_partial_match_output
+    expected_output = <<~OUTPUT
+      *
+      * Countries (Partial Match)
+      * * * * * * * * * * * * * * *
+      (🇦🇪 | 784 | AE | ARE | United Arab Emirates)
+      (🇬🇧 | 826 | GB | GBR | United Kingdom of Great Britain and Northern Ireland)
+      (🇲🇽 | 484 | MX | MEX | Mexico)
+      (🇹🇿 | 834 | TZ | TZA | Tanzania, United Republic of)
+      (🇺🇲 | 581 | UM | UMI | United States Minor Outlying Islands)
+      (🇺🇸 | 840 | US | USA | United States of America)
+      (🇻🇮 | 850 | VI | VIR | Virgin Islands (U.S.))
+    OUTPUT
+
+    %w[-c --country --countries].each do |command|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!([command, "united"])
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
+
   def test_all_countries_output
     expected_output = fixture("all_countries_output.txt")
 
