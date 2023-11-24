@@ -97,6 +97,15 @@ module Atlasq
       end
     end
 
+    # @param code [String] 3 letter currency code (ISO4217)
+    # @return [Atlasq::Data::Currency, nil]
+    def self.currency_by_code(code)
+      countries = ISO3166::Country.find_all_by(:currency_code, code)
+      return if countries.empty?
+
+      Currency.new(countries: countries.values, currency_code: code)
+    end
+
     # @return [Array<Atlasq::Data::Currency>]
     def self.all_currencies
       all_countries

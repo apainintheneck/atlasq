@@ -38,6 +38,7 @@ Metrics/BlockLength:
 Metrics/ClassLength:
   Enabled: true
   CountAsOne: ['array', 'heredoc', 'method_call']
+  Exclude: ['test/**/*']
 
 Metrics/CyclomaticComplexity:
   Enabled: false
@@ -50,6 +51,9 @@ Metrics/MethodLength:
 Metrics/ModuleLength:
   Enabled: true
   CountAsOne: ['array', 'heredoc', 'method_call']
+
+Minitest/MultipleAssertions:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
