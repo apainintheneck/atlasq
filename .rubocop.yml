@@ -6,6 +6,20 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 2.7
 
+Layout/FirstArrayElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+
+Layout/FirstHashElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+
 Layout/LineLength:
   Enabled: true
   Max: 120

@@ -45,7 +45,7 @@ module Atlasq
               .flat_map { |string| split(string) }
               .map { |word| Util::String.normalize(word) }
               .uniq
-            
+
             words.each do |word|
               word_map[word] << id
             end
@@ -61,7 +61,7 @@ module Atlasq
       # @param sentence [String]
       # @return [Array<String>]
       def split(sentence)
-        sentence.split(/[ \t,;:()]+/)
+        sentence.split(/[ \t,;:()]+/).reject(&:empty?)
       end
     end
   end
