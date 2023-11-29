@@ -112,7 +112,7 @@ module Atlasq
         attributes: Format.one_line_country(country),
         info: {
           "Search Term" => search_term,
-          "Languages" => Format.languages(country.languages),
+          "Languages" => Format.language_names(country.languages),
           "Nationality" => country.nationality,
           "Region" => country.subregion,
           "Continent" => country.continent,
@@ -128,11 +128,11 @@ module Atlasq
     # @example "English / Shona / Ndebele, North; North Ndebele"
     # @param language_codes [Array<String>] Ex. ["id"]
     # @return [String]
-    def self.languages(language_codes)
+    def self.language_names(language_codes)
       language_codes
         .take(4) # arbitrary limit to avoid long lines
-        .map do |lang|
-          ISO_639.find(lang).english_name
+        .map do |language_code|
+          Data.language_by_code(language_code).english_name
         end
         .join(" / ")
     end

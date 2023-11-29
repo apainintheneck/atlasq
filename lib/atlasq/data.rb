@@ -124,6 +124,37 @@ module Atlasq
         end
     end
 
+    # @param language_code [String] ISO639 language code
+    # @return [ISO_639]
+    def self.language_by_code(language_code)
+      @language ||= {}
+      @language[language_code] ||= ISO_639.find(language_code)
+    end
+
+    # @param term [String]
+    # @return [Array<ISO3166::Country>]
+    def self.languages(term)
+      language = language_by_code(term)
+      return [] if language.nil?
+
+      language_code = language.alpha2
+      return [] if language_code.empty?
+
+      all_languages.fetch(language_code, [])
+    end
+
+    # @return [Hash<String, ISO3166::Country>] ISO639 language code to country
+    def self.all_languages
+      @all_languages ||= all_countries
+        .each_with_object({}) do |country, hash|
+          country.languages.each do |language_code|
+            hash[language_code] ||= []
+            hash[language_code] << country
+          end
+        end
+        .freeze
+    end
+
     # @param number [String] ISO3166-1 numeric country code
     # @return [String, nil]
     def self.emoji_flag(iso_number)
