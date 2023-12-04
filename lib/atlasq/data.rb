@@ -21,7 +21,7 @@ ISO3166.configure do |config|
     pa pl ps pt ro ru rw si sk sl
     so sq sr sv sw ta te th ti tk
     tl tr tt ug uk ve vi wa wo xh
-    zh zu
+    zh-CN zh-TW zu
   ]
 end
 
