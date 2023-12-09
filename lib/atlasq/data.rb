@@ -5,25 +5,9 @@ require "iso-639"
 require "money"
 require "money-heuristics"
 
-ISO3166.configure do |config|
-  # Needed to allow us to access the `ISO3166::Country#currency`
-  # object which ends up being an instance of `Money::Currency`.
-  config.enable_currency_extension!
-
-  # Needed to allow us to search by localized country name.
-  config.locales = %i[
-    af am ar as az be bg bn br bs
-    ca cs cy da de dz el en eo es
-    et eu fa fi fo fr ga gl gu he
-    hi hr hu hy ia id is it ja ka
-    kk km kn ko ku lt lv mi mk ml
-    mn mr ms mt nb ne nl nn oc or
-    pa pl ps pt ro ru rw si sk sl
-    so sq sr sv sw ta te th ti tk
-    tl tr tt ug uk ve vi wa wo xh
-    zh-CN zh-TW zu
-  ]
-end
+# Needed to allow us to access the `ISO3166::Country#currency`
+# object which ends up being an instance of `Money::Currency`.
+ISO3166.configure(&:enable_currency_extension!)
 
 module Atlasq
   module Data
@@ -41,16 +25,16 @@ module Atlasq
     # @param term [String]
     # @return [ISO3166::Country, nil]
     def self.country(term)
-      ISO3166::Country.find_country_by_alpha2(term) ||
-        ISO3166::Country.find_country_by_alpha3(term) ||
-        ISO3166::Country.find_country_by_number(term) ||
-        ISO3166::Country.find_country_by_any_name(term)
+      Cache
+        .get("direct_match_country", namespace: "search_index")
+        .dig(Util::String.normalize(term))
+        &.then { |key| ISO3166::Country.new(key) }
     end
 
-    # @param code [String] 3 digit country id
+    # @param code [String] alpha2 country code
     # @return [ISO3166::Country, nil]
     def self.country_by_code(code)
-      ISO3166::Country.find_country_by_number(code)
+      ISO3166::Country.find_country_by_alpha2(code)
     end
 
     # @return [Array<ISO3166::Country>]

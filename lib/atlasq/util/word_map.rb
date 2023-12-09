@@ -12,8 +12,10 @@ module Atlasq
     # while the searches "bonaire france" and "saba bolivia" should not because
     # they include words not found in the original sentence.
     class WordMap
+      attr_writer :index
+
       # @param id_to_raw_names [Hash<String, Array<String>>]
-      def initialize(id_to_raw_names)
+      def initialize(id_to_raw_names = nil)
         @id_to_raw_names = id_to_raw_names
       end
 
@@ -26,7 +28,7 @@ module Atlasq
           .then { |string| split(string) }
           .map { |word| Util::String.normalize(word) }
           .uniq
-          .map { |word| word_map[word] }
+          .map { |word| index.fetch(word, []) }
           .inject(&:intersection)
           .sort
       end
@@ -36,9 +38,9 @@ module Atlasq
       # A map of words to ids.
       #
       # @return [Hash<String, Set<String>>]
-      def word_map
-        @word_map ||= begin
-          word_map = Hash.new { |hash, key| hash[key] = Set.new }
+      def index
+        @index ||= begin
+          index = Hash.new { |hash, key| hash[key] = [] }
 
           @id_to_raw_names.each do |id, raw_names|
             words = raw_names
@@ -47,11 +49,11 @@ module Atlasq
               .uniq
 
             words.each do |word|
-              word_map[word] << id
+              index[word] << id
             end
           end
 
-          word_map
+          index
         end
       end
 
