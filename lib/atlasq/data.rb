@@ -17,7 +17,7 @@ module Atlasq
     # @return [ISO3166::Country, nil]
     def self.country(term)
       Cache
-        .get("direct_match_country", namespace: "search_index")
+        .get("search_index/direct_match_country.json")
         .dig(Util::String.normalize(term))
         &.then { |key| ISO3166::Country.new(key) }
     end
@@ -36,7 +36,7 @@ module Atlasq
     # @return [Array<ISO3166::Country>]
     def self.countries_by_region(term)
       Cache
-        .get("direct_match_region", namespace: "search_index")
+        .get("search_index/direct_match_region.json")
         .fetch(Util::String.normalize(term), [])
         .map { |key| ISO3166::Country.new(key) }
     end

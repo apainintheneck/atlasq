@@ -46,7 +46,7 @@ class CacheGenerator
 
         file.puts <<~README
 
-          ## Item: #{file_name}
+          ## Item: #{@namespace}/#{file_name}
 
           ### Content Sample
           Sample of the first 20 pretty printed lines of the file.

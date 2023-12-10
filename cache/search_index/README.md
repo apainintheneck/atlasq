@@ -2,7 +2,7 @@
 
 ---
 
-## Item: direct_match_country.json
+## Item: search_index/direct_match_country.json
 
 ### Content Sample
 Sample of the first 20 pretty printed lines of the file.
@@ -31,7 +31,7 @@ Sample of the first 20 pretty printed lines of the file.
 ...
 ```
 
-## Item: partial_match_country.json
+## Item: search_index/partial_match_country.json
 
 ### Content Sample
 Sample of the first 20 pretty printed lines of the file.
@@ -60,7 +60,7 @@ Sample of the first 20 pretty printed lines of the file.
 ...
 ```
 
-## Item: direct_match_region.json
+## Item: search_index/direct_match_region.json
 
 ### Content Sample
 Sample of the first 20 pretty printed lines of the file.

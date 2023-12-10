@@ -6,7 +6,7 @@ module Atlasq
     # @return [Array<String>] 3 digit country codes (ISO3166)
     def self.countries(term)
       @countries ||= Util::WordMap.new.tap do |word_map|
-        word_map.index = Cache.get("partial_match_country", namespace: "search_index")
+        word_map.index = Cache.get("search_index/partial_match_country.json")
       end
 
       @countries.search(term)
