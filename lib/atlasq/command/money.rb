@@ -11,12 +11,10 @@ module Atlasq
           Format.currencies(currencies)
         else
           search_terms.map do |term|
-            if (currencies = Data.currencies(term)).any?
+            if (currencies = Data.countries_by_currencies(term))
               Format.currencies(currencies)
             elsif (currency_codes = PartialMatch.currencies(term)).any?
-              currencies = currency_codes.filter_map do |code|
-                Data.currency_by_code(code)
-              end
+              currencies = Data.countries_by_currencies(currency_codes)
               Format.currencies(currencies, partial_match: true)
             else
               Atlasq.failed!

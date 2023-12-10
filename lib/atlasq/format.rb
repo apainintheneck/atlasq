@@ -174,16 +174,14 @@ module Atlasq
       Format.brief_template(title: "All Subregions", elements: subregions)
     end
 
-    # @param currencies [Array<Atlasq::Data::Currencies]
+    # @param currencies [Hash<Money::Currency, Array<ISO3166::Country>>]
     # @param partial_match [Boolean] defaults to false
     # @return [String]
     def self.currencies(currencies, partial_match: false)
-      currencies = currencies.to_h do |currency_class|
-        currency = Money::Currency.new(currency_class.currency_code)
-
+      currencies = currencies.to_h do |currency, countries|
         [
           "[#{currency.iso_code}] #{currency.symbol} #{currency.name}",
-          currency_class.countries.map(&Format.method(:one_line_country)),
+          countries.map(&Format.method(:one_line_country)),
         ]
       end
 

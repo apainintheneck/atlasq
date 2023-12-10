@@ -33,12 +33,13 @@ module Atlasq
       @all_countries ||= ISO3166::Country.all
     end
 
-    # @return [Array<ISO3166::Country>]
+    # @param term [String]
+    # @return [Array<ISO3166::Country>, nil]
     def self.countries_by_region(term)
       Cache
-        .get("search_index/direct_match_region.json")
-        .fetch(Util::String.normalize(term), [])
-        .map { |key| ISO3166::Country.new(key) }
+        .get("search_index/countries_by_region.json")
+        .dig(Util::String.normalize(term))
+        &.map { |key| ISO3166::Country.new(key) }
     end
 
     # @return [Hash<String, Array<ISO3166::Country>>] Ex. { "Central Asia" => [...], ... }
@@ -54,42 +55,37 @@ module Atlasq
         end
     end
 
-    # @param term [String]
-    # @return [Array<Atlasq::Data::Currency>]
-    def self.currencies(term)
-      currency_codes = currency_code_by_number(term) || Money::Currency.analyze(term)
-      Array(currency_codes).filter_map do |currency_code|
-        countries = ISO3166::Country.find_all_by(:currency_code, currency_code)
-        next if countries.empty?
+    # @param terms [String, Array<String>]
+    # @return [Hash<Money::Currency, Array<ISO3166::Country>>]
+    def self.countries_by_currencies(terms)
+      terms = Array(terms).map(&Util::String.method(:normalize))
+      currency_codes = Cache
+        .get("search_index/direct_match_currency.json")
+        .values_at(*terms)
+        .compact
 
-        Currency.new(countries: countries.values, currency_code: currency_code)
-      end
+      return if currency_codes.empty?
+
+      Cache
+        .get("search_index/countries_by_currency.json")
+        .slice(*currency_codes)
+        .to_h do |currency_code, country_codes|
+          [
+            Money::Currency.new(currency_code),
+            country_codes.map(&Data.method(:country_by_code)),
+          ]
+        end
     end
 
-    # @param term [String] 3 digit currency code (ISO4217)
-    # @return [String, nil] 3 letter currency code (ISO4217)
-    def self.currency_code_by_number(term)
-      @currency_code_by_number ||= all_countries
-        .to_h { |country| [country.currency.iso_numeric, country.currency.iso_code] }
-
-      @currency_code_by_number[term]
-    end
-
-    # @param code [String] 3 letter currency code (ISO4217)
-    # @return [Atlasq::Data::Currency, nil]
-    def self.currency_by_code(code)
-      countries = ISO3166::Country.find_all_by(:currency_code, code)
-      return if countries.empty?
-
-      Currency.new(countries: countries.values, currency_code: code)
-    end
-
-    # @return [Array<Atlasq::Data::Currency>]
+    # @return [Hash<Money::Currency, Array<ISO3166::Country>>]
     def self.all_currencies
-      all_countries
-        .group_by(&:currency_code)
-        .map do |currency_code, countries|
-          Currency.new(countries: countries, currency_code: currency_code)
+      Cache
+        .get("search_index/countries_by_currency.json")
+        .to_h do |currency_code, country_codes|
+          [
+            Money::Currency.new(currency_code),
+            country_codes.map(&Data.method(:country_by_code)),
+          ]
         end
     end
 

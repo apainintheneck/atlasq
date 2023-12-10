@@ -32,6 +32,7 @@ ISO3166.configure do |config|
 end
 
 ALL_COUNTRIES = ISO3166::Country.all.freeze
+ALL_CURRENCIES = ALL_COUNTRIES.map(&:currency).uniq.freeze
 
 # --- Helpers ---
 
@@ -64,7 +65,7 @@ cache.add "direct_match_country" do
     names.map! { |name| normalize(name) }
     names.uniq!
 
-    key = country.alpha2
+    key = country.alpha2.downcase
 
     names.each do |name|
       hash[name] = key
@@ -87,7 +88,7 @@ cache.add "partial_match_country" do
       end
     end.uniq
 
-    key = country.alpha2
+    key = country.alpha2.downcase
 
     words.each do |word|
       hash[word] ||= []
@@ -96,7 +97,7 @@ cache.add "partial_match_country" do
   end
 end
 
-cache.add "direct_match_region" do
+cache.add "countries_by_region" do
   ALL_COUNTRIES.each_with_object({}) do |country, hash|
     names = [
       country.region,
@@ -108,12 +109,51 @@ cache.add "direct_match_region" do
     names.uniq!
     names.reject!(&:empty?)
 
-    key = country.alpha2
+    key = country.alpha2.downcase
 
     names.each do |name|
       hash[name] ||= []
       hash[name] << key
     end
+  end
+end
+
+cache.add "direct_match_currency" do
+  ALL_CURRENCIES.each_with_object({}) do |currency, hash|
+    names = [
+      currency.iso_numeric,
+      currency.iso_code,
+      currency.name,
+    ]
+    names.map! { |name| normalize(name) }
+    names.uniq!
+
+    key = currency.iso_code.downcase
+    names.each do |name|
+      hash[name] = key
+    end
+  end
+end
+
+cache.add "partial_match_currency" do
+  ALL_CURRENCIES.each_with_object({}) do |currency, hash|
+    words = split(currency.name).map do |word|
+      normalize(word)
+    end.uniq
+
+    key = currency.iso_code.downcase
+    words.each do |word|
+      hash[word] ||= []
+      hash[word] << key
+    end
+  end
+end
+
+cache.add "countries_by_currency" do
+  ALL_COUNTRIES.each_with_object({}) do |country, hash|
+    currency_code = country.currency.iso_code.downcase
+    hash[currency_code] ||= []
+    hash[currency_code] << country.alpha2.downcase
   end
 end
 

@@ -12,11 +12,9 @@ module Atlasq
     # while the searches "bonaire france" and "saba bolivia" should not because
     # they include words not found in the original sentence.
     class WordMap
-      attr_writer :index
-
-      # @param id_to_raw_names [Hash<String, Array<String>>]
-      def initialize(id_to_raw_names = nil)
-        @id_to_raw_names = id_to_raw_names
+      # @param index [Hash<String, Array<String>>]
+      def initialize(index:)
+        @index = index
       end
 
       # Search for ids that include all of the search term words.
@@ -28,34 +26,12 @@ module Atlasq
           .then { |string| split(string) }
           .map { |word| Util::String.normalize(word) }
           .uniq
-          .map { |word| index.fetch(word, []) }
+          .map { |word| @index.fetch(word, []) }
           .inject(&:intersection)
           .sort
       end
 
       private
-
-      # A map of words to ids.
-      #
-      # @return [Hash<String, Set<String>>]
-      def index
-        @index ||= begin
-          index = Hash.new { |hash, key| hash[key] = [] }
-
-          @id_to_raw_names.each do |id, raw_names|
-            words = raw_names
-              .flat_map { |string| split(string) }
-              .map { |word| Util::String.normalize(word) }
-              .uniq
-
-            words.each do |word|
-              index[word] << id
-            end
-          end
-
-          index
-        end
-      end
 
       # Split on spaces, tabs and punctuation separators.
       # Note: Some punctuation can be connectors or separators based on the language.

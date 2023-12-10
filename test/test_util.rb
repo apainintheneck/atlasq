@@ -2,17 +2,16 @@
 
 class UtilTest < Minitest::Test
   def test_word_map_search
-    word_map = Atlasq::Util::WordMap.new({
-      "even" => ["2 4 6 8 10", "two four six eight ten"],
-      "odd" => ["1 3 5 7 9", "one three five seven nine"],
-      "digits" => ["1, 2, 3, 4, 5, 6, 7, 8, 9, 10"],
-      "tens" => ["10 20 30 40 50", "ten twenty thirty fourty fifty"],
+    word_map = Atlasq::Util::WordMap.new(index: {
+      "1" => %w[odd digit], "2" => %w[even digit], "3" => %w[odd digit],
+      "4" => %w[even digit], "5" => %w[odd digit], "6" => %w[even digit],
+      "7" => %w[odd digit], "8" => %w[even digit], "9" => %w[odd digit],
+      "10" => %w[even digit]
     })
 
-    assert_equal %w[digits even], word_map.search("2")
-    assert_equal %w[digits odd], word_map.search("9")
-    assert_equal %w[digits even tens], word_map.search("10")
-    assert_equal %w[tens], word_map.search("10;   twenty 30  (fourty) 50")
+    assert_equal %w[digit even], word_map.search("2")
+    assert_equal %w[digit odd], word_map.search("9")
+    assert_equal %w[digit], word_map.search("10;   7 (4) 3")
     assert_empty word_map.search("eleven ten")
   end
 end

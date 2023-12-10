@@ -9,10 +9,10 @@ module Atlasq
         search_terms.map do |term|
           if (country = Data.country(term))
             Format.country(country, term)
-          elsif (countries = Data.countries_by_region(term)).any?
+          elsif (countries = Data.countries_by_region(term))
             region_name = Util::String.titleize(term)
             Format.countries(countries, title: "Region: #{region_name}")
-          elsif (currencies = Data.currencies(term)).any?
+          elsif (currencies = Data.countries_by_currencies(term))
             Format.currencies(currencies)
           else
             Atlasq.failed!
