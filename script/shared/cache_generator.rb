@@ -36,19 +36,41 @@ class CacheGenerator
     File.open(readme_path, "w") do |file|
       file.puts <<~README
         # Cache: #{@namespace}
-        Each cache item shows a pretty printed sample of the JSON collection.
 
         ---
       README
 
       each_cache_item do |name, content|
-        write_cache(name: name, content: content)
+        file_name = file_name_for(name: name, content: content)
+        write_cache(file_name: file_name, content: content)
 
         file.puts <<~README
 
-          ## Item: #{name}
+          ## Item: #{file_name}
+
+          ### Content Sample
+          Sample of the first 20 pretty printed lines of the file.
+
           ```
-          #{abbreviated_json(content)}
+          #{abbreviated_content(content)}
+          ```
+        README
+
+        first =
+          case content
+          when Array then content.first
+          when Hash then content.first.last
+          end
+
+        next unless first.is_a?(Hash)
+
+        file.puts <<~README
+
+          ### Result Schema
+          Fields available in the result hash.
+
+          ```
+          #{JSON.pretty_generate(first.keys)}
           ```
         README
       end
@@ -60,7 +82,8 @@ class CacheGenerator
       tmp_dir = Pathname(tmp_dir)
 
       each_cache_item do |name, content|
-        write_cache(name: name, content: content, cache_dir: tmp_dir)
+        file_name = file_name_for(name: name, content: content)
+        write_cache(file_name: file_name, content: content, cache_dir: tmp_dir)
       end
 
       diff_command = [
@@ -70,7 +93,7 @@ class CacheGenerator
         "--new-file",
         "--exclude=README.md",
         tmp_dir.to_s,
-        namespaced_cache_dir.to_s
+        namespaced_cache_dir.to_s,
       ]
 
       exit 1 unless system(*diff_command)
@@ -79,13 +102,19 @@ class CacheGenerator
 
   private
 
-  def write_cache(name:, content:, cache_dir: namespaced_cache_dir)
-    path = cache_dir / file_name_for(name)
-    File.write(path, JSON.generate(content))
+  def write_cache(file_name:, content:, cache_dir: namespaced_cache_dir)
+    path = cache_dir / file_name
+    content = JSON.generate(content) unless content.is_a?(String)
+    File.write(path, content)
   end
 
-  def file_name_for(name)
-    "#{name}.json"
+  def file_name_for(name:, content:)
+    case content
+    when String
+      "#{name}.txt"
+    else
+      "#{name}.json"
+    end
   end
 
   def temp_path_for(name)
@@ -100,7 +129,10 @@ class CacheGenerator
 
   def content_for(name, &block)
     block.call.tap do |result|
-      raise ArgumentError, "Expected a hash" unless result.is_a?(Hash)
+      next unless result.respond_to?(:empty?)
+      next unless result.empty?
+
+      raise StandardError, "Missing: cache content is empty"
     end
   rescue # rubocop:disable Style/RescueStandardError
     warn "Error: Failed to process `#{name}` cache"
@@ -113,13 +145,16 @@ class CacheGenerator
     end
   end
 
-  def abbreviated_json(content)
-    content
-      .take(20)
-      .to_h
-      .then(&JSON.method(:pretty_generate))
-      .split("\n")
-      .then { |lines| lines.size > 20 ? lines.take(20) + ["..."] : lines }
-      .join("\n")
+  def abbreviated_content(content)
+    text =
+      if content.is_a?(String)
+        content
+      else
+        JSON.pretty_generate(content)
+      end
+
+    lines = text.split("\n")
+    lines = lines.take(20) + ["..."] if lines.size > 20
+    lines.join("\n")
   end
 end

@@ -59,9 +59,8 @@ cache.add "direct_match_country" do
       country.iso_short_name,
       country.iso_long_name,
       *country.unofficial_names,
-      *country.translated_names
+      *country.translated_names,
     ]
-
     names.map! { |name| normalize(name) }
     names.uniq!
 
@@ -79,7 +78,7 @@ cache.add "partial_match_country" do
       country.iso_short_name,
       country.iso_long_name,
       *country.unofficial_names,
-      *country.translated_names
+      *country.translated_names,
     ]
 
     words = names.flat_map do |name|
@@ -93,6 +92,27 @@ cache.add "partial_match_country" do
     words.each do |word|
       hash[word] ||= []
       hash[word] << key
+    end
+  end
+end
+
+cache.add "direct_match_region" do
+  ALL_COUNTRIES.each_with_object({}) do |country, hash|
+    names = [
+      country.region,
+      country.subregion,
+      country.continent,
+      country.world_region,
+    ]
+    names.map! { |name| normalize(name) }
+    names.uniq!
+    names.reject!(&:empty?)
+
+    key = country.alpha2
+
+    names.each do |name|
+      hash[name] ||= []
+      hash[name] << key
     end
   end
 end

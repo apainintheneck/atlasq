@@ -7,11 +7,13 @@ module Atlasq
     class Any < Base
       def content
         search_terms.map do |term|
-          data = Data.any(term)
-          empty = data.empty? if data.respond_to?(:empty?)
-
-          if data && !empty
-            Format.any(data, term)
+          if (country = Data.country(term))
+            Format.country(country, term)
+          elsif (countries = Data.countries_by_region(term)).any?
+            region_name = Util::String.titleize(term)
+            Format.countries(countries, title: "Region: #{region_name}")
+          elsif (currencies = Data.currencies(term)).any?
+            Format.currencies(currencies)
           else
             Atlasq.failed!
             "Unknown search term: #{term}"

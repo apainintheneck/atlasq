@@ -11,7 +11,7 @@ def atlasq(*args)
 
   [
     "$ atlasq #{escaped_args}",
-    `#{EXECUTABLE_PATH} #{escaped_args}`
+    `#{EXECUTABLE_PATH} #{escaped_args}`,
   ].join("\n")
 end
 

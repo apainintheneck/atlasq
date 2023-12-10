@@ -12,15 +12,6 @@ ISO3166.configure(&:enable_currency_extension!)
 module Atlasq
   module Data
     autoload :Currency, "atlasq/data/currency"
-    autoload :Region, "atlasq/data/region"
-
-    # @param term [String]
-    # @return [ISO3166::Country, Atlasq::Data::Region, Atlasq::Data::Currency, nil]
-    def self.any(term)
-      Data.country(term) ||
-        Data.region(term) ||
-        Data.currencies(term)
-    end
 
     # @param term [String]
     # @return [ISO3166::Country, nil]
@@ -42,18 +33,12 @@ module Atlasq
       @all_countries ||= ISO3166::Country.all
     end
 
-    # Region types for querying ISO3166::Country
-    REGION_TYPES = %i[region subregion world_region continent].freeze
-
-    # @return [Atlasq::Data::Region, nil]
-    def self.region(term)
-      REGION_TYPES.each do |region_type|
-        countries = ISO3166::Country.find_all_by(region_type, term)
-        next if countries.empty?
-
-        return Region.new(countries: countries.values, type: region_type)
-      end
-      nil
+    # @return [Array<ISO3166::Country>]
+    def self.countries_by_region(term)
+      Cache
+        .get("direct_match_region", namespace: "search_index")
+        .fetch(Util::String.normalize(term), [])
+        .map { |key| ISO3166::Country.new(key) }
     end
 
     # @return [Hash<String, Array<ISO3166::Country>>] Ex. { "Central Asia" => [...], ... }

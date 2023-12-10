@@ -1,9 +1,12 @@
 # Cache: search_index
-Each cache item shows a pretty printed sample of the JSON collection.
 
 ---
 
-## Item: direct_match_country
+## Item: direct_match_country.json
+
+### Content Sample
+Sample of the first 20 pretty printed lines of the file.
+
 ```
 {
   "ad": "AD",
@@ -28,7 +31,11 @@ Each cache item shows a pretty printed sample of the JSON collection.
 ...
 ```
 
-## Item: partial_match_country
+## Item: partial_match_country.json
+
+### Content Sample
+Sample of the first 20 pretty printed lines of the file.
+
 ```
 {
   "andorra": [
@@ -50,5 +57,34 @@ Each cache item shows a pretty printed sample of the JSON collection.
     "BE",
     "BG",
     "BH",
+...
+```
+
+## Item: direct_match_region.json
+
+### Content Sample
+Sample of the first 20 pretty printed lines of the file.
+
+```
+{
+  "europe": [
+    "AD",
+    "AL",
+    "AT",
+    "AX",
+    "BA",
+    "BE",
+    "BG",
+    "BY",
+    "CH",
+    "CZ",
+    "DE",
+    "DK",
+    "EE",
+    "ES",
+    "FI",
+    "FO",
+    "FR",
+    "GB",
 ...
 ```

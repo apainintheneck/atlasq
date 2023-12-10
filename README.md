@@ -147,8 +147,8 @@ $ atlasq --country honduras
 ```console
 $ atlasq --region melanesia
 *
-* Subregion: Melanesia
-* * * * * * * * * * * * *
+* Region: Melanesia
+* * * * * * * * * * *
 (🇫🇯 | 242 | FJ | FJI | Fiji)
 (🇳🇨 | 540 | NC | NCL | New Caledonia)
 (🇵🇬 | 598 | PG | PNG | Papua New Guinea)
@@ -160,8 +160,8 @@ $ atlasq --region melanesia
 ```console
 $ atlasq --region antarctica
 *
-* Continent: Antarctica
-* * * * * * * * * * * * *
+* Region: Antarctica
+* * * * * * * * * * * *
 (🇦🇶 | 010 | AQ | ATA | Antarctica)
 (🇧🇻 | 074 | BV | BVT | Bouvet Island)
 (🇬🇸 | 239 | GS | SGS | South Georgia and the South Sandwich Islands)
