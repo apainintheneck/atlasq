@@ -184,9 +184,10 @@ $ atlasq --money ANG
 ```console
 $ atlasq --money \฿
 *
-* Currency: [THB] ฿ Thai Baht
+* Currencies (Partial Match)
 * * * * * * * * * * * * * * * *
-(🇹🇭 | 764 | TH | THA | Thailand)
+- [THB] ฿ Thai Baht
+    (🇹🇭 | 764 | TH | THA | Thailand)
 
 ```
 

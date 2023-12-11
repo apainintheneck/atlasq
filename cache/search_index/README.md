@@ -125,25 +125,25 @@ Sample of the first 20 pretty printed lines of the file.
 
 ```
 {
+  "978": [
+    "eur"
+  ],
+  "eur": [
+    "eur"
+  ],
+  "€": [
+    "eur"
+  ],
   "euro": [
     "eur"
   ],
-  "united": [
-    "aed",
-    "usd"
-  ],
-  "arab": [
+  "784": [
     "aed"
   ],
-  "emirates": [
+  "aed": [
     "aed"
   ],
-  "dirham": [
-    "aed",
-    "mad"
-  ],
-  "afghan": [
-    "afn"
+  "د.ا": [
 ...
 ```
 

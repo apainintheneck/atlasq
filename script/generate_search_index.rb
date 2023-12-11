@@ -137,9 +137,14 @@ end
 
 cache.add "partial_match_currency" do
   ALL_CURRENCIES.each_with_object({}) do |currency, hash|
-    words = split(currency.name).map do |word|
-      normalize(word)
-    end.uniq
+    words = [
+      currency.iso_numeric,
+      currency.iso_code,
+      currency.symbol,
+      *split(currency.name),
+    ]
+    words.map! { |word| normalize(word) }
+    words.uniq!
 
     key = currency.iso_code.downcase
     words.each do |word|
