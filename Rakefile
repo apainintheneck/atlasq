@@ -39,3 +39,15 @@ namespace "readme" do
     end
   end
 end
+
+namespace "cache" do
+  desc "Check if the cache needs to be regenerated"
+  task :outdated do
+    sh "bundle exec ruby script/generate_search_index.rb outdated"
+  end
+
+  desc "Regenerate the cache"
+  task :generate do
+    sh "bundle exec ruby script/generate_search_index.rb generate"
+  end
+end
