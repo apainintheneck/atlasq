@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
     "rubygems_mfa_required" => "true",
   }
 
-  spec.files = Dir["{lib,exe}/**/*"]
+  spec.files = Dir["{lib,exe}/**/*", "{cache}/**/*.json"]
   spec.bindir = "exe"
   spec.executables = ["atlasq"]
 

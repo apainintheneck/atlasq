@@ -104,7 +104,7 @@ class CacheGenerator
 
   def write_cache(file_name:, content:, cache_dir: namespaced_cache_dir)
     path = cache_dir / file_name
-    content = JSON.generate(content) unless content.is_a?(String)
+    content = JSON.generate(content) if file_name.end_with?(".json")
     File.write(path, content)
   end
 

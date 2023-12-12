@@ -218,6 +218,8 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 This file gets generated with the `rake readme:generate` command to make sure the example output is always up-to-date. We even check for this on CI with the `rake readme:outdated` command.
 
+More information about cached files can be found in `cache/README.md`.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/apainintheneck/atlasq.
