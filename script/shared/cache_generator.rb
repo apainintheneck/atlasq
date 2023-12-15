@@ -14,13 +14,18 @@ class CacheGenerator
     .tap { |path| FileUtils.mkdir_p(path) }
   private_constant :CACHE_DIR
 
+  # @param namespace [String] the subdirectory name in the cache/ directory
   def initialize(namespace:)
-    raise ArgumentError, "Namespace can only contain a-zA-z0-9_" unless namespace.match?(/^\w+$/)
+    raise ArgumentError, "Namespace can only contain a-zA-z0-9_" unless namespace.match?(/^[a-zA-z0-9_]+$/)
 
     @namespace = namespace
     @cache_items = {}
   end
 
+  # Add a new cache file for the data returned from the block.
+  # The block must return a JSON serializable value.
+  #
+  # @param name [String] must be unique per instance of this class
   def add(name, &block)
     raise ArgumentError, "Missing block" unless block_given?
     raise ArgumentError, "Name can only contain a-zA-z0-9_" unless name.match?(/^\w+$/)
@@ -30,8 +35,38 @@ class CacheGenerator
     true
   end
 
+  # Generate the cached documents that were added with `#add` along with
+  # a readme page summarizing their contents in the namespaced subdirectory.
   def generate
-    readme_path = namespaced_cache_dir / "README.md"
+    generate_cache_and_readme(cache_dir: namespaced_cache_dir)
+  end
+
+  # Check that the cached documents are up-to-date by diffing them against
+  # a newly generated directory of cached documents.
+  def outdated
+    Dir.mktmpdir do |tmp_dir|
+      tmp_dir = Pathname(tmp_dir)
+
+      generate_cache_and_readme(cache_dir: tmp_dir)
+
+      diff_command = [
+        "diff",
+        "--recursive",
+        "--brief",
+        "--new-file",
+        tmp_dir.to_s,
+        namespaced_cache_dir.to_s,
+      ]
+
+      exit 1 unless system(*diff_command)
+    end
+  end
+
+  private
+
+  # @param cached_dir [Pathname]
+  def generate_cache_and_readme(cache_dir:)
+    readme_path = cache_dir / "README.md"
 
     File.open(readme_path, "w") do |file|
       file.puts <<~README
@@ -42,7 +77,7 @@ class CacheGenerator
 
       each_cache_item do |name, content|
         file_name = file_name_for(name: name, content: content)
-        write_cache(file_name: file_name, content: content)
+        write_cache(file_name: file_name, content: content, cache_dir: cache_dir)
 
         file.puts <<~README
 
@@ -77,37 +112,17 @@ class CacheGenerator
     end
   end
 
-  def outdated
-    Dir.mktmpdir do |tmp_dir|
-      tmp_dir = Pathname(tmp_dir)
-
-      each_cache_item do |name, content|
-        file_name = file_name_for(name: name, content: content)
-        write_cache(file_name: file_name, content: content, cache_dir: tmp_dir)
-      end
-
-      diff_command = [
-        "diff",
-        "--recursive",
-        "--brief",
-        "--new-file",
-        "--exclude=README.md",
-        tmp_dir.to_s,
-        namespaced_cache_dir.to_s,
-      ]
-
-      exit 1 unless system(*diff_command)
-    end
-  end
-
-  private
-
-  def write_cache(file_name:, content:, cache_dir: namespaced_cache_dir)
+  # @param file_name [String]
+  # @param cache_dir [Pathname]
+  def write_cache(file_name:, content:, cache_dir:)
     path = cache_dir / file_name
     content = JSON.generate(content) if file_name.end_with?(".json")
     File.write(path, content)
   end
 
+  # @param name [String]
+  # @param content
+  # @return [String] either .txt or .json based on content
   def file_name_for(name:, content:)
     case content
     when String
@@ -117,16 +132,15 @@ class CacheGenerator
     end
   end
 
-  def temp_path_for(name)
-    temp_dir / file_name_for(name)
-  end
-
+  # @return [Pathname]
   def namespaced_cache_dir
     @namespaced_cache_dir ||= (CACHE_DIR / @namespace)
       .freeze
       .tap { |path| FileUtils.mkdir_p(path) }
   end
 
+  # @param name [String]
+  # @return content
   def content_for(name, &block)
     block.call.tap do |result|
       next unless result.respond_to?(:empty?)
@@ -139,12 +153,15 @@ class CacheGenerator
     raise
   end
 
+  # @yield [name, content]
   def each_cache_item
     @cache_items.each do |name, block|
       yield [name, content_for(name, &block)]
     end
   end
 
+  # @param content
+  # @return [String]
   def abbreviated_content(content)
     text =
       if content.is_a?(String)
