@@ -6,6 +6,7 @@ module Atlasq
   class Error < StandardError; end
   DEBUG = ENV.key?("ATLASQ_DEBUG")
 
+  autoload :Cache, "atlasq/cache"
   autoload :Command, "atlasq/command"
   autoload :Data, "atlasq/data"
   autoload :Format, "atlasq/format"

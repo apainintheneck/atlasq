@@ -18,6 +18,9 @@ jobs:
 
     - name: Outdated readme check
       run: bundle exec rake readme:outdated
+
+    - name: Outdated cache check
+      run: bundle exec rake cache:outdated
   tests:
     needs: docs
     strategy:

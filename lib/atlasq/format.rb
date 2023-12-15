@@ -13,7 +13,7 @@ module Atlasq
       [
         "*",
         "* #{title}",
-        "*#{" *" * ((title.size / 2) + 2)}"
+        "*#{" *" * ((title.size / 2) + 2)}",
       ].join("\n")
     end
 
@@ -56,7 +56,7 @@ module Atlasq
 
       [
         Format.title(title),
-        *elements
+        *elements,
       ].join("\n")
     end
 
@@ -83,24 +83,8 @@ module Atlasq
       [
         Format.title(title),
         attributes,
-        *info_ladder
+        *info_ladder,
       ].join("\n")
-    end
-
-    # @param value
-    # @param search_term [String]
-    # @return [String]
-    def self.any(value, search_term)
-      case value
-      in ISO3166::Country
-        Format.country(value, search_term)
-      in Atlasq::Data::Region
-        Format.region(value)
-      in [Atlasq::Data::Currency, *]
-        Format.currencies(value)
-      else
-        raise Error, "Unknown format type: #{value.class}"
-      end
     end
 
     # @param country [ISO3166::Country]
@@ -116,7 +100,7 @@ module Atlasq
           "Nationality" => country.nationality,
           "Region" => country.subregion,
           "Continent" => country.continent,
-          "Currency" => "#{country.currency.symbol} #{country.currency.name}"
+          "Currency" => "#{country.currency.symbol} #{country.currency.name}",
         }.reject do |_, value|
           # "countries" like Antarctica can have missing language, nationality,
           # and region data so we remove that missing data beforehand.
@@ -159,7 +143,7 @@ module Atlasq
           country.number,
           country.alpha2,
           country.alpha3,
-          country.iso_short_name
+          country.iso_short_name,
         ]
       when Hash
         values = country.slice(
@@ -171,22 +155,13 @@ module Atlasq
 
         [
           Data.emoji_flag(country.fetch("number")),
-          *values
+          *values,
         ]
       else
         raise Error, "Unknown country type: #{country.class}"
       end.then do |country_values|
         "(#{country_values.compact.join(" | ")})"
       end
-    end
-
-    # @param region [Atlasq::Data::Region]
-    # @return [String]
-    def self.region(region)
-      type = Util::String.titleize(region.type)
-      title = "#{type}: #{region.name}"
-
-      Format.countries(region.countries, title: title)
     end
 
     # @param subregions [Hash<String, Array<ISO3166::Country>>]
@@ -199,16 +174,14 @@ module Atlasq
       Format.brief_template(title: "All Subregions", elements: subregions)
     end
 
-    # @param currencies [Array<Atlasq::Data::Currencies]
+    # @param currencies [Hash<Money::Currency, Array<ISO3166::Country>>]
     # @param partial_match [Boolean] defaults to false
     # @return [String]
     def self.currencies(currencies, partial_match: false)
-      currencies = currencies.to_h do |currency_class|
-        currency = Money::Currency.new(currency_class.currency_code)
-
+      currencies = currencies.to_h do |currency, countries|
         [
           "[#{currency.iso_code}] #{currency.symbol} #{currency.name}",
-          currency_class.countries.map(&Format.method(:one_line_country))
+          countries.map(&Format.method(:one_line_country)),
         ]
       end
 

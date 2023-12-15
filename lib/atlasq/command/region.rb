@@ -11,10 +11,9 @@ module Atlasq
           Format.subregions(subregions)
         else
           search_terms.map do |term|
-            region = Data.region(term)
-
-            if region
-              Format.region(region)
+            if (countries = Data.countries_by_region(term))
+              region_name = Util::String.titleize(term)
+              Format.countries(countries, title: "Region: #{region_name}")
             else
               Atlasq.failed!
               "Unknown region: #{term}"

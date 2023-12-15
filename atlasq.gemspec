@@ -19,10 +19,10 @@ Gem::Specification.new do |spec|
   spec.metadata = {
     "homepage_uri" => "https://github.com/apainintheneck/atlasq/",
     "changelog_uri" => "https://github.com/apainintheneck/atlasq/blob/main/CHANGELOG.md",
-    "rubygems_mfa_required" => "true"
+    "rubygems_mfa_required" => "true",
   }
 
-  spec.files = Dir["{lib,exe}/**/*"]
+  spec.files = Dir["{lib,exe}/**/*", "{cache}/**/*.json"]
   spec.bindir = "exe"
   spec.executables = ["atlasq"]
 

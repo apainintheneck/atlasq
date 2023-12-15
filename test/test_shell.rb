@@ -129,8 +129,8 @@ class ShellTest < Minitest::Test
   def test_subregion_output
     expected_output = <<~OUTPUT
       *
-      * Subregion: Central Asia
-      * * * * * * * * * * * * * *
+      * Region: Central Asia
+      * * * * * * * * * * * * *
       (🇰🇬 | 417 | KG | KGZ | Kyrgyzstan)
       (🇰🇿 | 398 | KZ | KAZ | Kazakhstan)
       (🇹🇯 | 762 | TJ | TJK | Tajikistan)
@@ -150,8 +150,8 @@ class ShellTest < Minitest::Test
   def test_world_region_output
     expected_output = <<~OUTPUT
       *
-      * World Region: AMER
-      * * * * * * * * * * * *
+      * Region: North, Central and South America (AMER)
+      * * * * * * * * * * * * * * * * * * * * * * * * * *
       (🇦🇬 | 028 | AG | ATG | Antigua and Barbuda)
       (🇦🇮 | 660 | AI | AIA | Anguilla)
       (🇦🇶 | 010 | AQ | ATA | Antarctica)
@@ -219,8 +219,8 @@ class ShellTest < Minitest::Test
   def test_continent_output
     expected_output = <<~OUTPUT
       *
-      * Continent: Antarctica
-      * * * * * * * * * * * * *
+      * Region: Antarctica
+      * * * * * * * * * * * *
       (🇦🇶 | 010 | AQ | ATA | Antarctica)
       (🇧🇻 | 074 | BV | BVT | Bouvet Island)
       (🇬🇸 | 239 | GS | SGS | South Georgia and the South Sandwich Islands)

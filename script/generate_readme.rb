@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 # frozen_string_literal: true
 
 require "shellwords"
@@ -12,7 +11,7 @@ def atlasq(*args)
 
   [
     "$ atlasq #{escaped_args}",
-    `#{EXECUTABLE_PATH} #{escaped_args}`
+    `#{EXECUTABLE_PATH} #{escaped_args}`,
   ].join("\n")
 end
 
@@ -91,6 +90,8 @@ puts <<~README
   To install this gem onto your local machine, run `bundle exec rake install`.
 
   This file gets generated with the `rake readme:generate` command to make sure the example output is always up-to-date. We even check for this on CI with the `rake readme:outdated` command.
+
+  More information about cached files can be found in `cache/README.md`.
 
   ## Contributing
 

@@ -26,7 +26,7 @@ namespace "readme" do
   desc "Check if the readme needs to be regenerated"
   task :outdated do
     Tempfile.open("readme") do |file|
-      sh "bin/generate_readme > #{file.path}"
+      sh "bundle exec ruby script/generate_readme.rb > #{file.path}"
       sh "diff -q README.md #{file.path}"
     end
   end
@@ -34,8 +34,20 @@ namespace "readme" do
   desc "Regenerate the readme"
   task :generate do
     Tempfile.open("readme") do |file|
-      sh "bin/generate_readme > #{file.path}"
+      sh "bundle exec ruby script/generate_readme.rb > #{file.path}"
       mv file.path, "README.md"
     end
+  end
+end
+
+namespace "cache" do
+  desc "Check if the cache needs to be regenerated"
+  task :outdated do
+    sh "bundle exec ruby script/generate_search_index.rb outdated"
+  end
+
+  desc "Regenerate the cache"
+  task :generate do
+    sh "bundle exec ruby script/generate_search_index.rb generate"
   end
 end

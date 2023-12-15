@@ -77,7 +77,7 @@ class AtlasqTest < Minitest::Test
 
     [
       %w[chile],
-      %w[-c chile]
+      %w[-c chile],
     ].each do |args|
       assert_command args: args, expected_stdout: expected_output
     end
@@ -92,8 +92,8 @@ class AtlasqTest < Minitest::Test
   def test_region_success
     expected_output = <<~OUTPUT
       *
-      * Subregion: Australia and New Zealand
-      * * * * * * * * * * * * * * * * * * * * *
+      * Region: Australia and New Zealand
+      * * * * * * * * * * * * * * * * * * *
       (🇦🇺 | 036 | AU | AUS | Australia)
       (🇨🇨 | 166 | CC | CCK | Cocos (Keeling) Islands)
       (🇨🇽 | 162 | CX | CXR | Christmas Island)
@@ -103,7 +103,7 @@ class AtlasqTest < Minitest::Test
 
     [
       ["australia and new zealand"],
-      ["-r", "australia and new zealand"]
+      ["-r", "australia and new zealand"],
     ].each do |args|
       assert_command args: args, expected_stdout: expected_output
     end
@@ -125,7 +125,7 @@ class AtlasqTest < Minitest::Test
 
     [
       ["canadian dollar"],
-      ["-m", "canadian dollar"]
+      ["-m", "canadian dollar"],
     ].each do |args|
       assert_command args: args, expected_stdout: expected_output
     end

@@ -147,8 +147,8 @@ $ atlasq --country honduras
 ```console
 $ atlasq --region melanesia
 *
-* Subregion: Melanesia
-* * * * * * * * * * * * *
+* Region: Melanesia
+* * * * * * * * * * *
 (🇫🇯 | 242 | FJ | FJI | Fiji)
 (🇳🇨 | 540 | NC | NCL | New Caledonia)
 (🇵🇬 | 598 | PG | PNG | Papua New Guinea)
@@ -160,8 +160,8 @@ $ atlasq --region melanesia
 ```console
 $ atlasq --region antarctica
 *
-* Continent: Antarctica
-* * * * * * * * * * * * *
+* Region: Antarctica
+* * * * * * * * * * * *
 (🇦🇶 | 010 | AQ | ATA | Antarctica)
 (🇧🇻 | 074 | BV | BVT | Bouvet Island)
 (🇬🇸 | 239 | GS | SGS | South Georgia and the South Sandwich Islands)
@@ -184,9 +184,10 @@ $ atlasq --money ANG
 ```console
 $ atlasq --money \฿
 *
-* Currency: [THB] ฿ Thai Baht
+* Currencies (Partial Match)
 * * * * * * * * * * * * * * * *
-(🇹🇭 | 764 | TH | THA | Thailand)
+- [THB] ฿ Thai Baht
+    (🇹🇭 | 764 | TH | THA | Thailand)
 
 ```
 
@@ -216,6 +217,8 @@ You can also run `bin/console` for an interactive prompt that will allow you to 
 To install this gem onto your local machine, run `bundle exec rake install`.
 
 This file gets generated with the `rake readme:generate` command to make sure the example output is always up-to-date. We even check for this on CI with the `rake readme:outdated` command.
+
+More information about cached files can be found in `cache/README.md`.
 
 ## Contributing
 
