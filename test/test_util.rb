@@ -18,6 +18,10 @@ class UtilTest < Minitest::Test
     end
   end
 
+  def test_string_word_split
+    assert_equal %w[The Argentine Republic AR], Atlasq::Util::String.word_split(" The Argentine Republic(AR)")
+  end
+
   def test_word_map_search
     word_map = Atlasq::Util::WordMap.new(index: {
       "1" => %w[odd digit], "2" => %w[even digit], "3" => %w[odd digit],
