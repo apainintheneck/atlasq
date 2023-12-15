@@ -34,19 +34,6 @@ end
 ALL_COUNTRIES = ISO3166::Country.all.freeze
 ALL_CURRENCIES = ALL_COUNTRIES.map(&:currency).uniq.freeze
 
-# --- Helpers ---
-
-require "unaccent"
-
-def normalize(string)
-  @normalize ||= {}
-  @normalize[string] ||= Unaccent.unaccent(string.downcase)
-end
-
-def split(sentence)
-  sentence.split(/[ \t,;:()]+/).reject(&:empty?)
-end
-
 # --- Load Cache ---
 
 cache = CacheGenerator.new(namespace: "search_index")
@@ -62,7 +49,7 @@ cache.add "direct_match_country" do
       *country.unofficial_names,
       *country.translated_names,
     ]
-    names.map! { |name| normalize(name) }
+    names.map! { |name| Atlasq::Util::String.normalize(name) }
     names.uniq!
 
     key = country.alpha2.downcase
@@ -83,8 +70,8 @@ cache.add "partial_match_country" do
     ]
 
     words = names.flat_map do |name|
-      split(name).map do |word|
-        normalize(word)
+      Atlasq::Util::String.word_split(name).map do |word|
+        Atlasq::Util::String.normalize(word)
       end
     end.uniq
 
@@ -105,7 +92,7 @@ cache.add "countries_by_region" do
       country.continent,
       country.world_region,
     ]
-    names.map! { |name| normalize(name) }
+    names.map! { |name| Atlasq::Util::String.normalize(name) }
     names.uniq!
     names.reject!(&:empty?)
 
@@ -125,7 +112,7 @@ cache.add "direct_match_currency" do
       currency.iso_code,
       currency.name,
     ]
-    names.map! { |name| normalize(name) }
+    names.map! { |name| Atlasq::Util::String.normalize(name) }
     names.uniq!
 
     key = currency.iso_code.downcase
@@ -141,9 +128,9 @@ cache.add "partial_match_currency" do
       currency.iso_numeric,
       currency.iso_code,
       currency.symbol,
-      *split(currency.name),
+      *Atlasq::Util::String.word_split(currency.name),
     ]
-    words.map! { |word| normalize(word) }
+    words.map! { |word| Atlasq::Util::String.normalize(word) }
     words.uniq!
 
     key = currency.iso_code.downcase

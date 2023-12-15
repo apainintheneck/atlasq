@@ -39,6 +39,14 @@ module Atlasq
         @normalize ||= {}
         @normalize[string] ||= Unaccent.unaccent(string.downcase)
       end
+
+      # Split a sentence on words ignoring irrelevant punctuation.
+      #
+      # @param sentence [String]
+      # @return [Array<String>]
+      def self.word_split(sentence)
+        sentence.split(/[ \t,;:()]+/).reject(&:empty?)
+      end
     end
   end
 end

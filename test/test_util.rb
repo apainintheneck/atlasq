@@ -1,6 +1,23 @@
 # frozen_string_literal: true
 
 class UtilTest < Minitest::Test
+  def test_string_titleize
+    [
+      "One Two Three",
+      "one two three",
+      "OnE tWo ThReE",
+      "one_two_three",
+    ].each do |string|
+      assert_equal "One Two Three", Atlasq::Util::String.titleize(string)
+    end
+  end
+
+  def test_string_titleize_with_abbreviation
+    %w[AMER amer].each do |string|
+      assert_equal "North, Central and South America (AMER)", Atlasq::Util::String.titleize(string)
+    end
+  end
+
   def test_word_map_search
     word_map = Atlasq::Util::WordMap.new(index: {
       "1" => %w[odd digit], "2" => %w[even digit], "3" => %w[odd digit],
