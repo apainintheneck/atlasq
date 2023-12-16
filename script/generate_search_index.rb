@@ -9,7 +9,6 @@ require_relative "shared/cache_generator"
 require "countries"
 require "iso-639"
 require "money"
-require "money-heuristics"
 
 ISO3166.configure do |config|
   # Needed to allow us to access the `ISO3166::Country#currency`

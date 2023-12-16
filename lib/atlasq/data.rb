@@ -3,7 +3,6 @@
 require "countries"
 require "iso-639"
 require "money"
-require "money-heuristics"
 
 # Needed to allow us to access the `ISO3166::Country#currency`
 # object which ends up being an instance of `Money::Currency`.

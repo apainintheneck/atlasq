@@ -204,7 +204,7 @@ $ atlasq --money Surinamese\ Dollar
 
 Country data is sourced from the [countries](https://github.com/countries/countries) gem which provides country and region information and implements the ISO3166 standard country codes and names.
 
-Currency data is sourced from from the [money](https://github.com/RubyMoney/money) and [money-heuristics](https://github.com/RubyMoney/money-heuristics) gems which provide information about currency names and symbols.
+Currency data is sourced from the [money](https://github.com/RubyMoney/money) gem which provides information about currency names and symbols.
 
 Language data is sourced from the [ISO-639](https://github.com/xwmx/iso-639) gem which implements the ISO369 standard for language codes and names.
 

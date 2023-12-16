@@ -29,6 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "countries", "~> 5.7"
   spec.add_dependency "iso-639", "~> 0.3"
   spec.add_dependency "money", "~> 6.9"
-  spec.add_dependency "money-heuristics", "~> 0.1.1"
   spec.add_dependency "tty-pager", "~> 0.14"
 end
