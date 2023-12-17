@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    atlasq (0.1.0)
+    atlasq (0.2.0)
       countries (~> 5.7)
       iso-639 (~> 0.3)
       money (~> 6.9)
