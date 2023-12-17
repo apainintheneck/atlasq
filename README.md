@@ -83,7 +83,7 @@ OPTIONS
     : Display this page
 
   -v/--version
-    : Display the version (0.1.0)
+    : Display the version (0.2.0)
 
   -d/--debug
     : Display debug output
