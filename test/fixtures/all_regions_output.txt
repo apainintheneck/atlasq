@@ -177,7 +177,7 @@
     (🇸🇷 | 740 | SR | SUR | Suriname)
     (🇺🇾 | 858 | UY | URY | Uruguay)
     (🇻🇪 | 862 | VE | VEN | Venezuela (Bolivarian Republic of))
-- South-Eastern Asia
+- South Eastern Asia
     (🇧🇳 | 096 | BN | BRN | Brunei Darussalam)
     (🇮🇩 | 360 | ID | IDN | Indonesia)
     (🇰🇭 | 116 | KH | KHM | Cambodia)

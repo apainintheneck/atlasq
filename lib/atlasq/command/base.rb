@@ -18,7 +18,7 @@ module Atlasq
 
       # @param search_terms [Array<String>]
       def initialize(search_terms)
-        @search_terms = search_terms
+        @search_terms = search_terms.map(&Util::String.method(:normalize))
       end
 
       # @return [String]

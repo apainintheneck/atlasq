@@ -100,13 +100,12 @@ $ atlasq --country 418
 * Country: The Lao People's Democratic Republic
 * * * * * * * * * * * * * * * * * * * * * * * * *
 (🇱🇦 | 418 | LA | LAO | Lao People's Democratic Republic)
- | Search Term: 418
-  | Languages: Lao
-   | Nationality: Laotian
-    | Region: South-Eastern Asia
-     | Continent: Asia
-      | Currency: ₭ Lao Kip
-       |________________________________________
+ | Languages: Lao
+  | Nationality: Laotian
+   | Region: South-Eastern Asia
+    | Continent: Asia
+     | Currency: ₭ Lao Kip
+      |________________________________________
 
 ```
 
@@ -116,13 +115,12 @@ $ atlasq --country AM
 * Country: The Republic of Armenia
 * * * * * * * * * * * * * * * * * * *
 (🇦🇲 | 051 | AM | ARM | Armenia)
- | Search Term: AM
-  | Languages: Armenian / Russian
-   | Nationality: Armenian
-    | Region: Western Asia
-     | Continent: Asia
-      | Currency: դր. Armenian Dram
-       |________________________________________
+ | Languages: Armenian / Russian
+  | Nationality: Armenian
+   | Region: Western Asia
+    | Continent: Asia
+     | Currency: դր. Armenian Dram
+      |________________________________________
 
 ```
 
@@ -132,13 +130,12 @@ $ atlasq --country honduras
 * Country: The Republic of Honduras
 * * * * * * * * * * * * * * * * * * *
 (🇭🇳 | 340 | HN | HND | Honduras)
- | Search Term: honduras
-  | Languages: Spanish; Castilian
-   | Nationality: Honduran
-    | Region: Central America
-     | Continent: North America
-      | Currency: L Honduran Lempira
-       |________________________________________
+ | Languages: Spanish; Castilian
+  | Nationality: Honduran
+   | Region: Central America
+    | Continent: North America
+     | Currency: L Honduran Lempira
+      |________________________________________
 
 ```
 

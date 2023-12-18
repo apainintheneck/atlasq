@@ -60,127 +60,73 @@ module Atlasq
       ].join("\n")
     end
 
-    # @example
-    # *
-    # * Title
-    # * * * * *
-    # (attr1 | attr2 | attr3)
-    # | Info One: 1
-    #  | Info Two: 2
-    #   | Info Three: 3
-    #    |________________________________________
-    #
-    # @param title [String]
-    # @param attributes [String]
-    # @param info [Hash<String, String>]
-    # @return [String]
-    def self.verbose_template(title:, attributes:, info:)
-      info_ladder = info.map.with_index do |(name, value), index|
-        "#{" " * (index + 1)}| #{name}: #{value}"
-      end
-      info_ladder << "#{" " * (info_ladder.size + 1)}|#{"_" * 40}"
-
-      [
-        Format.title(title),
-        attributes,
-        *info_ladder,
-      ].join("\n")
-    end
-
-    # @param country [ISO3166::Country]
-    # @param search_term [String]
-    # @return [String]
-    def self.country(country, search_term)
-      Format.verbose_template(
-        title: "Country: #{country.iso_long_name}",
-        attributes: Format.one_line_country(country),
-        info: {
-          "Search Term" => search_term,
-          "Languages" => Format.languages(country.languages),
-          "Nationality" => country.nationality,
-          "Region" => country.subregion,
-          "Continent" => country.continent,
-          "Currency" => "#{country.currency.symbol} #{country.currency.name}",
-        }.reject do |_, value|
-          # "countries" like Antarctica can have missing language, nationality,
-          # and region data so we remove that missing data beforehand.
-          value.nil? || value.empty?
-        end.to_h
-      )
-    end
-
-    # @example "English / Shona / Ndebele, North; North Ndebele"
-    # @param language_codes [Array<String>] Ex. ["id"]
-    # @return [String]
-    def self.languages(language_codes)
-      language_codes
-        .take(4) # arbitrary limit to avoid long lines
-        .map do |lang|
-          ISO_639.find(lang).english_name
-        end
-        .join(" / ")
-    end
-
-    # @param countries [Array<ISO3166::Country|Hash>]
+    # @param country_codes [Array<String>] ISO3166 2 letter country codes
     # @param title [String]
     # @return [String]
-    def self.countries(countries, title:)
+    def self.countries(country_codes, title:)
       Format.brief_template(
         title: title,
-        elements: countries.map do |country|
+        elements: country_codes.map do |country|
           Format.one_line_country(country)
         end
       )
     end
 
-    # @param country [ISO3166::Country|Hash]
+    # @param country_code [String] ISO3166 2 letter country code
     # @return [String]
-    def self.one_line_country(country)
-      case country
-      when ISO3166::Country
-        [
-          country.emoji_flag,
-          country.number,
-          country.alpha2,
-          country.alpha3,
-          country.iso_short_name,
-        ]
-      when Hash
-        values = country.slice(
-          "number",
-          "alpha2",
-          "alpha3",
-          "iso_short_name"
-        ).values
-
-        [
-          Data.emoji_flag(country.fetch("number")),
-          *values,
-        ]
-      else
-        raise Error, "Unknown country type: #{country.class}"
-      end.then do |country_values|
-        "(#{country_values.compact.join(" | ")})"
-      end
+    def self.country(country_code)
+      [
+        Format.country_title(country_code),
+        Format.one_line_country(country_code),
+        Format.multiline_country(country_code),
+      ].join("\n")
     end
 
-    # @param subregions [Hash<String, Array<ISO3166::Country>>]
+    # @param country_code [String] ISO3166 2 letter country code
+    # @return [String]
+    def self.country_title(country_code)
+      Cache
+        .get("formatted_output/country_title.json")
+        .fetch(country_code)
+        .then(&Format.method(:title))
+    end
+
+    # @param country_code [String] ISO3166 2 letter country code
+    # @return [String]
+    def self.one_line_country(country_code)
+      Cache
+        .get("formatted_output/one_line_country.json")
+        .fetch(country_code)
+    end
+
+    # @param country_code [String] ISO3166 2 letter country code
+    # @return [String]
+    def self.multiline_country(country_code)
+      Cache
+        .get("formatted_output/multiline_country.json")
+        .fetch(country_code)
+    end
+
+    # @param subregions [Hash<String, Array<String>>] region name to ISO3166 2 letter country codes
     # @return [String]
     def self.subregions(subregions)
-      subregions.transform_values! do |countries|
-        countries.map(&Format.method(:one_line_country))
+      subregions = subregions.to_h do |region, countries|
+        [
+          Util::String.titleize(region),
+          countries.map(&Format.method(:one_line_country)),
+        ]
       end
 
       Format.brief_template(title: "All Subregions", elements: subregions)
     end
 
-    # @param currencies [Hash<Money::Currency, Array<ISO3166::Country>>]
+    # @param currencies [Hash<String, Array<String>>] 3 letter currency code to ISO3166 2 letter country codes
     # @param partial_match [Boolean] defaults to false
     # @return [String]
     def self.currencies(currencies, partial_match: false)
       currencies = currencies.to_h do |currency, countries|
         [
-          "[#{currency.iso_code}] #{currency.symbol} #{currency.name}",
+          Format.one_line_currency(currency),
           countries.map(&Format.method(:one_line_country)),
         ]
       end
@@ -193,6 +139,12 @@ module Atlasq
         title = partial_match ? "Currencies (Partial Match)" : "Currencies"
         Format.brief_template(title: title, elements: currencies)
       end
+    end
+
+    def self.one_line_currency(currency_code)
+      Cache
+        .get("formatted_output/one_line_currency.json")
+        .fetch(currency_code)
     end
   end
 end
