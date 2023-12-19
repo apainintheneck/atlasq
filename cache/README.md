@@ -16,7 +16,7 @@ As the name would suggest, this generates a bunch of search indexes that are bas
 
 ### script/generate_formatted_output.rb
 
-This is where we generate the formatted output so that we don't need to include runtime dependencies to load country, currency and region informaton.
+This is where we generate the formatted output so that we don't need to include runtime dependencies to load country, currency and region information.
 
 ### script/generate_list.rb
 
