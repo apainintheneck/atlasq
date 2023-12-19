@@ -40,7 +40,8 @@ module Atlasq
         @normalize[string] ||= Unaccent.unaccent(string.downcase)
       end
 
-      # Split a sentence on words ignoring irrelevant punctuation.
+      # Split on spaces, tabs and punctuation separators.
+      # Note: Some punctuation can be connectors or separators based on the language.
       #
       # @param sentence [String]
       # @return [Array<String>]

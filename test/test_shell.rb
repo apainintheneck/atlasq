@@ -15,33 +15,29 @@ class ShellTest < Minitest::Test
   #
   # COUNTRY
   #
-  def expected_country_output(search_term)
-    <<~OUTPUT
+  def test_country_output
+    expected_output = <<~OUTPUT
       *
       * Country: The Commonwealth of Australia
       * * * * * * * * * * * * * * * * * * * * * *
       (🇦🇺 | 036 | AU | AUS | Australia)
-       | Search Term: #{search_term}
-        | Languages: English
-         | Nationality: Australian
-          | Region: Australia and New Zealand
-           | Continent: Australia
-            | Currency: $ Australian Dollar
-             |________________________________________
+       | Languages: English
+        | Nationality: Australian
+         | Region: Australia and New Zealand
+          | Continent: Australia
+           | Currency: $ Australian Dollar
+            |________________________________________
     OUTPUT
-  end
 
-  def test_country_output
     commands = %w[-c --country --countries]
     countries = %w[AU AUS 036 Australia Awstraaliya]
 
     commands.product(countries).each do |args|
-      search_term = args.last
       actual_output, _err = capture_io do
         Atlasq::Shell.start!(args)
       end
 
-      assert_equal expected_country_output(search_term), actual_output
+      assert_equal expected_output, actual_output
     end
   end
 

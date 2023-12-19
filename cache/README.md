@@ -14,6 +14,14 @@ Note: Sample data can be found in the `README.md` file in each subdirectory.
 
 As the name would suggest, this generates a bunch of search indexes that are basic JSON files with string to string mappings (no nested nonsense). These are used primarily to speed up partial matches though pre-computing things also means we don't have to pull in the internationalization libraries for 90+ languages which also makes a difference.
 
+### script/generate_formatted_output.rb
+
+This is where we generate the formatted output so that we don't need to include runtime dependencies to load country, currency and region information.
+
+### script/generate_list.rb
+
+This script generates a few simple lists of countries and regions.
+
 ## Reading
 
 Reading from the cached files is quite easy. Just use the `Atlas::Cache` module to load the file using the namespace and file name. Each file gets lazy loaded the first time it's referenced and then memoized. Specified in `lib/atlasq/cache.rb`.

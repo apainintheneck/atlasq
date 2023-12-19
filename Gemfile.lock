@@ -2,9 +2,6 @@ PATH
   remote: .
   specs:
     atlasq (0.2.0)
-      countries (~> 5.7)
-      iso-639 (~> 0.3)
-      money (~> 6.9)
       tty-pager (~> 0.14)
 
 GEM
@@ -67,9 +64,12 @@ PLATFORMS
 
 DEPENDENCIES
   atlasq!
-  minitest (~> 5.0)
-  rake (~> 13.0)
-  rubocop (~> 1.21)
+  countries
+  iso-639
+  minitest
+  money
+  rake
+  rubocop
   rubocop-minitest
   rubocop-rake
 

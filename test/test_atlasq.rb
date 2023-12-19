@@ -66,13 +66,12 @@ class AtlasqTest < Minitest::Test
       * Country: The Republic of Chile
       * * * * * * * * * * * * * * * * * *
       (🇨🇱 | 152 | CL | CHL | Chile)
-       | Search Term: chile
-        | Languages: Spanish; Castilian
-         | Nationality: Chilean
-          | Region: South America
-           | Continent: South America
-            | Currency: $ Chilean Peso
-             |________________________________________
+       | Languages: Spanish; Castilian
+        | Nationality: Chilean
+         | Region: South America
+          | Continent: South America
+           | Currency: $ Chilean Peso
+            |________________________________________
     OUTPUT
 
     [
@@ -111,7 +110,7 @@ class AtlasqTest < Minitest::Test
 
   def test_region_failure
     assert_command args: %w[-r Pyrrus],
-                   expected_stdout: "Unknown region: Pyrrus\n",
+                   expected_stdout: "Unknown region: pyrrus\n",
                    expected_status: 1
   end
 
@@ -133,13 +132,13 @@ class AtlasqTest < Minitest::Test
 
   def test_currency_failure
     assert_command args: ["-m", "Double Dollars"],
-                   expected_stdout: "Unknown currency: Double Dollars\n",
+                   expected_stdout: "Unknown currency: double dollars\n",
                    expected_status: 1
   end
 
   def test_any_failure
     assert_command args: ["Grand Line"],
-                   expected_stdout: "Unknown search term: Grand Line\n",
+                   expected_stdout: "Unknown search term: grand line\n",
                    expected_status: 1
   end
 end

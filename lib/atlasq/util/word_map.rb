@@ -23,23 +23,11 @@ module Atlasq
       # @return [Array<String>] list of ids
       def search(search_term)
         search_term
-          .then { |string| split(string) }
-          .map { |word| Util::String.normalize(word) }
+          .then(&Util::String.method(:word_split))
           .uniq
           .map { |word| @index.fetch(word, []) }
           .inject(&:intersection)
           .sort
-      end
-
-      private
-
-      # Split on spaces, tabs and punctuation separators.
-      # Note: Some punctuation can be connectors or separators based on the language.
-      #
-      # @param sentence [String]
-      # @return [Array<String>]
-      def split(sentence)
-        sentence.split(/[ \t,;:()]+/).reject(&:empty?)
       end
     end
   end

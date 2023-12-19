@@ -14,7 +14,7 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: %i[test lint]
+task default: %i[lint test]
 
 desc "Shortcut for `rake rubocop`"
 task lint: :rubocop
@@ -44,10 +44,14 @@ namespace "cache" do
   desc "Check if the cache needs to be regenerated"
   task :outdated do
     sh "bundle exec ruby script/generate_search_index.rb outdated"
+    sh "bundle exec ruby script/generate_formatted_output.rb outdated"
+    sh "bundle exec ruby script/generate_list.rb outdated"
   end
 
   desc "Regenerate the cache"
   task :generate do
     sh "bundle exec ruby script/generate_search_index.rb generate"
+    sh "bundle exec ruby script/generate_formatted_output.rb generate"
+    sh "bundle exec ruby script/generate_list.rb generate"
   end
 end

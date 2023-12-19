@@ -8,17 +8,14 @@ module Atlasq
       # @return [String]
       def content
         if search_terms.empty?
-          countries = Data.all_countries
-          Format.countries(countries, title: "All Countries")
+          country_codes = Data.all_countries
+          Format.countries(country_codes, title: "All Countries")
         else
           search_terms.map do |term|
-            if (country = Data.country(term))
-              Format.country(country, term)
+            if (country_code = Data.country(term))
+              Format.country(country_code)
             elsif (country_codes = PartialMatch.countries(term)).any?
-              countries = country_codes.map do |code|
-                Data.country_by_code(code)
-              end
-              Format.countries(countries, title: "Countries (Partial Match)")
+              Format.countries(country_codes, title: "Countries (Partial Match)")
             else
               Atlasq.failed!
               "Unknown country: #{term}"
