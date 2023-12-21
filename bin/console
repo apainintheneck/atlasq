@@ -2,9 +2,9 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-
 require "atlasq"
-require "atlasq/data"
-
 require "irb"
+
+require_relative "../script/shared/country_info"
+
 IRB.start(__FILE__)
