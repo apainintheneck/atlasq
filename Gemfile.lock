@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    atlasq (0.2.0)
+    atlasq (0.3.0)
       tty-pager (~> 0.14)
 
 GEM
