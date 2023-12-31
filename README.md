@@ -22,6 +22,8 @@ commands:
 
 Install the gem from RubyGems with `gem install atlasq`.
 
+Note: This gem is only tested on Linux and macOS.
+
 ## Documentation
 
 ```console
