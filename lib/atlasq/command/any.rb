@@ -5,6 +5,7 @@ require_relative "base"
 module Atlasq
   module Command
     class Any < Base
+      # @return [String]
       def content
         search_terms.map do |term|
           if (country = Data.country(term))

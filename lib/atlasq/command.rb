@@ -14,6 +14,8 @@ module Atlasq
     # @param args [Array<String>]
     Options = Struct.new(:command, :args, keyword_init: true)
 
+    # @param args [Array<String>] command line arguments
+    # @return [Atlasq::Command::Options]
     def self.parse(args)
       command = parse_command(args.first)
       args.shift unless command.to_s == "Atlasq::Command::Any"
@@ -22,6 +24,8 @@ module Atlasq
       Options.new(command: command, args: args).freeze
     end
 
+    # @param command [String]
+    # @return [Atlasq::Command::Base]
     def self.parse_command(command)
       case command
       when "-c", "--country", "--countries"

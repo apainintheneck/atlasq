@@ -4,6 +4,7 @@ module Atlasq
   module Shell
     SKIP_PAGER = %i[usage version].freeze
 
+    # @param [Array<String>] command line arguments
     def self.start!(args = ARGV)
       warn "DEBUG: args: #{args}" if DEBUG
       options = Command.parse(args)
@@ -24,6 +25,9 @@ module Atlasq
 
     DEFAULT_SHELL_HEIGHT = 24
 
+    # @param options [Atlasq::Command::Options]
+    # @param content [String]
+    # @return [Boolean]
     def self.use_pager?(options, content)
       $stdout.tty? &&
         options.command.to_pager? &&
