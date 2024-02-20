@@ -18,6 +18,7 @@ module Atlasq
     @failed = true
   end
 
+  # @return [Boolean]
   def self.failed?
     !!@failed
   end

@@ -5,6 +5,7 @@ require_relative "base"
 module Atlasq
   module Command
     class Money < Base
+      # @return [String]
       def content
         if search_terms.empty?
           currencies = Data.all_currencies

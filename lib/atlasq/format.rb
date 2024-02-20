@@ -141,6 +141,8 @@ module Atlasq
       end
     end
 
+    # @param country_code [String]
+    # @return [String]
     def self.one_line_currency(currency_code)
       Cache
         .get("formatted_output/one_line_currency.json")

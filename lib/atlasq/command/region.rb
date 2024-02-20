@@ -5,6 +5,7 @@ require_relative "base"
 module Atlasq
   module Command
     class Region < Base
+      # @return [String]
       def content
         if search_terms.empty?
           subregions = Data.all_subregions
