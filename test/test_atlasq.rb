@@ -136,6 +136,29 @@ class AtlasqTest < Minitest::Test
                    expected_status: 1
   end
 
+  def test_language_success
+    expected_output = <<~OUTPUT
+      *
+      * Language: (gn/grn) Guarani
+      * * * * * * * * * * * * * * * *
+      (🇦🇷 | 032 | AR | ARG | Argentina)
+      (🇵🇾 | 600 | PY | PRY | Paraguay)
+    OUTPUT
+
+    [
+      ["grn"],
+      ["-l", "grn"],
+    ].each do |args|
+      assert_command args: args, expected_stdout: expected_output
+    end
+  end
+
+  def test_language_failure
+    assert_command args: ["-l", "Vulcan"],
+                   expected_stdout: "Unknown language: vulcan\n",
+                   expected_status: 1
+  end
+
   def test_any_failure
     assert_command args: ["Grand Line"],
                    expected_stdout: "Unknown search term: grand line\n",

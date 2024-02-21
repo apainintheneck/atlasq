@@ -316,4 +316,60 @@ class ShellTest < Minitest::Test
       assert_equal expected_output, actual_output
     end
   end
+
+  #
+  # Language
+  #
+  def test_language_output
+    expected_output = <<~OUTPUT
+      *
+      * Language: (ms/may) Malay
+      * * * * * * * * * * * * * * *
+      (🇧🇳 | 096 | BN | BRN | Brunei Darussalam)
+      (🇨🇽 | 162 | CX | CXR | Christmas Island)
+      (🇲🇾 | 458 | MY | MYS | Malaysia)
+      (🇸🇬 | 702 | SG | SGP | Singapore)
+    OUTPUT
+
+    commands = %w[-l --language --languages]
+    currencies = %w[ms may]
+
+    commands.product(currencies).each do |args|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!(args)
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
+
+  def test_language_partial_match_output
+    expected_output = <<~OUTPUT
+      *
+      * Languages (Partial Match)
+      * * * * * * * * * * * * * * *
+      - (dv/div) Divehi; Dhivehi; Maldivian
+          (🇲🇻 | 462 | MV | MDV | Maldives)
+    OUTPUT
+
+    %w[-l --language --languages].each do |command|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!([command, "Maldivian"])
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
+
+  def test_all_languages_output
+    expected_output = fixture("all_languages_output.txt")
+
+    %w[-l --language --languages].each do |command|
+      actual_output, _err = capture_io do
+        Atlasq::Shell.start!([command])
+      end
+
+      assert_equal expected_output, actual_output
+    end
+  end
 end
