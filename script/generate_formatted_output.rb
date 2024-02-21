@@ -90,6 +90,15 @@ cache.add "one_line_currency" do
   end
 end
 
+cache.add "one_line_language" do
+  ALL_LANGUAGES.to_h do |language|
+    [
+      language.alpha2,
+      "(#{language.alpha2}/#{language.alpha3}) #{language.english_name}",
+    ]
+  end
+end
+
 # --- Run ---
 
 case ARGV.first
