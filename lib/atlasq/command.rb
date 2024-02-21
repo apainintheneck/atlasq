@@ -4,6 +4,7 @@ module Atlasq
   module Command
     autoload :Any, "atlasq/command/any"
     autoload :Country, "atlasq/command/country"
+    autoload :Language, "atlasq/command/language"
     autoload :Region, "atlasq/command/region"
     autoload :Money, "atlasq/command/money"
     autoload :Version, "atlasq/command/version"
@@ -30,6 +31,8 @@ module Atlasq
       case command
       when "-c", "--country", "--countries"
         Country
+      when "-l", "--language", "--languages"
+        Language
       when "-r", "--region", "--regions"
         Region
       when "-m", "--money"

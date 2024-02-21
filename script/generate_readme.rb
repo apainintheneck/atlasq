@@ -75,6 +75,16 @@ puts <<~README
   #{atlasq "--money", "Surinamese Dollar"}
   ```
 
+  ### Languages
+
+  ```console
+  #{atlasq "--language", "ch"}
+  ```
+
+  ```console
+  #{atlasq "--language", "greek"}
+  ```
+
   ## Data
 
   Country data is sourced from the [countries](https://github.com/countries/countries) gem which provides country and region information and implements the ISO3166 standard country codes and names.

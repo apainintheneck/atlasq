@@ -141,12 +141,41 @@ module Atlasq
       end
     end
 
-    # @param country_code [String]
+    # @param currency_code [String]
     # @return [String]
     def self.one_line_currency(currency_code)
       Cache
         .get("formatted_output/one_line_currency.json")
         .fetch(currency_code)
+    end
+
+    # @param languages [Hash<String, Array<String>>] 2 letter ISO639 language code to ISO3166 2 letter country codes
+    # @param partial_match [Boolean] defaults to false
+    # @return [String]
+    def self.languages(languages, partial_match: false)
+      languages = languages.to_h do |language, countries|
+        [
+          Format.one_line_language(language),
+          countries.map(&Format.method(:one_line_country)),
+        ]
+      end
+
+      if !partial_match && languages.size == 1
+        title, elements = languages.first
+        title = "Language: #{title}"
+        Format.brief_template(title: title, elements: elements)
+      else
+        title = partial_match ? "Languages (Partial Match)" : "Languages"
+        Format.brief_template(title: title, elements: languages)
+      end
+    end
+
+    # @param language [String] 2 letter ISO639 language code
+    # @return [String]
+    def self.one_line_language(language)
+      Cache
+        .get("formatted_output/one_line_language.json")
+        .fetch(language)
     end
   end
 end
