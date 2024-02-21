@@ -13,14 +13,11 @@ module Atlasq
       @get ||= {}
       @get.fetch(full_name) do
         path = "#{CACHE_DIR}/#{full_name}"
-        content = File.read(path)
 
-        case full_name
-        when /\.json$/
-          JSON.parse(content)
-        else
-          content
-        end
+        content = File.read(path)
+        content = JSON.parse(content) if full_name.end_with?(".json")
+
+        @get[full_name] = content
       end
     end
   end
