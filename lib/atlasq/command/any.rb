@@ -15,6 +15,8 @@ module Atlasq
             Format.countries(country_codes, title: "Region: #{region_name}")
           elsif (currencies = Data.countries_by_currencies(term))
             Format.currencies(currencies)
+          elsif (languages = Data.countries_by_languages(term))
+            Format.languages(languages)
           else
             Atlasq.failed!
             "Unknown search term: #{term}"

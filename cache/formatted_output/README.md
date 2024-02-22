@@ -117,3 +117,32 @@ Sample of the first 20 pretty printed lines of the file.
   "bif": "[BIF] Fr Burundian Franc",
 ...
 ```
+
+## Item: formatted_output/one_line_language.json
+
+### Content Sample
+Sample of the first 20 pretty printed lines of the file.
+
+```
+{
+  "ca": "(ca/cat) Catalan; Valencian",
+  "ar": "(ar/ara) Arabic",
+  "ps": "(ps/pus) Pushto; Pashto",
+  "uz": "(uz/uzb) Uzbek",
+  "tk": "(tk/tuk) Turkmen",
+  "en": "(en/eng) English",
+  "sq": "(sq/alb) Albanian",
+  "hy": "(hy/arm) Armenian",
+  "ru": "(ru/rus) Russian",
+  "pt": "(pt/por) Portuguese",
+  "es": "(es/spa) Spanish; Castilian",
+  "gn": "(gn/grn) Guarani",
+  "sm": "(sm/smo) Samoan",
+  "de": "(de/ger) German",
+  "nl": "(nl/dut) Dutch; Flemish",
+  "sv": "(sv/swe) Swedish",
+  "az": "(az/aze) Azerbaijani",
+  "bs": "(bs/bos) Bosnian",
+  "hr": "(hr/hrv) Croatian",
+...
+```

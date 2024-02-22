@@ -1,0 +1,475 @@
+*
+* Languages
+* * * * * * *
+- (af/afr) Afrikaans
+    (🇳🇦 | 516 | NA | NAM | Namibia)
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (am/amh) Amharic
+    (🇪🇹 | 231 | ET | ETH | Ethiopia)
+- (ar/ara) Arabic
+    (🇦🇪 | 784 | AE | ARE | United Arab Emirates)
+    (🇧🇭 | 048 | BH | BHR | Bahrain)
+    (🇩🇯 | 262 | DJ | DJI | Djibouti)
+    (🇩🇿 | 012 | DZ | DZA | Algeria)
+    (🇪🇬 | 818 | EG | EGY | Egypt)
+    (🇪🇷 | 232 | ER | ERI | Eritrea)
+    (🇮🇱 | 376 | IL | ISR | Israel)
+    (🇮🇶 | 368 | IQ | IRQ | Iraq)
+    (🇯🇴 | 400 | JO | JOR | Jordan)
+    (🇰🇲 | 174 | KM | COM | Comoros)
+    (🇰🇼 | 414 | KW | KWT | Kuwait)
+    (🇱🇧 | 422 | LB | LBN | Lebanon)
+    (🇱🇾 | 434 | LY | LBY | Libya)
+    (🇲🇦 | 504 | MA | MAR | Morocco)
+    (🇲🇷 | 478 | MR | MRT | Mauritania)
+    (🇴🇲 | 512 | OM | OMN | Oman)
+    (🇵🇸 | 275 | PS | PSE | Palestine, State of)
+    (🇶🇦 | 634 | QA | QAT | Qatar)
+    (🇸🇦 | 682 | SA | SAU | Saudi Arabia)
+    (🇸🇩 | 729 | SD | SDN | Sudan)
+    (🇸🇴 | 706 | SO | SOM | Somalia)
+    (🇸🇸 | 728 | SS | SSD | South Sudan)
+    (🇸🇾 | 760 | SY | SYR | Syrian Arab Republic)
+    (🇹🇩 | 148 | TD | TCD | Chad)
+    (🇹🇳 | 788 | TN | TUN | Tunisia)
+    (🇾🇪 | 887 | YE | YEM | Yemen)
+- (ay/aym) Aymara
+    (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
+- (az/aze) Azerbaijani
+    (🇦🇿 | 031 | AZ | AZE | Azerbaijan)
+- (be/bel) Belarusian
+    (🇧🇾 | 112 | BY | BLR | Belarus)
+- (bg/bul) Bulgarian
+    (🇧🇬 | 100 | BG | BGR | Bulgaria)
+- (bi/bis) Bislama
+    (🇻🇺 | 548 | VU | VUT | Vanuatu)
+- (bn/ben) Bengali
+    (🇧🇩 | 050 | BD | BGD | Bangladesh)
+- (bs/bos) Bosnian
+    (🇧🇦 | 070 | BA | BIH | Bosnia and Herzegovina)
+    (🇲🇪 | 499 | ME | MNE | Montenegro)
+- (ca/cat) Catalan; Valencian
+    (🇦🇩 | 020 | AD | AND | Andorra)
+- (ch/cha) Chamorro
+    (🇬🇺 | 316 | GU | GUM | Guam)
+    (🇲🇵 | 580 | MP | MNP | Northern Mariana Islands)
+- (cs/cze) Czech
+    (🇨🇿 | 203 | CZ | CZE | Czechia)
+- (da/dan) Danish
+    (🇩🇰 | 208 | DK | DNK | Denmark)
+- (de/ger) German
+    (🇦🇹 | 040 | AT | AUT | Austria)
+    (🇧🇪 | 056 | BE | BEL | Belgium)
+    (🇨🇭 | 756 | CH | CHE | Switzerland)
+    (🇩🇪 | 276 | DE | DEU | Germany)
+    (🇱🇮 | 438 | LI | LIE | Liechtenstein)
+    (🇱🇺 | 442 | LU | LUX | Luxembourg)
+- (dv/div) Divehi; Dhivehi; Maldivian
+    (🇲🇻 | 462 | MV | MDV | Maldives)
+- (dz/dzo) Dzongkha
+    (🇧🇹 | 064 | BT | BTN | Bhutan)
+- (el/gre) Greek, Modern (1453-)
+    (🇨🇾 | 196 | CY | CYP | Cyprus)
+    (🇬🇷 | 300 | GR | GRC | Greece)
+- (en/eng) English
+    (🇦🇬 | 028 | AG | ATG | Antigua and Barbuda)
+    (🇦🇮 | 660 | AI | AIA | Anguilla)
+    (🇦🇸 | 016 | AS | ASM | American Samoa)
+    (🇦🇺 | 036 | AU | AUS | Australia)
+    (🇧🇧 | 052 | BB | BRB | Barbados)
+    (🇧🇲 | 060 | BM | BMU | Bermuda)
+    (🇧🇶 | 535 | BQ | BES | Bonaire, Sint Eustatius and Saba)
+    (🇧🇸 | 044 | BS | BHS | Bahamas)
+    (🇧🇼 | 072 | BW | BWA | Botswana)
+    (🇧🇿 | 084 | BZ | BLZ | Belize)
+    (🇨🇦 | 124 | CA | CAN | Canada)
+    (🇨🇨 | 166 | CC | CCK | Cocos (Keeling) Islands)
+    (🇨🇰 | 184 | CK | COK | Cook Islands)
+    (🇨🇲 | 120 | CM | CMR | Cameroon)
+    (🇨🇽 | 162 | CX | CXR | Christmas Island)
+    (🇩🇲 | 212 | DM | DMA | Dominica)
+    (🇪🇷 | 232 | ER | ERI | Eritrea)
+    (🇫🇯 | 242 | FJ | FJI | Fiji)
+    (🇫🇰 | 238 | FK | FLK | Falkland Islands (Malvinas))
+    (🇫🇲 | 583 | FM | FSM | Micronesia (Federated States of))
+    (🇬🇧 | 826 | GB | GBR | United Kingdom of Great Britain and Northern Ireland)
+    (🇬🇩 | 308 | GD | GRD | Grenada)
+    (🇬🇬 | 831 | GG | GGY | Guernsey)
+    (🇬🇭 | 288 | GH | GHA | Ghana)
+    (🇬🇮 | 292 | GI | GIB | Gibraltar)
+    (🇬🇲 | 270 | GM | GMB | Gambia)
+    (🇬🇸 | 239 | GS | SGS | South Georgia and the South Sandwich Islands)
+    (🇬🇺 | 316 | GU | GUM | Guam)
+    (🇬🇾 | 328 | GY | GUY | Guyana)
+    (🇭🇰 | 344 | HK | HKG | Hong Kong)
+    (🇭🇲 | 334 | HM | HMD | Heard Island and McDonald Islands)
+    (🇮🇪 | 372 | IE | IRL | Ireland)
+    (🇮🇲 | 833 | IM | IMN | Isle of Man)
+    (🇮🇳 | 356 | IN | IND | India)
+    (🇮🇴 | 086 | IO | IOT | British Indian Ocean Territory)
+    (🇯🇪 | 832 | JE | JEY | Jersey)
+    (🇯🇲 | 388 | JM | JAM | Jamaica)
+    (🇰🇪 | 404 | KE | KEN | Kenya)
+    (🇰🇮 | 296 | KI | KIR | Kiribati)
+    (🇰🇳 | 659 | KN | KNA | Saint Kitts and Nevis)
+    (🇰🇾 | 136 | KY | CYM | Cayman Islands)
+    (🇱🇨 | 662 | LC | LCA | Saint Lucia)
+    (🇱🇷 | 430 | LR | LBR | Liberia)
+    (🇱🇸 | 426 | LS | LSO | Lesotho)
+    (🇲🇫 | 663 | MF | MAF | Saint Martin (French part))
+    (🇲🇭 | 584 | MH | MHL | Marshall Islands)
+    (🇲🇵 | 580 | MP | MNP | Northern Mariana Islands)
+    (🇲🇸 | 500 | MS | MSR | Montserrat)
+    (🇲🇹 | 470 | MT | MLT | Malta)
+    (🇲🇺 | 480 | MU | MUS | Mauritius)
+    (🇲🇼 | 454 | MW | MWI | Malawi)
+    (🇲🇾 | 458 | MY | MYS | Malaysia)
+    (🇳🇦 | 516 | NA | NAM | Namibia)
+    (🇳🇫 | 574 | NF | NFK | Norfolk Island)
+    (🇳🇬 | 566 | NG | NGA | Nigeria)
+    (🇳🇷 | 520 | NR | NRU | Nauru)
+    (🇳🇺 | 570 | NU | NIU | Niue)
+    (🇳🇿 | 554 | NZ | NZL | New Zealand)
+    (🇵🇬 | 598 | PG | PNG | Papua New Guinea)
+    (🇵🇭 | 608 | PH | PHL | Philippines)
+    (🇵🇰 | 586 | PK | PAK | Pakistan)
+    (🇵🇳 | 612 | PN | PCN | Pitcairn)
+    (🇵🇷 | 630 | PR | PRI | Puerto Rico)
+    (🇵🇸 | 275 | PS | PSE | Palestine, State of)
+    (🇵🇼 | 585 | PW | PLW | Palau)
+    (🇷🇼 | 646 | RW | RWA | Rwanda)
+    (🇸🇧 | 090 | SB | SLB | Solomon Islands)
+    (🇸🇨 | 690 | SC | SYC | Seychelles)
+    (🇸🇩 | 729 | SD | SDN | Sudan)
+    (🇸🇬 | 702 | SG | SGP | Singapore)
+    (🇸🇭 | 654 | SH | SHN | Saint Helena, Ascension and Tristan da Cunha)
+    (🇸🇱 | 694 | SL | SLE | Sierra Leone)
+    (🇸🇸 | 728 | SS | SSD | South Sudan)
+    (🇸🇽 | 534 | SX | SXM | Sint Maarten (Dutch part))
+    (🇸🇿 | 748 | SZ | SWZ | Eswatini)
+    (🇹🇨 | 796 | TC | TCA | Turks and Caicos Islands)
+    (🇹🇰 | 772 | TK | TKL | Tokelau)
+    (🇹🇴 | 776 | TO | TON | Tonga)
+    (🇹🇹 | 780 | TT | TTO | Trinidad and Tobago)
+    (🇹🇻 | 798 | TV | TUV | Tuvalu)
+    (🇹🇿 | 834 | TZ | TZA | Tanzania, United Republic of)
+    (🇺🇬 | 800 | UG | UGA | Uganda)
+    (🇺🇲 | 581 | UM | UMI | United States Minor Outlying Islands)
+    (🇺🇸 | 840 | US | USA | United States of America)
+    (🇻🇨 | 670 | VC | VCT | Saint Vincent and the Grenadines)
+    (🇻🇬 | 092 | VG | VGB | Virgin Islands (British))
+    (🇻🇮 | 850 | VI | VIR | Virgin Islands (U.S.))
+    (🇻🇺 | 548 | VU | VUT | Vanuatu)
+    (🇼🇸 | 882 | WS | WSM | Samoa)
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+    (🇿🇲 | 894 | ZM | ZMB | Zambia)
+    (🇿🇼 | 716 | ZW | ZWE | Zimbabwe)
+- (es/spa) Spanish; Castilian
+    (🇦🇷 | 032 | AR | ARG | Argentina)
+    (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
+    (🇧🇿 | 084 | BZ | BLZ | Belize)
+    (🇨🇱 | 152 | CL | CHL | Chile)
+    (🇨🇴 | 170 | CO | COL | Colombia)
+    (🇨🇷 | 188 | CR | CRI | Costa Rica)
+    (🇨🇺 | 192 | CU | CUB | Cuba)
+    (🇩🇴 | 214 | DO | DOM | Dominican Republic)
+    (🇪🇨 | 218 | EC | ECU | Ecuador)
+    (🇪🇭 | 732 | EH | ESH | Western Sahara)
+    (🇪🇸 | 724 | ES | ESP | Spain)
+    (🇬🇶 | 226 | GQ | GNQ | Equatorial Guinea)
+    (🇬🇹 | 320 | GT | GTM | Guatemala)
+    (🇬🇺 | 316 | GU | GUM | Guam)
+    (🇭🇳 | 340 | HN | HND | Honduras)
+    (🇲🇽 | 484 | MX | MEX | Mexico)
+    (🇳🇮 | 558 | NI | NIC | Nicaragua)
+    (🇵🇦 | 591 | PA | PAN | Panama)
+    (🇵🇪 | 604 | PE | PER | Peru)
+    (🇵🇷 | 630 | PR | PRI | Puerto Rico)
+    (🇵🇾 | 600 | PY | PRY | Paraguay)
+    (🇸🇻 | 222 | SV | SLV | El Salvador)
+    (🇺🇾 | 858 | UY | URY | Uruguay)
+    (🇻🇪 | 862 | VE | VEN | Venezuela (Bolivarian Republic of))
+- (et/est) Estonian
+    (🇪🇪 | 233 | EE | EST | Estonia)
+- (fa/per) Persian
+    (🇮🇷 | 364 | IR | IRN | Iran (Islamic Republic of))
+- (ff/ful) Fulah
+    (🇧🇫 | 854 | BF | BFA | Burkina Faso)
+    (🇬🇳 | 324 | GN | GIN | Guinea)
+- (fi/fin) Finnish
+    (🇫🇮 | 246 | FI | FIN | Finland)
+- (fj/fij) Fijian
+    (🇫🇯 | 242 | FJ | FJI | Fiji)
+- (fo/fao) Faroese
+    (🇫🇴 | 234 | FO | FRO | Faroe Islands)
+- (fr/fre) French
+    (🇧🇪 | 056 | BE | BEL | Belgium)
+    (🇧🇫 | 854 | BF | BFA | Burkina Faso)
+    (🇧🇮 | 108 | BI | BDI | Burundi)
+    (🇧🇯 | 204 | BJ | BEN | Benin)
+    (🇧🇱 | 652 | BL | BLM | Saint Barthélemy)
+    (🇨🇦 | 124 | CA | CAN | Canada)
+    (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
+    (🇨🇫 | 140 | CF | CAF | Central African Republic)
+    (🇨🇬 | 178 | CG | COG | Congo)
+    (🇨🇭 | 756 | CH | CHE | Switzerland)
+    (🇨🇮 | 384 | CI | CIV | Côte d'Ivoire)
+    (🇨🇲 | 120 | CM | CMR | Cameroon)
+    (🇩🇯 | 262 | DJ | DJI | Djibouti)
+    (🇪🇭 | 732 | EH | ESH | Western Sahara)
+    (🇫🇷 | 250 | FR | FRA | France)
+    (🇬🇦 | 266 | GA | GAB | Gabon)
+    (🇬🇫 | 254 | GF | GUF | French Guiana)
+    (🇬🇬 | 831 | GG | GGY | Guernsey)
+    (🇬🇳 | 324 | GN | GIN | Guinea)
+    (🇬🇵 | 312 | GP | GLP | Guadeloupe)
+    (🇬🇶 | 226 | GQ | GNQ | Equatorial Guinea)
+    (🇭🇹 | 332 | HT | HTI | Haiti)
+    (🇯🇪 | 832 | JE | JEY | Jersey)
+    (🇰🇲 | 174 | KM | COM | Comoros)
+    (🇱🇧 | 422 | LB | LBN | Lebanon)
+    (🇱🇺 | 442 | LU | LUX | Luxembourg)
+    (🇲🇨 | 492 | MC | MCO | Monaco)
+    (🇲🇫 | 663 | MF | MAF | Saint Martin (French part))
+    (🇲🇬 | 450 | MG | MDG | Madagascar)
+    (🇲🇱 | 466 | ML | MLI | Mali)
+    (🇲🇶 | 474 | MQ | MTQ | Martinique)
+    (🇲🇷 | 478 | MR | MRT | Mauritania)
+    (🇳🇨 | 540 | NC | NCL | New Caledonia)
+    (🇳🇪 | 562 | NE | NER | Niger)
+    (🇵🇫 | 258 | PF | PYF | French Polynesia)
+    (🇵🇲 | 666 | PM | SPM | Saint Pierre and Miquelon)
+    (🇷🇪 | 638 | RE | REU | Réunion)
+    (🇷🇼 | 646 | RW | RWA | Rwanda)
+    (🇸🇨 | 690 | SC | SYC | Seychelles)
+    (🇸🇳 | 686 | SN | SEN | Senegal)
+    (🇹🇩 | 148 | TD | TCD | Chad)
+    (🇹🇫 | 260 | TF | ATF | French Southern Territories)
+    (🇹🇬 | 768 | TG | TGO | Togo)
+    (🇹🇳 | 788 | TN | TUN | Tunisia)
+    (🇻🇺 | 548 | VU | VUT | Vanuatu)
+    (🇼🇫 | 876 | WF | WLF | Wallis and Futuna)
+    (🇾🇹 | 175 | YT | MYT | Mayotte)
+- (ga/gle) Irish
+    (🇮🇪 | 372 | IE | IRL | Ireland)
+- (gn/grn) Guarani
+    (🇦🇷 | 032 | AR | ARG | Argentina)
+    (🇵🇾 | 600 | PY | PRY | Paraguay)
+- (gv/glv) Manx
+    (🇮🇲 | 833 | IM | IMN | Isle of Man)
+- (he/heb) Hebrew
+    (🇮🇱 | 376 | IL | ISR | Israel)
+    (🇵🇸 | 275 | PS | PSE | Palestine, State of)
+- (hi/hin) Hindi
+    (🇫🇯 | 242 | FJ | FJI | Fiji)
+    (🇮🇳 | 356 | IN | IND | India)
+- (hr/hrv) Croatian
+    (🇧🇦 | 070 | BA | BIH | Bosnia and Herzegovina)
+    (🇭🇷 | 191 | HR | HRV | Croatia)
+    (🇲🇪 | 499 | ME | MNE | Montenegro)
+- (ht/hat) Haitian; Haitian Creole
+    (🇭🇹 | 332 | HT | HTI | Haiti)
+- (hu/hun) Hungarian
+    (🇭🇺 | 348 | HU | HUN | Hungary)
+- (hy/arm) Armenian
+    (🇦🇲 | 051 | AM | ARM | Armenia)
+    (🇦🇿 | 031 | AZ | AZE | Azerbaijan)
+    (🇨🇾 | 196 | CY | CYP | Cyprus)
+- (id/ind) Indonesian
+    (🇮🇩 | 360 | ID | IDN | Indonesia)
+- (is/ice) Icelandic
+    (🇮🇸 | 352 | IS | ISL | Iceland)
+- (it/ita) Italian
+    (🇨🇭 | 756 | CH | CHE | Switzerland)
+    (🇮🇹 | 380 | IT | ITA | Italy)
+    (🇸🇲 | 674 | SM | SMR | San Marino)
+    (🇻🇦 | 336 | VA | VAT | Holy See)
+- (ja/jpn) Japanese
+    (🇯🇵 | 392 | JP | JPN | Japan)
+- (ka/geo) Georgian
+    (🇬🇪 | 268 | GE | GEO | Georgia)
+- (kg/kon) Kongo
+    (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
+- (kk/kaz) Kazakh
+    (🇰🇿 | 398 | KZ | KAZ | Kazakhstan)
+- (kl/kal) Kalaallisut; Greenlandic
+    (🇬🇱 | 304 | GL | GRL | Greenland)
+- (km/khm) Central Khmer
+    (🇰🇭 | 116 | KH | KHM | Cambodia)
+- (ko/kor) Korean
+    (🇰🇵 | 408 | KP | PRK | Korea (Democratic People's Republic of))
+    (🇰🇷 | 410 | KR | KOR | Korea (Republic of))
+- (ky/kir) Kirghiz; Kyrgyz
+    (🇰🇬 | 417 | KG | KGZ | Kyrgyzstan)
+- (la/lat) Latin
+    (🇻🇦 | 336 | VA | VAT | Holy See)
+- (lb/ltz) Luxembourgish; Letzeburgesch
+    (🇱🇺 | 442 | LU | LUX | Luxembourg)
+- (ln/lin) Lingala
+    (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
+    (🇨🇬 | 178 | CG | COG | Congo)
+- (lo/lao) Lao
+    (🇱🇦 | 418 | LA | LAO | Lao People's Democratic Republic)
+- (lt/lit) Lithuanian
+    (🇱🇹 | 440 | LT | LTU | Lithuania)
+- (lu/lub) Luba-Katanga
+    (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
+- (lv/lav) Latvian
+    (🇱🇻 | 428 | LV | LVA | Latvia)
+- (mg/mlg) Malagasy
+    (🇲🇬 | 450 | MG | MDG | Madagascar)
+- (mh/mah) Marshallese
+    (🇲🇭 | 584 | MH | MHL | Marshall Islands)
+- (mk/mac) Macedonian
+    (🇲🇰 | 807 | MK | MKD | North Macedonia)
+- (mn/mon) Mongolian
+    (🇲🇳 | 496 | MN | MNG | Mongolia)
+- (ms/may) Malay
+    (🇧🇳 | 096 | BN | BRN | Brunei Darussalam)
+    (🇨🇽 | 162 | CX | CXR | Christmas Island)
+    (🇲🇾 | 458 | MY | MYS | Malaysia)
+    (🇸🇬 | 702 | SG | SGP | Singapore)
+- (mt/mlt) Maltese
+    (🇲🇹 | 470 | MT | MLT | Malta)
+- (my/bur) Burmese
+    (🇲🇲 | 104 | MM | MMR | Myanmar)
+- (na/nau) Nauru
+    (🇳🇷 | 520 | NR | NRU | Nauru)
+- (nb/nob) Bokmål, Norwegian; Norwegian Bokmål
+    (🇳🇴 | 578 | NO | NOR | Norway)
+- (nd/nde) Ndebele, North; North Ndebele
+    (🇿🇼 | 716 | ZW | ZWE | Zimbabwe)
+- (ne/nep) Nepali
+    (🇳🇵 | 524 | NP | NPL | Nepal)
+- (nl/dut) Dutch; Flemish
+    (🇦🇼 | 533 | AW | ABW | Aruba)
+    (🇧🇪 | 056 | BE | BEL | Belgium)
+    (🇧🇶 | 535 | BQ | BES | Bonaire, Sint Eustatius and Saba)
+    (🇨🇼 | 531 | CW | CUW | Curaçao)
+    (🇲🇫 | 663 | MF | MAF | Saint Martin (French part))
+    (🇳🇱 | 528 | NL | NLD | Netherlands)
+    (🇸🇷 | 740 | SR | SUR | Suriname)
+    (🇸🇽 | 534 | SX | SXM | Sint Maarten (Dutch part))
+- (nn/nno) Norwegian Nynorsk; Nynorsk, Norwegian
+    (🇳🇴 | 578 | NO | NOR | Norway)
+- (no/nor) Norwegian
+    (🇸🇯 | 744 | SJ | SJM | Svalbard and Jan Mayen)
+- (nr/nbl) Ndebele, South; South Ndebele
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (ny/nya) Chichewa; Chewa; Nyanja
+    (🇲🇼 | 454 | MW | MWI | Malawi)
+- (pl/pol) Polish
+    (🇵🇱 | 616 | PL | POL | Poland)
+- (ps/pus) Pushto; Pashto
+    (🇦🇫 | 004 | AF | AFG | Afghanistan)
+- (pt/por) Portuguese
+    (🇦🇴 | 024 | AO | AGO | Angola)
+    (🇧🇷 | 076 | BR | BRA | Brazil)
+    (🇨🇻 | 132 | CV | CPV | Cabo Verde)
+    (🇬🇼 | 624 | GW | GNB | Guinea-Bissau)
+    (🇲🇴 | 446 | MO | MAC | Macao)
+    (🇲🇿 | 508 | MZ | MOZ | Mozambique)
+    (🇵🇹 | 620 | PT | PRT | Portugal)
+    (🇸🇹 | 678 | ST | STP | Sao Tome and Principe)
+    (🇹🇱 | 626 | TL | TLS | Timor-Leste)
+- (qu/que) Quechua
+    (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
+- (rn/run) Rundi
+    (🇧🇮 | 108 | BI | BDI | Burundi)
+- (ro/rum) Romanian; Moldavian; Moldovan
+    (🇲🇩 | 498 | MD | MDA | Moldova (Republic of))
+    (🇷🇴 | 642 | RO | ROU | Romania)
+- (ru/rus) Russian
+    (🇦🇲 | 051 | AM | ARM | Armenia)
+    (🇧🇾 | 112 | BY | BLR | Belarus)
+    (🇰🇬 | 417 | KG | KGZ | Kyrgyzstan)
+    (🇰🇿 | 398 | KZ | KAZ | Kazakhstan)
+    (🇷🇺 | 643 | RU | RUS | Russian Federation)
+    (🇹🇯 | 762 | TJ | TJK | Tajikistan)
+    (🇺🇿 | 860 | UZ | UZB | Uzbekistan)
+- (rw/kin) Kinyarwanda
+    (🇷🇼 | 646 | RW | RWA | Rwanda)
+- (sg/sag) Sango
+    (🇨🇫 | 140 | CF | CAF | Central African Republic)
+- (si/sin) Sinhala; Sinhalese
+    (🇱🇰 | 144 | LK | LKA | Sri Lanka)
+- (sk/slo) Slovak
+    (🇨🇿 | 203 | CZ | CZE | Czechia)
+    (🇸🇰 | 703 | SK | SVK | Slovakia)
+- (sl/slv) Slovenian
+    (🇸🇮 | 705 | SI | SVN | Slovenia)
+- (sm/smo) Samoan
+    (🇦🇸 | 016 | AS | ASM | American Samoa)
+    (🇼🇸 | 882 | WS | WSM | Samoa)
+- (sn/sna) Shona
+    (🇿🇼 | 716 | ZW | ZWE | Zimbabwe)
+- (so/som) Somali
+    (🇸🇴 | 706 | SO | SOM | Somalia)
+- (sq/alb) Albanian
+    (🇦🇱 | 008 | AL | ALB | Albania)
+    (🇲🇪 | 499 | ME | MNE | Montenegro)
+- (sr/srp) Serbian
+    (🇧🇦 | 070 | BA | BIH | Bosnia and Herzegovina)
+    (🇲🇪 | 499 | ME | MNE | Montenegro)
+    (🇷🇸 | 688 | RS | SRB | Serbia)
+- (ss/ssw) Swati
+    (🇸🇿 | 748 | SZ | SWZ | Eswatini)
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (st/sot) Sotho, Southern
+    (🇱🇸 | 426 | LS | LSO | Lesotho)
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (sv/swe) Swedish
+    (🇦🇽 | 248 | AX | ALA | Åland Islands)
+    (🇫🇮 | 246 | FI | FIN | Finland)
+    (🇸🇪 | 752 | SE | SWE | Sweden)
+- (sw/swa) Swahili
+    (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
+    (🇰🇪 | 404 | KE | KEN | Kenya)
+    (🇹🇿 | 834 | TZ | TZA | Tanzania, United Republic of)
+    (🇺🇬 | 800 | UG | UGA | Uganda)
+- (ta/tam) Tamil
+    (🇱🇰 | 144 | LK | LKA | Sri Lanka)
+    (🇸🇬 | 702 | SG | SGP | Singapore)
+- (tg/tgk) Tajik
+    (🇹🇯 | 762 | TJ | TJK | Tajikistan)
+- (th/tha) Thai
+    (🇹🇭 | 764 | TH | THA | Thailand)
+- (ti/tir) Tigrinya
+    (🇪🇷 | 232 | ER | ERI | Eritrea)
+- (tk/tuk) Turkmen
+    (🇦🇫 | 004 | AF | AFG | Afghanistan)
+    (🇹🇲 | 795 | TM | TKM | Turkmenistan)
+- (tl/tgl) Tagalog
+    (🇵🇭 | 608 | PH | PHL | Philippines)
+- (tn/tsn) Tswana
+    (🇧🇼 | 072 | BW | BWA | Botswana)
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (to/ton) Tonga (Tonga Islands)
+    (🇹🇴 | 776 | TO | TON | Tonga)
+- (tr/tur) Turkish
+    (🇨🇾 | 196 | CY | CYP | Cyprus)
+    (🇹🇷 | 792 | TR | TUR | Türkiye)
+- (ts/tso) Tsonga
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (uk/ukr) Ukrainian
+    (🇺🇦 | 804 | UA | UKR | Ukraine)
+- (ur/urd) Urdu
+    (🇫🇯 | 242 | FJ | FJI | Fiji)
+    (🇵🇰 | 586 | PK | PAK | Pakistan)
+- (uz/uzb) Uzbek
+    (🇦🇫 | 004 | AF | AFG | Afghanistan)
+    (🇺🇿 | 860 | UZ | UZB | Uzbekistan)
+- (ve/ven) Venda
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (vi/vie) Vietnamese
+    (🇻🇳 | 704 | VN | VNM | Viet Nam)
+- (xh/xho) Xhosa
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (zh/chi) Chinese
+    (🇨🇳 | 156 | CN | CHN | China)
+    (🇨🇽 | 162 | CX | CXR | Christmas Island)
+    (🇭🇰 | 344 | HK | HKG | Hong Kong)
+    (🇲🇴 | 446 | MO | MAC | Macao)
+    (🇹🇼 | 158 | TW | TWN | Taiwan, Province of China)
+- (zu/zul) Zulu
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)

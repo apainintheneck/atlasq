@@ -120,6 +120,44 @@ cache.add "countries_by_currency" do
   end
 end
 
+cache.add "direct_match_language" do
+  ALL_LANGUAGES.each_with_object({}) do |language, hash|
+    key = language.alpha2.downcase
+    hash[language.alpha2.downcase] = key
+    hash[language.alpha3.downcase] = key
+  end
+end
+
+cache.add "partial_match_language" do
+  ALL_LANGUAGES.each_with_object({}) do |language, hash|
+    names = [
+      language.english_name,
+      language.french_name,
+    ]
+
+    words = names.flat_map do |name|
+      Atlasq::Util::String.word_split(name).map do |word|
+        Atlasq::Util::String.normalize(word)
+      end
+    end.uniq
+
+    key = language.alpha2.downcase
+    words.each do |word|
+      hash[word] ||= []
+      hash[word] << key
+    end
+  end
+end
+
+cache.add "countries_by_language" do
+  ALL_COUNTRIES.each_with_object({}) do |country, hash|
+    country.languages.map(&:downcase).each do |language|
+      hash[language] ||= []
+      hash[language] << country.alpha2.downcase
+    end
+  end
+end
+
 # --- Run ---
 
 case ARGV.first

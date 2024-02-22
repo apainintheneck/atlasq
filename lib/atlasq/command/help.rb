@@ -61,6 +61,14 @@ module Atlasq
                 3. symbol
                 4. partial match on name
 
+            -l/--language
+              : Display all countries by language
+            -l/--language   [query ...]
+              : Search for countries by the following criteria
+                1. alpha2 (ISO639 standard 2 letter code)
+                2. alpha3 (ISO639 standard 3 letter code)
+                3. partial match on name in English or French
+
             -h/--help
               : Display this page
 

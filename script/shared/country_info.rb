@@ -26,3 +26,8 @@ end
 
 ALL_COUNTRIES = ISO3166::Country.all.freeze
 ALL_CURRENCIES = ALL_COUNTRIES.map(&:currency).uniq.freeze
+ALL_LANGUAGES = ALL_COUNTRIES
+  .flat_map(&:languages)
+  .uniq
+  .map(&ISO_639.method(:find))
+  .freeze

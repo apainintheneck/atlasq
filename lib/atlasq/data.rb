@@ -52,5 +52,26 @@ module Atlasq
     def self.all_currencies
       Cache.get("search_index/countries_by_currency.json")
     end
+
+    # @param terms [String, Array<String>] search terms
+    # @return [Hash<String, Array<String>>] ISO639 2 letter language code to ISO3166 2 letter country codes
+    def self.countries_by_languages(terms)
+      terms = Array(terms)
+      languages = Cache
+        .get("search_index/direct_match_language.json")
+        .values_at(*terms)
+        .compact
+
+      return if languages.empty?
+
+      Cache
+        .get("search_index/countries_by_language.json")
+        .slice(*languages)
+    end
+
+    # @return [Hash<String, Array<String>>] ISO639 2 letter language code to ISO3166 2 letter country codes
+    def self.all_languages
+      Cache.get("search_index/countries_by_language.json")
+    end
   end
 end

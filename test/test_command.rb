@@ -47,6 +47,18 @@ class CommandTest < Minitest::Test
     end
   end
 
+  def test_parse_language
+    %w[-l --language --languages].each do |command|
+      result = Atlasq::Command::Options.new(
+        command: Atlasq::Command::Language,
+        args: command_args
+      )
+      args = [command] + command_args
+
+      assert_equal result, Atlasq::Command.parse(args)
+    end
+  end
+
   def test_parse_version
     %w[-m --money].each do |command|
       result = Atlasq::Command::Options.new(

@@ -81,6 +81,14 @@ OPTIONS
       3. symbol
       4. partial match on name
 
+  -l/--language
+    : Display all countries by language
+  -l/--language   [query ...]
+    : Search for countries by the following criteria
+      1. alpha2 (ISO639 standard 2 letter code)
+      2. alpha3 (ISO639 standard 3 letter code)
+      3. partial match on name in English or French
+
   -h/--help
     : Display this page
 
@@ -196,6 +204,29 @@ $ atlasq --money Surinamese\ Dollar
 * Currency: [SRD] $ Surinamese Dollar
 * * * * * * * * * * * * * * * * * * * *
 (🇸🇷 | 740 | SR | SUR | Suriname)
+
+```
+
+### Languages
+
+```console
+$ atlasq --language ch
+*
+* Language: (ch/cha) Chamorro
+* * * * * * * * * * * * * * * *
+(🇬🇺 | 316 | GU | GUM | Guam)
+(🇲🇵 | 580 | MP | MNP | Northern Mariana Islands)
+
+```
+
+```console
+$ atlasq --language greek
+*
+* Languages (Partial Match)
+* * * * * * * * * * * * * * *
+- (el/gre) Greek, Modern (1453-)
+    (🇨🇾 | 196 | CY | CYP | Cyprus)
+    (🇬🇷 | 300 | GR | GRC | Greece)
 
 ```
 

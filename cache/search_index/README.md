@@ -175,3 +175,90 @@ Sample of the first 20 pretty printed lines of the file.
     "lt",
 ...
 ```
+
+## Item: search_index/direct_match_language.json
+
+### Content Sample
+Sample of the first 20 pretty printed lines of the file.
+
+```
+{
+  "ca": "ca",
+  "cat": "ca",
+  "ar": "ar",
+  "ara": "ar",
+  "ps": "ps",
+  "pus": "ps",
+  "uz": "uz",
+  "uzb": "uz",
+  "tk": "tk",
+  "tuk": "tk",
+  "en": "en",
+  "eng": "en",
+  "sq": "sq",
+  "alb": "sq",
+  "hy": "hy",
+  "arm": "hy",
+  "ru": "ru",
+  "rus": "ru",
+  "pt": "pt",
+...
+```
+
+## Item: search_index/partial_match_language.json
+
+### Content Sample
+Sample of the first 20 pretty printed lines of the file.
+
+```
+{
+  "catalan": [
+    "ca"
+  ],
+  "valencian": [
+    "ca"
+  ],
+  "valencien": [
+    "ca"
+  ],
+  "arabic": [
+    "ar"
+  ],
+  "arabe": [
+    "ar"
+  ],
+  "pushto": [
+    "ps"
+  ],
+  "pashto": [
+...
+```
+
+## Item: search_index/countries_by_language.json
+
+### Content Sample
+Sample of the first 20 pretty printed lines of the file.
+
+```
+{
+  "ca": [
+    "ad"
+  ],
+  "ar": [
+    "ae",
+    "bh",
+    "dj",
+    "dz",
+    "eg",
+    "er",
+    "il",
+    "iq",
+    "jo",
+    "km",
+    "kw",
+    "lb",
+    "ly",
+    "ma",
+    "mr",
+...
+```
