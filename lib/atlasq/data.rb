@@ -54,7 +54,7 @@ module Atlasq
     end
 
     # @param terms [String, Array<String>] search terms
-    # @return [Hash<String, Array<String>>] ISO369 2 letter currency code to ISO3166 2 letter country codes
+    # @return [Hash<String, Array<String>>] ISO639 2 letter language code to ISO3166 2 letter country codes
     def self.countries_by_languages(terms)
       terms = Array(terms)
       languages = Cache
@@ -69,7 +69,7 @@ module Atlasq
         .slice(*languages)
     end
 
-    # @return [Hash<String, Array<String>>] ISO369 2 letter currency code to ISO3166 2 letter country codes
+    # @return [Hash<String, Array<String>>] ISO639 2 letter language code to ISO3166 2 letter country codes
     def self.all_languages
       Cache.get("search_index/countries_by_language.json")
     end
