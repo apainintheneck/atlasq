@@ -55,3 +55,10 @@ namespace "cache" do
     sh "bundle exec ruby script/generate_list.rb generate"
   end
 end
+
+namespace "fixture" do
+  desc "Regenerate the test fixtures"
+  task :generate do
+    sh "bundle exec ruby script/generate_test_fixtures.rb"
+  end
+end
