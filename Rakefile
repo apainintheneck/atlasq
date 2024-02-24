@@ -14,7 +14,7 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: %i[lint test]
+task default: %i[lint test readme:outdated cache:outdated]
 
 desc "Shortcut for `rake rubocop`"
 task lint: :rubocop
