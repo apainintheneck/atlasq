@@ -14,7 +14,7 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: %i[lint test]
+task default: %i[lint test readme:outdated cache:outdated]
 
 desc "Shortcut for `rake rubocop`"
 task lint: :rubocop
@@ -53,5 +53,12 @@ namespace "cache" do
     sh "bundle exec ruby script/generate_search_index.rb generate"
     sh "bundle exec ruby script/generate_formatted_output.rb generate"
     sh "bundle exec ruby script/generate_list.rb generate"
+  end
+end
+
+namespace "fixture" do
+  desc "Regenerate the test fixtures"
+  task :generate do
+    sh "bundle exec ruby script/generate_test_fixtures.rb"
   end
 end

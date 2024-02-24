@@ -394,7 +394,6 @@
 - (si/sin) Sinhala; Sinhalese
     (🇱🇰 | 144 | LK | LKA | Sri Lanka)
 - (sk/slo) Slovak
-    (🇨🇿 | 203 | CZ | CZE | Czechia)
     (🇸🇰 | 703 | SK | SVK | Slovakia)
 - (sl/slv) Slovenian
     (🇸🇮 | 705 | SI | SVN | Slovenia)
