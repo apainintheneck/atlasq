@@ -141,7 +141,7 @@
     (🇬🇸 | 239 | GS | SGS | South Georgia and the South Sandwich Islands)
     (🇮🇲 | 833 | IM | IMN | Isle of Man)
     (🇯🇪 | 832 | JE | JEY | Jersey)
-- [GEL] ლ Georgian Lari
+- [GEL] ₾ Georgian Lari
     (🇬🇪 | 268 | GE | GEO | Georgia)
 - [GHS] ₵ Ghanaian Cedi
     (🇬🇭 | 288 | GH | GHA | Ghana)
