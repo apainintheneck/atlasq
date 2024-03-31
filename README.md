@@ -93,7 +93,7 @@ OPTIONS
     : Display this page
 
   -v/--version
-    : Display the version (0.4.0)
+    : Display the version (1.0.0)
 
   -d/--debug
     : Display debug output

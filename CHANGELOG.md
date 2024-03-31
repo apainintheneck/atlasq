@@ -1,3 +1,7 @@
+## [1.0.0] 2024-03-31
+
+- Drop support for Ruby 2.7
+
 ## [0.4.0] 2024-02-21
 
 - Fix bug in data caching where cache files were read multiple times
