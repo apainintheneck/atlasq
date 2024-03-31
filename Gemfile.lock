@@ -9,7 +9,7 @@ GEM
   specs:
     ast (2.4.2)
     concurrent-ruby (1.2.3)
-    countries (5.7.2)
+    countries (6.0.0)
       unaccent (~> 0.3)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
