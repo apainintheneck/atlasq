@@ -1,3 +1,7 @@
+## [1.0.1] 2024-04-25
+
+- Fix `unaccent` gem missing when installing the gem
+
 ## [1.0.0] 2024-03-31
 
 - Drop support for Ruby 2.7
