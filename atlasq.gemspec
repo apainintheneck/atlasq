@@ -26,5 +26,6 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = ["atlasq"]
 
-  spec.add_dependency "tty-pager", "~> 0.14"
+  spec.add_dependency "tty-pager"
+  spec.add_dependency "unaccent"
 end

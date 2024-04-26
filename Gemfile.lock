@@ -2,7 +2,8 @@ PATH
   remote: .
   specs:
     atlasq (1.0.1)
-      tty-pager (~> 0.14)
+      tty-pager
+      unaccent
 
 GEM
   remote: https://rubygems.org/
