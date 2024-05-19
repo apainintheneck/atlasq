@@ -1,3 +1,7 @@
+## [1.0.2] 2024-05-19
+
+- Update `countries` gem
+
 ## [1.0.1] 2024-04-25
 
 - Fix `unaccent` gem missing when installing the gem

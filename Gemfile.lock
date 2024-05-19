@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    atlasq (1.0.1)
+    atlasq (1.0.2)
       tty-pager (~> 0.14.0)
       unaccent (~> 0.4.0)
 
