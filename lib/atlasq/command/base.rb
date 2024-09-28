@@ -23,7 +23,7 @@ module Atlasq
 
       # @return [String]
       def content
-        NotImplementedError
+        raise NotImplementedError
       end
     end
   end
