@@ -18,7 +18,7 @@ cache.add "direct_match_country" do
       country.iso_short_name,
       country.iso_long_name,
       *country.unofficial_names,
-      *country.translated_names,
+      *country.translated_names
     ]
     names.map! { |name| Atlasq::Util::String.normalize(name) }
     names.uniq!
@@ -37,7 +37,7 @@ cache.add "partial_match_country" do
       country.iso_short_name,
       country.iso_long_name,
       *country.unofficial_names,
-      *country.translated_names,
+      *country.translated_names
     ]
 
     words = names.flat_map do |name|
@@ -61,7 +61,7 @@ cache.add "countries_by_region" do
       country.region,
       country.subregion,
       country.continent,
-      country.world_region,
+      country.world_region
     ]
     names.map! { |name| Atlasq::Util::String.normalize(name) }
     names.uniq!
@@ -81,7 +81,7 @@ cache.add "direct_match_currency" do
     names = [
       currency.iso_numeric,
       currency.iso_code,
-      currency.name,
+      currency.name
     ]
     names.map! { |name| Atlasq::Util::String.normalize(name) }
     names.uniq!
@@ -99,7 +99,7 @@ cache.add "partial_match_currency" do
       currency.iso_numeric,
       currency.iso_code,
       currency.symbol,
-      *Atlasq::Util::String.word_split(currency.name),
+      *Atlasq::Util::String.word_split(currency.name)
     ]
     words.map! { |word| Atlasq::Util::String.normalize(word) }
     words.uniq!
@@ -132,7 +132,7 @@ cache.add "partial_match_language" do
   ALL_LANGUAGES.each_with_object({}) do |language, hash|
     names = [
       language.english_name,
-      language.french_name,
+      language.french_name
     ]
 
     words = names.flat_map do |name|

@@ -9,9 +9,7 @@ gem "rake"
 
 gem "minitest"
 
-gem "rubocop"
-gem "rubocop-minitest"
-gem "rubocop-rake"
+gem "standard"
 
 gem "countries"
 gem "iso-639"

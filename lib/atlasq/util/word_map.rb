@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "set"
-require "unaccent"
-
 module Atlasq
   module Util
     # This data structure provides partial match support for words in sentences.

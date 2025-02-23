@@ -15,7 +15,7 @@ def one_line_country(country)
     country.number,
     country.alpha2,
     country.alpha3,
-    country.iso_short_name,
+    country.iso_short_name
   ].compact
     .join(" | ")
     .then { |country_string| "(#{country_string})" }
@@ -41,7 +41,7 @@ cache.add "one_line_country" do
   ALL_COUNTRIES.to_h do |country|
     [
       country.alpha2.downcase,
-      one_line_country(country),
+      one_line_country(country)
     ]
   end
 end
@@ -50,7 +50,7 @@ cache.add "country_title" do
   ALL_COUNTRIES.to_h do |country|
     [
       country.alpha2.downcase,
-      "Country: #{country.iso_long_name}",
+      "Country: #{country.iso_long_name}"
     ]
   end
 end
@@ -62,7 +62,7 @@ cache.add "multiline_country" do
       "Nationality" => country.nationality,
       "Region" => country.subregion,
       "Continent" => country.continent,
-      "Currency" => "#{country.currency.symbol} #{country.currency.name}",
+      "Currency" => "#{country.currency.symbol} #{country.currency.name}"
     }.reject do |_, value|
       # "countries" like Antarctica can have missing language, nationality,
       # and region data so we remove that missing data beforehand.
@@ -76,7 +76,7 @@ cache.add "multiline_country" do
 
     [
       country.alpha2.downcase,
-      info_ladder.join("\n"),
+      info_ladder.join("\n")
     ]
   end
 end
@@ -85,7 +85,7 @@ cache.add "one_line_currency" do
   ALL_CURRENCIES.to_h do |currency|
     [
       currency.iso_code.downcase,
-      "[#{currency.iso_code}] #{currency.symbol} #{currency.name}",
+      "[#{currency.iso_code}] #{currency.symbol} #{currency.name}"
     ]
   end
 end
@@ -94,7 +94,7 @@ cache.add "one_line_language" do
   ALL_LANGUAGES.to_h do |language|
     [
       language.alpha2,
-      "(#{language.alpha2}/#{language.alpha3}) #{language.english_name}",
+      "(#{language.alpha2}/#{language.alpha3}) #{language.english_name}"
     ]
   end
 end

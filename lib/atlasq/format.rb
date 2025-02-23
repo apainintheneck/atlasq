@@ -13,7 +13,7 @@ module Atlasq
       [
         "*",
         "* #{title}",
-        "*#{" *" * ((title.size / 2) + 2)}",
+        "*#{" *" * ((title.size / 2) + 2)}"
       ].join("\n")
     end
 
@@ -56,7 +56,7 @@ module Atlasq
 
       [
         Format.title(title),
-        *elements,
+        *elements
       ].join("\n")
     end
 
@@ -78,7 +78,7 @@ module Atlasq
       [
         Format.country_title(country_code),
         Format.one_line_country(country_code),
-        Format.multiline_country(country_code),
+        Format.multiline_country(country_code)
       ].join("\n")
     end
 
@@ -113,7 +113,7 @@ module Atlasq
       subregions = subregions.to_h do |region, countries|
         [
           Util::String.titleize(region),
-          countries.map(&Format.method(:one_line_country)),
+          countries.map(&Format.method(:one_line_country))
         ]
       end
 
@@ -127,7 +127,7 @@ module Atlasq
       currencies = currencies.to_h do |currency, countries|
         [
           Format.one_line_currency(currency),
-          countries.map(&Format.method(:one_line_country)),
+          countries.map(&Format.method(:one_line_country))
         ]
       end
 
@@ -156,7 +156,7 @@ module Atlasq
       languages = languages.to_h do |language, countries|
         [
           Format.one_line_language(language),
-          countries.map(&Format.method(:one_line_country)),
+          countries.map(&Format.method(:one_line_country))
         ]
       end
 

@@ -2,6 +2,7 @@
 
 require "bundler/gem_tasks"
 require "rake/testtask"
+require "standard/rake"
 require "tempfile"
 
 Rake::TestTask.new(:test) do |t|
@@ -14,13 +15,7 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: %i[lint test readme:outdated cache:outdated]
-
-desc "Shortcut for `rake rubocop`"
-task lint: :rubocop
-
-desc "Shortcut for `rake rubocop:autocorrect`"
-task fix: :"rubocop:autocorrect"
+task default: %i[standard test readme:outdated cache:outdated]
 
 namespace "readme" do
   desc "Check if the readme needs to be regenerated"
