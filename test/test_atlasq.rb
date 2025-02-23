@@ -76,7 +76,7 @@ class AtlasqTest < Minitest::Test
 
     [
       %w[chile],
-      %w[-c chile],
+      %w[-c chile]
     ].each do |args|
       assert_command args: args, expected_stdout: expected_output
     end
@@ -84,8 +84,8 @@ class AtlasqTest < Minitest::Test
 
   def test_country_failure
     assert_command args: %w[-c atlantis],
-                   expected_stdout: "Unknown country: atlantis\n",
-                   expected_status: 1
+      expected_stdout: "Unknown country: atlantis\n",
+      expected_status: 1
   end
 
   def test_region_success
@@ -102,7 +102,7 @@ class AtlasqTest < Minitest::Test
 
     [
       ["australia and new zealand"],
-      ["-r", "australia and new zealand"],
+      ["-r", "australia and new zealand"]
     ].each do |args|
       assert_command args: args, expected_stdout: expected_output
     end
@@ -110,8 +110,8 @@ class AtlasqTest < Minitest::Test
 
   def test_region_failure
     assert_command args: %w[-r Pyrrus],
-                   expected_stdout: "Unknown region: pyrrus\n",
-                   expected_status: 1
+      expected_stdout: "Unknown region: pyrrus\n",
+      expected_status: 1
   end
 
   def test_currency_success
@@ -124,7 +124,7 @@ class AtlasqTest < Minitest::Test
 
     [
       ["canadian dollar"],
-      ["-m", "canadian dollar"],
+      ["-m", "canadian dollar"]
     ].each do |args|
       assert_command args: args, expected_stdout: expected_output
     end
@@ -132,8 +132,8 @@ class AtlasqTest < Minitest::Test
 
   def test_currency_failure
     assert_command args: ["-m", "Double Dollars"],
-                   expected_stdout: "Unknown currency: double dollars\n",
-                   expected_status: 1
+      expected_stdout: "Unknown currency: double dollars\n",
+      expected_status: 1
   end
 
   def test_language_success
@@ -147,7 +147,7 @@ class AtlasqTest < Minitest::Test
 
     [
       ["grn"],
-      ["-l", "grn"],
+      ["-l", "grn"]
     ].each do |args|
       assert_command args: args, expected_stdout: expected_output
     end
@@ -155,13 +155,13 @@ class AtlasqTest < Minitest::Test
 
   def test_language_failure
     assert_command args: ["-l", "Vulcan"],
-                   expected_stdout: "Unknown language: vulcan\n",
-                   expected_status: 1
+      expected_stdout: "Unknown language: vulcan\n",
+      expected_status: 1
   end
 
   def test_any_failure
     assert_command args: ["Grand Line"],
-                   expected_stdout: "Unknown search term: grand line\n",
-                   expected_status: 1
+      expected_stdout: "Unknown search term: grand line\n",
+      expected_status: 1
   end
 end

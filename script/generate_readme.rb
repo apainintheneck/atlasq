@@ -11,7 +11,7 @@ def atlasq(*args)
 
   [
     "$ atlasq #{escaped_args}",
-    `#{EXECUTABLE_PATH} #{escaped_args}`,
+    `#{EXECUTABLE_PATH} #{escaped_args}`
   ].join("\n")
 end
 
@@ -95,7 +95,7 @@ puts <<~README
 
   ## Development
 
-  After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. Use either `rake lint` to lint the code or `rake fix` to automatically fix simple linter errors.
+  After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. Use either `rake standard` to lint the code.
 
   You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 

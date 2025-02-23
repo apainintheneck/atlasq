@@ -6,7 +6,7 @@ class UtilTest < Minitest::Test
       "One Two Three",
       "one two three",
       "OnE tWo ThReE",
-      "one_two_three",
+      "one_two_three"
     ].each do |string|
       assert_equal "One Two Three", Atlasq::Util::String.titleize(string)
     end

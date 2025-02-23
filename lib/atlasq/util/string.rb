@@ -8,7 +8,7 @@ module Atlasq
       ABBREVIATIONS = {
         "AMER" => "North, Central and South America",
         "APAC" => "Asia-Pacific",
-        "EMEA" => "Europe, Middle East, and Africa",
+        "EMEA" => "Europe, Middle East, and Africa"
       }.freeze
 
       # @param string [String]

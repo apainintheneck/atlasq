@@ -31,10 +31,9 @@ GEM
     rainbow (3.1.1)
     rake (13.2.1)
     regexp_parser (2.10.0)
-    rubocop (1.72.1)
+    rubocop (1.71.2)
       json (~> 2.3)
-      language_server-protocol (~> 3.17.0.2)
-      lint_roller (~> 1.1.0)
+      language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
@@ -44,14 +43,22 @@ GEM
       unicode-display_width (>= 2.4.0, < 4.0)
     rubocop-ast (1.38.0)
       parser (>= 3.3.1.0)
-    rubocop-minitest (0.37.1)
-      lint_roller (~> 1.1)
-      rubocop (>= 1.72.1, < 2.0)
-      rubocop-ast (>= 1.38.0, < 2.0)
-    rubocop-rake (0.7.0)
-      lint_roller (~> 1.1)
-      rubocop (>= 1.72.1)
+    rubocop-performance (1.23.1)
+      rubocop (>= 1.48.1, < 2.0)
+      rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
+    standard (1.45.0)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.0)
+      rubocop (~> 1.71.0)
+      standard-custom (~> 1.0.0)
+      standard-performance (~> 1.6)
+    standard-custom (1.0.2)
+      lint_roller (~> 1.0)
+      rubocop (~> 1.50)
+    standard-performance (1.6.0)
+      lint_roller (~> 1.1)
+      rubocop-performance (~> 1.23.0)
     strings (0.2.1)
       strings-ansi (~> 0.2)
       unicode-display_width (>= 1.5, < 3.0)
@@ -75,9 +82,7 @@ DEPENDENCIES
   minitest
   money
   rake
-  rubocop
-  rubocop-minitest
-  rubocop-rake
+  standard
 
 BUNDLED WITH
    2.4.10

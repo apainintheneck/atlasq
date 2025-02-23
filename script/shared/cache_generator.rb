@@ -55,7 +55,7 @@ class CacheGenerator
         "--brief",
         "--new-file",
         tmp_dir.to_s,
-        namespaced_cache_dir.to_s,
+        namespaced_cache_dir.to_s
       ]
 
       exit 1 unless system(*diff_command)
