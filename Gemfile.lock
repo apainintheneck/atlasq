@@ -20,7 +20,7 @@ GEM
     json (2.10.2)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
-    minitest (5.25.4)
+    minitest (5.25.5)
     money (6.19.0)
       i18n (>= 0.6.4, <= 2)
     parallel (1.26.3)
