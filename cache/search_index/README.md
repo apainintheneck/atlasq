@@ -183,25 +183,25 @@ Sample of the first 20 pretty printed lines of the file.
 
 ```
 {
-  "ca": "ca",
-  "cat": "ca",
-  "ar": "ar",
-  "ara": "ar",
-  "ps": "ps",
-  "pus": "ps",
-  "uz": "uz",
-  "uzb": "uz",
-  "tk": "tk",
-  "tuk": "tk",
-  "en": "en",
-  "eng": "en",
-  "sq": "sq",
-  "alb": "sq",
-  "hy": "hy",
-  "arm": "hy",
-  "ru": "ru",
-  "rus": "ru",
-  "pt": "pt",
+  "aa": "aar",
+  "aar": "aar",
+  "ab": "abk",
+  "abk": "abk",
+  "ace": "ace",
+  "ach": "ach",
+  "ada": "ada",
+  "ady": "ady",
+  "afa": "afa",
+  "afh": "afh",
+  "af": "afr",
+  "afr": "afr",
+  "ain": "ain",
+  "ak": "aka",
+  "aka": "aka",
+  "akk": "akk",
+  "sq": "alb",
+  "alb": "alb",
+  "ale": "ale",
 ...
 ```
 
@@ -212,25 +212,25 @@ Sample of the first 20 pretty printed lines of the file.
 
 ```
 {
-  "catalan": [
-    "ca"
+  "afar": [
+    "aar"
   ],
-  "valencian": [
-    "ca"
+  "abkhazian": [
+    "abk"
   ],
-  "valencien": [
-    "ca"
+  "abkhaze": [
+    "abk"
   ],
-  "arabic": [
-    "ar"
+  "achinese": [
+    "ace"
   ],
-  "arabe": [
-    "ar"
+  "aceh": [
+    "ace"
   ],
-  "pushto": [
-    "ps"
+  "acoli": [
+    "ach"
   ],
-  "pashto": [
+  "adangme": [
 ...
 ```
 
@@ -241,24 +241,24 @@ Sample of the first 20 pretty printed lines of the file.
 
 ```
 {
-  "ca": [
-    "ad"
+  "aar": [],
+  "abk": [],
+  "ace": [],
+  "ach": [],
+  "ada": [],
+  "ady": [],
+  "afa": [],
+  "afh": [],
+  "afr": [
+    "na",
+    "za"
   ],
-  "ar": [
-    "ae",
-    "bh",
-    "dj",
-    "dz",
-    "eg",
-    "er",
-    "il",
-    "iq",
-    "jo",
-    "km",
-    "kw",
-    "lb",
-    "ly",
-    "ma",
-    "mr",
+  "ain": [],
+  "aka": [],
+  "akk": [],
+  "alb": [
+    "al",
+    "me"
+  ],
 ...
 ```

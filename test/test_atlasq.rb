@@ -139,7 +139,7 @@ class AtlasqTest < Minitest::Test
   def test_language_success
     expected_output = <<~OUTPUT
       *
-      * Language: (gn/grn) Guarani
+      * Language: (grn/gn) Guarani
       * * * * * * * * * * * * * * * *
       (🇦🇷 | 032 | AR | ARG | Argentina)
       (🇵🇾 | 600 | PY | PRY | Paraguay)

@@ -26,8 +26,9 @@ end
 
 ALL_COUNTRIES = ISO3166::Country.all.freeze
 ALL_CURRENCIES = ALL_COUNTRIES.map(&:currency).uniq.freeze
-ALL_LANGUAGES = ALL_COUNTRIES
-  .flat_map(&:languages)
-  .uniq
+ALL_LANGUAGES = ISO_639::ISO_639_2
+  .map(&:first)
   .map(&ISO_639.method(:find))
+  .reject { |language| language.alpha3 == "zxx" }
+  .sort_by(&:alpha3)
   .freeze

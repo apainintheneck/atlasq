@@ -1,3 +1,7 @@
+## [Unreleased]
+
+- Support all ISO639 2 language codes
+
 ## [1.0.2] 2024-05-19
 
 - Update `countries` gem

@@ -12,11 +12,11 @@ module Atlasq
           Format.languages(languages)
         else
           search_terms.map do |term|
-            if (languages = Data.countries_by_languages(term))
-              Format.languages(languages)
-            elsif (currency_codes = PartialMatch.languages(term)).any?
-              languages = Data.countries_by_languages(currency_codes)
-              Format.languages(languages, partial_match: true)
+            if (countries_by_languages = Data.countries_by_languages(term))
+              Format.languages(countries_by_languages)
+            elsif (language_codes = PartialMatch.languages(term)).any?
+              countries_by_languages = Data.countries_by_languages(language_codes)
+              Format.languages(countries_by_languages, partial_match: true)
             else
               Atlasq.failed!
               "Unknown language: #{term}"
