@@ -122,8 +122,8 @@ end
 
 cache.add "direct_match_language" do
   ALL_LANGUAGES.each_with_object({}) do |language, hash|
-    key = language.alpha2.downcase
-    hash[language.alpha2.downcase] = key
+    key = language.alpha3.downcase
+    hash[language.alpha2.downcase] = key unless language.alpha2.empty?
     hash[language.alpha3.downcase] = key
   end
 end
@@ -141,7 +141,7 @@ cache.add "partial_match_language" do
       end
     end.uniq
 
-    key = language.alpha2.downcase
+    key = language.alpha3.downcase
     words.each do |word|
       hash[word] ||= []
       hash[word] << key
@@ -150,10 +150,14 @@ cache.add "partial_match_language" do
 end
 
 cache.add "countries_by_language" do
-  ALL_COUNTRIES.each_with_object({}) do |country, hash|
-    country.languages.map(&:downcase).each do |language|
-      hash[language] ||= []
-      hash[language] << country.alpha2.downcase
+  countries_by_language = ALL_LANGUAGES.to_h do |language|
+    [language.alpha3, []]
+  end
+
+  ALL_COUNTRIES.each_with_object(countries_by_language) do |country, hash|
+    country.languages.map(&:downcase).each do |language_code|
+      language = ISO_639.find(language_code)
+      hash[language.alpha3] << country.alpha2.downcase
     end
   end
 end

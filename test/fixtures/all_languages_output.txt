@@ -1,12 +1,32 @@
 *
 * Languages
 * * * * * * *
-- (af/afr) Afrikaans
+- (aar/aa) Afar
+- (abk/ab) Abkhazian
+- (ace/**) Achinese
+- (ach/**) Acoli
+- (ada/**) Adangme
+- (ady/**) Adyghe; Adygei
+- (afa/**) Afro-Asiatic languages
+- (afh/**) Afrihili
+- (afr/af) Afrikaans
     (🇳🇦 | 516 | NA | NAM | Namibia)
     (🇿🇦 | 710 | ZA | ZAF | South Africa)
-- (am/amh) Amharic
+- (ain/**) Ainu
+- (aka/ak) Akan
+- (akk/**) Akkadian
+- (alb/sq) Albanian
+    (🇦🇱 | 008 | AL | ALB | Albania)
+    (🇲🇪 | 499 | ME | MNE | Montenegro)
+- (ale/**) Aleut
+- (alg/**) Algonquian languages
+- (alt/**) Southern Altai
+- (amh/am) Amharic
     (🇪🇹 | 231 | ET | ETH | Ethiopia)
-- (ar/ara) Arabic
+- (ang/**) English, Old (ca.450-1100)
+- (anp/**) Angika
+- (apa/**) Apache languages
+- (ara/ar) Arabic
     (🇦🇪 | 784 | AE | ARE | United Arab Emirates)
     (🇧🇭 | 048 | BH | BHR | Bahrain)
     (🇩🇯 | 262 | DJ | DJI | Djibouti)
@@ -33,45 +53,141 @@
     (🇹🇩 | 148 | TD | TCD | Chad)
     (🇹🇳 | 788 | TN | TUN | Tunisia)
     (🇾🇪 | 887 | YE | YEM | Yemen)
-- (ay/aym) Aymara
-    (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
-- (az/aze) Azerbaijani
+- (arc/**) Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)
+- (arg/an) Aragonese
+- (arm/hy) Armenian
+    (🇦🇲 | 051 | AM | ARM | Armenia)
     (🇦🇿 | 031 | AZ | AZE | Azerbaijan)
-- (be/bel) Belarusian
+    (🇨🇾 | 196 | CY | CYP | Cyprus)
+- (arn/**) Mapudungun; Mapuche
+- (arp/**) Arapaho
+- (art/**) Artificial languages
+- (arw/**) Arawak
+- (asm/as) Assamese
+- (ast/**) Asturian; Bable; Leonese; Asturleonese
+- (ath/**) Athapascan languages
+- (aus/**) Australian languages
+- (ava/av) Avaric
+- (ave/ae) Avestan
+- (awa/**) Awadhi
+- (aym/ay) Aymara
+    (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
+- (aze/az) Azerbaijani
+    (🇦🇿 | 031 | AZ | AZE | Azerbaijan)
+- (bad/**) Banda languages
+- (bai/**) Bamileke languages
+- (bak/ba) Bashkir
+- (bal/**) Baluchi
+- (bam/bm) Bambara
+- (ban/**) Balinese
+- (baq/eu) Basque
+- (bas/**) Basa
+- (bat/**) Baltic languages
+- (bej/**) Beja; Bedawiyet
+- (bel/be) Belarusian
     (🇧🇾 | 112 | BY | BLR | Belarus)
-- (bg/bul) Bulgarian
-    (🇧🇬 | 100 | BG | BGR | Bulgaria)
-- (bi/bis) Bislama
-    (🇻🇺 | 548 | VU | VUT | Vanuatu)
-- (bn/ben) Bengali
+- (bem/**) Bemba
+- (ben/bn) Bengali
     (🇧🇩 | 050 | BD | BGD | Bangladesh)
-- (bs/bos) Bosnian
+- (ber/**) Berber languages
+- (bho/**) Bhojpuri
+- (bih/bh) Bihari languages
+- (bik/**) Bikol
+- (bin/**) Bini; Edo
+- (bis/bi) Bislama
+    (🇻🇺 | 548 | VU | VUT | Vanuatu)
+- (bla/**) Siksika
+- (bnt/**) Bantu languages
+- (bos/bs) Bosnian
     (🇧🇦 | 070 | BA | BIH | Bosnia and Herzegovina)
     (🇲🇪 | 499 | ME | MNE | Montenegro)
-- (ca/cat) Catalan; Valencian
+- (bra/**) Braj
+- (bre/br) Breton
+- (btk/**) Batak languages
+- (bua/**) Buriat
+- (bug/**) Buginese
+- (bul/bg) Bulgarian
+    (🇧🇬 | 100 | BG | BGR | Bulgaria)
+- (bur/my) Burmese
+    (🇲🇲 | 104 | MM | MMR | Myanmar)
+- (byn/**) Blin; Bilin
+- (cad/**) Caddo
+- (cai/**) Central American Indian languages
+- (car/**) Galibi Carib
+- (cat/ca) Catalan; Valencian
     (🇦🇩 | 020 | AD | AND | Andorra)
-- (ch/cha) Chamorro
+- (cau/**) Caucasian languages
+- (ceb/**) Cebuano
+- (cel/**) Celtic languages
+- (cha/ch) Chamorro
     (🇬🇺 | 316 | GU | GUM | Guam)
     (🇲🇵 | 580 | MP | MNP | Northern Mariana Islands)
-- (cs/cze) Czech
+- (chb/**) Chibcha
+- (che/ce) Chechen
+- (chg/**) Chagatai
+- (chi/zh) Chinese
+    (🇨🇳 | 156 | CN | CHN | China)
+    (🇨🇽 | 162 | CX | CXR | Christmas Island)
+    (🇭🇰 | 344 | HK | HKG | Hong Kong)
+    (🇲🇴 | 446 | MO | MAC | Macao)
+    (🇹🇼 | 158 | TW | TWN | Taiwan, Province of China)
+- (chk/**) Chuukese
+- (chm/**) Mari
+- (chn/**) Chinook jargon
+- (cho/**) Choctaw
+- (chp/**) Chipewyan; Dene Suline
+- (chr/**) Cherokee
+- (chu/cu) Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic
+- (chv/cv) Chuvash
+- (chy/**) Cheyenne
+- (cmc/**) Chamic languages
+- (cnr/**) Montenegrin
+- (cop/**) Coptic
+- (cor/kw) Cornish
+- (cos/co) Corsican
+- (cpe/**) Creoles and pidgins, English based
+- (cpf/**) Creoles and pidgins, French-based
+- (cpp/**) Creoles and pidgins, Portuguese-based
+- (cre/cr) Cree
+- (crh/**) Crimean Tatar; Crimean Turkish
+- (crp/**) Creoles and pidgins
+- (csb/**) Kashubian
+- (cus/**) Cushitic languages
+- (cze/cs) Czech
     (🇨🇿 | 203 | CZ | CZE | Czechia)
-- (da/dan) Danish
+- (dak/**) Dakota
+- (dan/da) Danish
     (🇩🇰 | 208 | DK | DNK | Denmark)
-- (de/ger) German
-    (🇦🇹 | 040 | AT | AUT | Austria)
-    (🇧🇪 | 056 | BE | BEL | Belgium)
-    (🇨🇭 | 756 | CH | CHE | Switzerland)
-    (🇩🇪 | 276 | DE | DEU | Germany)
-    (🇱🇮 | 438 | LI | LIE | Liechtenstein)
-    (🇱🇺 | 442 | LU | LUX | Luxembourg)
-- (dv/div) Divehi; Dhivehi; Maldivian
+- (dar/**) Dargwa
+- (day/**) Land Dayak languages
+- (del/**) Delaware
+- (den/**) Slave (Athapascan)
+- (dgr/**) Dogrib
+- (din/**) Dinka
+- (div/dv) Divehi; Dhivehi; Maldivian
     (🇲🇻 | 462 | MV | MDV | Maldives)
-- (dz/dzo) Dzongkha
+- (doi/**) Dogri
+- (dra/**) Dravidian languages
+- (dsb/**) Lower Sorbian
+- (dua/**) Duala
+- (dum/**) Dutch, Middle (ca.1050-1350)
+- (dut/nl) Dutch; Flemish
+    (🇦🇼 | 533 | AW | ABW | Aruba)
+    (🇧🇪 | 056 | BE | BEL | Belgium)
+    (🇧🇶 | 535 | BQ | BES | Bonaire, Sint Eustatius and Saba)
+    (🇨🇼 | 531 | CW | CUW | Curaçao)
+    (🇲🇫 | 663 | MF | MAF | Saint Martin (French part))
+    (🇳🇱 | 528 | NL | NLD | Netherlands)
+    (🇸🇷 | 740 | SR | SUR | Suriname)
+    (🇸🇽 | 534 | SX | SXM | Sint Maarten (Dutch part))
+- (dyu/**) Dyula
+- (dzo/dz) Dzongkha
     (🇧🇹 | 064 | BT | BTN | Bhutan)
-- (el/gre) Greek, Modern (1453-)
-    (🇨🇾 | 196 | CY | CYP | Cyprus)
-    (🇬🇷 | 300 | GR | GRC | Greece)
-- (en/eng) English
+- (efi/**) Efik
+- (egy/**) Egyptian (Ancient)
+- (eka/**) Ekajuk
+- (elx/**) Elamite
+- (eng/en) English
     (🇦🇬 | 028 | AG | ATG | Antigua and Barbuda)
     (🇦🇮 | 660 | AI | AIA | Anguilla)
     (🇦🇸 | 016 | AS | ASM | American Samoa)
@@ -164,45 +280,24 @@
     (🇿🇦 | 710 | ZA | ZAF | South Africa)
     (🇿🇲 | 894 | ZM | ZMB | Zambia)
     (🇿🇼 | 716 | ZW | ZWE | Zimbabwe)
-- (es/spa) Spanish; Castilian
-    (🇦🇷 | 032 | AR | ARG | Argentina)
-    (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
-    (🇧🇿 | 084 | BZ | BLZ | Belize)
-    (🇨🇱 | 152 | CL | CHL | Chile)
-    (🇨🇴 | 170 | CO | COL | Colombia)
-    (🇨🇷 | 188 | CR | CRI | Costa Rica)
-    (🇨🇺 | 192 | CU | CUB | Cuba)
-    (🇩🇴 | 214 | DO | DOM | Dominican Republic)
-    (🇪🇨 | 218 | EC | ECU | Ecuador)
-    (🇪🇭 | 732 | EH | ESH | Western Sahara)
-    (🇪🇸 | 724 | ES | ESP | Spain)
-    (🇬🇶 | 226 | GQ | GNQ | Equatorial Guinea)
-    (🇬🇹 | 320 | GT | GTM | Guatemala)
-    (🇬🇺 | 316 | GU | GUM | Guam)
-    (🇭🇳 | 340 | HN | HND | Honduras)
-    (🇲🇽 | 484 | MX | MEX | Mexico)
-    (🇳🇮 | 558 | NI | NIC | Nicaragua)
-    (🇵🇦 | 591 | PA | PAN | Panama)
-    (🇵🇪 | 604 | PE | PER | Peru)
-    (🇵🇷 | 630 | PR | PRI | Puerto Rico)
-    (🇵🇾 | 600 | PY | PRY | Paraguay)
-    (🇸🇻 | 222 | SV | SLV | El Salvador)
-    (🇺🇾 | 858 | UY | URY | Uruguay)
-    (🇻🇪 | 862 | VE | VEN | Venezuela (Bolivarian Republic of))
-- (et/est) Estonian
+- (enm/**) English, Middle (1100-1500)
+- (epo/eo) Esperanto
+- (est/et) Estonian
     (🇪🇪 | 233 | EE | EST | Estonia)
-- (fa/per) Persian
-    (🇮🇷 | 364 | IR | IRN | Iran (Islamic Republic of))
-- (ff/ful) Fulah
-    (🇧🇫 | 854 | BF | BFA | Burkina Faso)
-    (🇬🇳 | 324 | GN | GIN | Guinea)
-- (fi/fin) Finnish
-    (🇫🇮 | 246 | FI | FIN | Finland)
-- (fj/fij) Fijian
-    (🇫🇯 | 242 | FJ | FJI | Fiji)
-- (fo/fao) Faroese
+- (ewe/ee) Ewe
+- (ewo/**) Ewondo
+- (fan/**) Fang
+- (fao/fo) Faroese
     (🇫🇴 | 234 | FO | FRO | Faroe Islands)
-- (fr/fre) French
+- (fat/**) Fanti
+- (fij/fj) Fijian
+    (🇫🇯 | 242 | FJ | FJI | Fiji)
+- (fil/**) Filipino; Pilipino
+- (fin/fi) Finnish
+    (🇫🇮 | 246 | FI | FIN | Finland)
+- (fiu/**) Finno-Ugrian languages
+- (fon/**) Fon
+- (fre/fr) French
     (🇧🇪 | 056 | BE | BEL | Belgium)
     (🇧🇫 | 854 | BF | BFA | Burkina Faso)
     (🇧🇮 | 108 | BI | BDI | Burundi)
@@ -250,119 +345,283 @@
     (🇻🇺 | 548 | VU | VUT | Vanuatu)
     (🇼🇫 | 876 | WF | WLF | Wallis and Futuna)
     (🇾🇹 | 175 | YT | MYT | Mayotte)
-- (ga/gle) Irish
+- (frm/**) French, Middle (ca.1400-1600)
+- (fro/**) French, Old (842-ca.1400)
+- (frr/**) Northern Frisian
+- (frs/**) Eastern Frisian
+- (fry/fy) Western Frisian
+- (ful/ff) Fulah
+    (🇧🇫 | 854 | BF | BFA | Burkina Faso)
+    (🇬🇳 | 324 | GN | GIN | Guinea)
+- (fur/**) Friulian
+- (gaa/**) Ga
+- (gay/**) Gayo
+- (gba/**) Gbaya
+- (gem/**) Germanic languages
+- (geo/ka) Georgian
+    (🇬🇪 | 268 | GE | GEO | Georgia)
+- (ger/de) German
+    (🇦🇹 | 040 | AT | AUT | Austria)
+    (🇧🇪 | 056 | BE | BEL | Belgium)
+    (🇨🇭 | 756 | CH | CHE | Switzerland)
+    (🇩🇪 | 276 | DE | DEU | Germany)
+    (🇱🇮 | 438 | LI | LIE | Liechtenstein)
+    (🇱🇺 | 442 | LU | LUX | Luxembourg)
+- (gez/**) Geez
+- (gil/**) Gilbertese
+- (gla/gd) Gaelic; Scottish Gaelic
+- (gle/ga) Irish
     (🇮🇪 | 372 | IE | IRL | Ireland)
-- (gn/grn) Guarani
+- (glg/gl) Galician
+- (glv/gv) Manx
+    (🇮🇲 | 833 | IM | IMN | Isle of Man)
+- (gmh/**) German, Middle High (ca.1050-1500)
+- (goh/**) German, Old High (ca.750-1050)
+- (gon/**) Gondi
+- (gor/**) Gorontalo
+- (got/**) Gothic
+- (grb/**) Grebo
+- (grc/**) Greek, Ancient (to 1453)
+- (gre/el) Greek, Modern (1453-)
+    (🇨🇾 | 196 | CY | CYP | Cyprus)
+    (🇬🇷 | 300 | GR | GRC | Greece)
+- (grn/gn) Guarani
     (🇦🇷 | 032 | AR | ARG | Argentina)
     (🇵🇾 | 600 | PY | PRY | Paraguay)
-- (gv/glv) Manx
-    (🇮🇲 | 833 | IM | IMN | Isle of Man)
-- (he/heb) Hebrew
+- (gsw/**) Swiss German; Alemannic; Alsatian
+- (guj/gu) Gujarati
+- (gwi/**) Gwich'in
+- (hai/**) Haida
+- (hat/ht) Haitian; Haitian Creole
+    (🇭🇹 | 332 | HT | HTI | Haiti)
+- (hau/ha) Hausa
+- (haw/**) Hawaiian
+- (heb/he) Hebrew
     (🇮🇱 | 376 | IL | ISR | Israel)
     (🇵🇸 | 275 | PS | PSE | Palestine, State of)
-- (hi/hin) Hindi
+- (her/hz) Herero
+- (hil/**) Hiligaynon
+- (him/**) Himachali languages; Western Pahari languages
+- (hin/hi) Hindi
     (🇫🇯 | 242 | FJ | FJI | Fiji)
     (🇮🇳 | 356 | IN | IND | India)
-- (hr/hrv) Croatian
+- (hit/**) Hittite
+- (hmn/**) Hmong; Mong
+- (hmo/ho) Hiri Motu
+- (hrv/hr) Croatian
     (🇧🇦 | 070 | BA | BIH | Bosnia and Herzegovina)
     (🇭🇷 | 191 | HR | HRV | Croatia)
     (🇲🇪 | 499 | ME | MNE | Montenegro)
-- (ht/hat) Haitian; Haitian Creole
-    (🇭🇹 | 332 | HT | HTI | Haiti)
-- (hu/hun) Hungarian
+- (hsb/**) Upper Sorbian
+- (hun/hu) Hungarian
     (🇭🇺 | 348 | HU | HUN | Hungary)
-- (hy/arm) Armenian
-    (🇦🇲 | 051 | AM | ARM | Armenia)
-    (🇦🇿 | 031 | AZ | AZE | Azerbaijan)
-    (🇨🇾 | 196 | CY | CYP | Cyprus)
-- (id/ind) Indonesian
-    (🇮🇩 | 360 | ID | IDN | Indonesia)
-- (is/ice) Icelandic
+- (hup/**) Hupa
+- (iba/**) Iban
+- (ibo/ig) Igbo
+- (ice/is) Icelandic
     (🇮🇸 | 352 | IS | ISL | Iceland)
-- (it/ita) Italian
+- (ido/io) Ido
+- (iii/ii) Sichuan Yi; Nuosu
+- (ijo/**) Ijo languages
+- (iku/iu) Inuktitut
+- (ile/ie) Interlingue; Occidental
+- (ilo/**) Iloko
+- (ina/ia) Interlingua (International Auxiliary Language Association)
+- (inc/**) Indic languages
+- (ind/id) Indonesian
+    (🇮🇩 | 360 | ID | IDN | Indonesia)
+- (ine/**) Indo-European languages
+- (inh/**) Ingush
+- (ipk/ik) Inupiaq
+- (ira/**) Iranian languages
+- (iro/**) Iroquoian languages
+- (ita/it) Italian
     (🇨🇭 | 756 | CH | CHE | Switzerland)
     (🇮🇹 | 380 | IT | ITA | Italy)
     (🇸🇲 | 674 | SM | SMR | San Marino)
     (🇻🇦 | 336 | VA | VAT | Holy See)
-- (ja/jpn) Japanese
+- (jav/jv) Javanese
+- (jbo/**) Lojban
+- (jpn/ja) Japanese
     (🇯🇵 | 392 | JP | JPN | Japan)
-- (ka/geo) Georgian
-    (🇬🇪 | 268 | GE | GEO | Georgia)
-- (kg/kon) Kongo
-    (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
-- (kk/kaz) Kazakh
-    (🇰🇿 | 398 | KZ | KAZ | Kazakhstan)
-- (kl/kal) Kalaallisut; Greenlandic
+- (jpr/**) Judeo-Persian
+- (jrb/**) Judeo-Arabic
+- (kaa/**) Kara-Kalpak
+- (kab/**) Kabyle
+- (kac/**) Kachin; Jingpho
+- (kal/kl) Kalaallisut; Greenlandic
     (🇬🇱 | 304 | GL | GRL | Greenland)
-- (km/khm) Central Khmer
+- (kam/**) Kamba
+- (kan/kn) Kannada
+- (kar/**) Karen languages
+- (kas/ks) Kashmiri
+- (kau/kr) Kanuri
+- (kaw/**) Kawi
+- (kaz/kk) Kazakh
+    (🇰🇿 | 398 | KZ | KAZ | Kazakhstan)
+- (kbd/**) Kabardian
+- (kha/**) Khasi
+- (khi/**) Khoisan languages
+- (khm/km) Central Khmer
     (🇰🇭 | 116 | KH | KHM | Cambodia)
-- (ko/kor) Korean
+- (kho/**) Khotanese; Sakan
+- (kik/ki) Kikuyu; Gikuyu
+- (kin/rw) Kinyarwanda
+    (🇷🇼 | 646 | RW | RWA | Rwanda)
+- (kir/ky) Kirghiz; Kyrgyz
+    (🇰🇬 | 417 | KG | KGZ | Kyrgyzstan)
+- (kmb/**) Kimbundu
+- (kok/**) Konkani
+- (kom/kv) Komi
+- (kon/kg) Kongo
+    (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
+- (kor/ko) Korean
     (🇰🇵 | 408 | KP | PRK | Korea (Democratic People's Republic of))
     (🇰🇷 | 410 | KR | KOR | Korea (Republic of))
-- (ky/kir) Kirghiz; Kyrgyz
-    (🇰🇬 | 417 | KG | KGZ | Kyrgyzstan)
-- (la/lat) Latin
+- (kos/**) Kosraean
+- (kpe/**) Kpelle
+- (krc/**) Karachay-Balkar
+- (krl/**) Karelian
+- (kro/**) Kru languages
+- (kru/**) Kurukh
+- (kua/kj) Kuanyama; Kwanyama
+- (kum/**) Kumyk
+- (kur/ku) Kurdish
+- (kut/**) Kutenai
+- (lad/**) Ladino
+- (lah/**) Lahnda
+- (lam/**) Lamba
+- (lao/lo) Lao
+    (🇱🇦 | 418 | LA | LAO | Lao People's Democratic Republic)
+- (lat/la) Latin
     (🇻🇦 | 336 | VA | VAT | Holy See)
-- (lb/ltz) Luxembourgish; Letzeburgesch
-    (🇱🇺 | 442 | LU | LUX | Luxembourg)
-- (ln/lin) Lingala
+- (lav/lv) Latvian
+    (🇱🇻 | 428 | LV | LVA | Latvia)
+- (lez/**) Lezghian
+- (lim/li) Limburgan; Limburger; Limburgish
+- (lin/ln) Lingala
     (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
     (🇨🇬 | 178 | CG | COG | Congo)
-- (lo/lao) Lao
-    (🇱🇦 | 418 | LA | LAO | Lao People's Democratic Republic)
-- (lt/lit) Lithuanian
+- (lit/lt) Lithuanian
     (🇱🇹 | 440 | LT | LTU | Lithuania)
-- (lu/lub) Luba-Katanga
+- (lol/**) Mongo
+- (loz/**) Lozi
+- (ltz/lb) Luxembourgish; Letzeburgesch
+    (🇱🇺 | 442 | LU | LUX | Luxembourg)
+- (lua/**) Luba-Lulua
+- (lub/lu) Luba-Katanga
     (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
-- (lv/lav) Latvian
-    (🇱🇻 | 428 | LV | LVA | Latvia)
-- (mg/mlg) Malagasy
-    (🇲🇬 | 450 | MG | MDG | Madagascar)
-- (mh/mah) Marshallese
-    (🇲🇭 | 584 | MH | MHL | Marshall Islands)
-- (mk/mac) Macedonian
+- (lug/lg) Ganda
+- (lui/**) Luiseno
+- (lun/**) Lunda
+- (luo/**) Luo (Kenya and Tanzania)
+- (lus/**) Lushai
+- (mac/mk) Macedonian
     (🇲🇰 | 807 | MK | MKD | North Macedonia)
-- (mn/mon) Mongolian
-    (🇲🇳 | 496 | MN | MNG | Mongolia)
-- (ms/may) Malay
+- (mad/**) Madurese
+- (mag/**) Magahi
+- (mah/mh) Marshallese
+    (🇲🇭 | 584 | MH | MHL | Marshall Islands)
+- (mai/**) Maithili
+- (mak/**) Makasar
+- (mal/ml) Malayalam
+- (man/**) Mandingo
+- (mao/mi) Maori
+- (map/**) Austronesian languages
+- (mar/mr) Marathi
+- (mas/**) Masai
+- (may/ms) Malay
     (🇧🇳 | 096 | BN | BRN | Brunei Darussalam)
     (🇨🇽 | 162 | CX | CXR | Christmas Island)
     (🇲🇾 | 458 | MY | MYS | Malaysia)
     (🇸🇬 | 702 | SG | SGP | Singapore)
-- (mt/mlt) Maltese
+- (mdf/**) Moksha
+- (mdr/**) Mandar
+- (men/**) Mende
+- (mga/**) Irish, Middle (900-1200)
+- (mic/**) Mi'kmaq; Micmac
+- (min/**) Minangkabau
+- (mis/**) Uncoded languages
+- (mkh/**) Mon-Khmer languages
+- (mlg/mg) Malagasy
+    (🇲🇬 | 450 | MG | MDG | Madagascar)
+- (mlt/mt) Maltese
     (🇲🇹 | 470 | MT | MLT | Malta)
-- (my/bur) Burmese
-    (🇲🇲 | 104 | MM | MMR | Myanmar)
-- (na/nau) Nauru
+- (mnc/**) Manchu
+- (mni/**) Manipuri
+- (mno/**) Manobo languages
+- (moh/**) Mohawk
+- (mon/mn) Mongolian
+    (🇲🇳 | 496 | MN | MNG | Mongolia)
+- (mos/**) Mossi
+- (mul/**) Multiple languages
+- (mun/**) Munda languages
+- (mus/**) Creek
+- (mwl/**) Mirandese
+- (mwr/**) Marwari
+- (myn/**) Mayan languages
+- (myv/**) Erzya
+- (nah/**) Nahuatl languages
+- (nai/**) North American Indian languages
+- (nap/**) Neapolitan
+- (nau/na) Nauru
     (🇳🇷 | 520 | NR | NRU | Nauru)
-- (nb/nob) Bokmål, Norwegian; Norwegian Bokmål
-    (🇳🇴 | 578 | NO | NOR | Norway)
-- (nd/nde) Ndebele, North; North Ndebele
-    (🇿🇼 | 716 | ZW | ZWE | Zimbabwe)
-- (ne/nep) Nepali
-    (🇳🇵 | 524 | NP | NPL | Nepal)
-- (nl/dut) Dutch; Flemish
-    (🇦🇼 | 533 | AW | ABW | Aruba)
-    (🇧🇪 | 056 | BE | BEL | Belgium)
-    (🇧🇶 | 535 | BQ | BES | Bonaire, Sint Eustatius and Saba)
-    (🇨🇼 | 531 | CW | CUW | Curaçao)
-    (🇲🇫 | 663 | MF | MAF | Saint Martin (French part))
-    (🇳🇱 | 528 | NL | NLD | Netherlands)
-    (🇸🇷 | 740 | SR | SUR | Suriname)
-    (🇸🇽 | 534 | SX | SXM | Sint Maarten (Dutch part))
-- (nn/nno) Norwegian Nynorsk; Nynorsk, Norwegian
-    (🇳🇴 | 578 | NO | NOR | Norway)
-- (no/nor) Norwegian
-    (🇸🇯 | 744 | SJ | SJM | Svalbard and Jan Mayen)
-- (nr/nbl) Ndebele, South; South Ndebele
+- (nav/nv) Navajo; Navaho
+- (nbl/nr) Ndebele, South; South Ndebele
     (🇿🇦 | 710 | ZA | ZAF | South Africa)
-- (ny/nya) Chichewa; Chewa; Nyanja
+- (nde/nd) Ndebele, North; North Ndebele
+    (🇿🇼 | 716 | ZW | ZWE | Zimbabwe)
+- (ndo/ng) Ndonga
+- (nds/**) Low German; Low Saxon; German, Low; Saxon, Low
+- (nep/ne) Nepali
+    (🇳🇵 | 524 | NP | NPL | Nepal)
+- (new/**) Nepal Bhasa; Newari
+- (nia/**) Nias
+- (nic/**) Niger-Kordofanian languages
+- (niu/**) Niuean
+- (nno/nn) Norwegian Nynorsk; Nynorsk, Norwegian
+    (🇳🇴 | 578 | NO | NOR | Norway)
+- (nob/nb) Bokmål, Norwegian; Norwegian Bokmål
+    (🇳🇴 | 578 | NO | NOR | Norway)
+- (nog/**) Nogai
+- (non/**) Norse, Old
+- (nor/no) Norwegian
+    (🇸🇯 | 744 | SJ | SJM | Svalbard and Jan Mayen)
+- (nqo/**) N'Ko
+- (nso/**) Pedi; Sepedi; Northern Sotho
+- (nub/**) Nubian languages
+- (nwc/**) Classical Newari; Old Newari; Classical Nepal Bhasa
+- (nya/ny) Chichewa; Chewa; Nyanja
     (🇲🇼 | 454 | MW | MWI | Malawi)
-- (pl/pol) Polish
+- (nym/**) Nyamwezi
+- (nyn/**) Nyankole
+- (nyo/**) Nyoro
+- (nzi/**) Nzima
+- (oci/oc) Occitan (post 1500)
+- (oji/oj) Ojibwa
+- (ori/or) Oriya
+- (orm/om) Oromo
+- (osa/**) Osage
+- (oss/os) Ossetian; Ossetic
+- (ota/**) Turkish, Ottoman (1500-1928)
+- (oto/**) Otomian languages
+- (paa/**) Papuan languages
+- (pag/**) Pangasinan
+- (pal/**) Pahlavi
+- (pam/**) Pampanga; Kapampangan
+- (pan/pa) Panjabi; Punjabi
+- (pap/**) Papiamento
+- (pau/**) Palauan
+- (peo/**) Persian, Old (ca.600-400 B.C.)
+- (per/fa) Persian
+    (🇮🇷 | 364 | IR | IRN | Iran (Islamic Republic of))
+- (phi/**) Philippine languages
+- (phn/**) Phoenician
+- (pli/pi) Pali
+- (pol/pl) Polish
     (🇵🇱 | 616 | PL | POL | Poland)
-- (ps/pus) Pushto; Pashto
-    (🇦🇫 | 004 | AF | AFG | Afghanistan)
-- (pt/por) Portuguese
+- (pon/**) Pohnpeian
+- (por/pt) Portuguese
     (🇦🇴 | 024 | AO | AGO | Angola)
     (🇧🇷 | 076 | BR | BRA | Brazil)
     (🇨🇻 | 132 | CV | CPV | Cabo Verde)
@@ -372,14 +631,26 @@
     (🇵🇹 | 620 | PT | PRT | Portugal)
     (🇸🇹 | 678 | ST | STP | Sao Tome and Principe)
     (🇹🇱 | 626 | TL | TLS | Timor-Leste)
-- (qu/que) Quechua
+- (pra/**) Prakrit languages
+- (pro/**) Provençal, Old (to 1500); Occitan, Old (to 1500)
+- (pus/ps) Pushto; Pashto
+    (🇦🇫 | 004 | AF | AFG | Afghanistan)
+- (qaa-qtz/**) Reserved for local use
+- (que/qu) Quechua
     (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
-- (rn/run) Rundi
-    (🇧🇮 | 108 | BI | BDI | Burundi)
-- (ro/rum) Romanian; Moldavian; Moldovan
+- (raj/**) Rajasthani
+- (rap/**) Rapanui
+- (rar/**) Rarotongan; Cook Islands Maori
+- (roa/**) Romance languages
+- (roh/rm) Romansh
+- (rom/**) Romany
+- (rum/ro) Romanian; Moldavian; Moldovan
     (🇲🇩 | 498 | MD | MDA | Moldova (Republic of))
     (🇷🇴 | 642 | RO | ROU | Romania)
-- (ru/rus) Russian
+- (run/rn) Rundi
+    (🇧🇮 | 108 | BI | BDI | Burundi)
+- (rup/**) Aromanian; Arumanian; Macedo-Romanian
+- (rus/ru) Russian
     (🇦🇲 | 051 | AM | ARM | Armenia)
     (🇧🇾 | 112 | BY | BLR | Belarus)
     (🇰🇬 | 417 | KG | KGZ | Kyrgyzstan)
@@ -387,88 +658,194 @@
     (🇷🇺 | 643 | RU | RUS | Russian Federation)
     (🇹🇯 | 762 | TJ | TJK | Tajikistan)
     (🇺🇿 | 860 | UZ | UZB | Uzbekistan)
-- (rw/kin) Kinyarwanda
-    (🇷🇼 | 646 | RW | RWA | Rwanda)
-- (sg/sag) Sango
+- (sad/**) Sandawe
+- (sag/sg) Sango
     (🇨🇫 | 140 | CF | CAF | Central African Republic)
-- (si/sin) Sinhala; Sinhalese
+- (sah/**) Yakut
+- (sai/**) South American Indian languages
+- (sal/**) Salishan languages
+- (sam/**) Samaritan Aramaic
+- (san/sa) Sanskrit
+- (sas/**) Sasak
+- (sat/**) Santali
+- (scn/**) Sicilian
+- (sco/**) Scots
+- (sel/**) Selkup
+- (sem/**) Semitic languages
+- (sga/**) Irish, Old (to 900)
+- (sgn/**) Sign Languages
+- (shn/**) Shan
+- (sid/**) Sidamo
+- (sin/si) Sinhala; Sinhalese
     (🇱🇰 | 144 | LK | LKA | Sri Lanka)
-- (sk/slo) Slovak
+- (sio/**) Siouan languages
+- (sit/**) Sino-Tibetan languages
+- (sla/**) Slavic languages
+- (slo/sk) Slovak
     (🇸🇰 | 703 | SK | SVK | Slovakia)
-- (sl/slv) Slovenian
+- (slv/sl) Slovenian
     (🇸🇮 | 705 | SI | SVN | Slovenia)
-- (sm/smo) Samoan
+- (sma/**) Southern Sami
+- (sme/se) Northern Sami
+- (smi/**) Sami languages
+- (smj/**) Lule Sami
+- (smn/**) Inari Sami
+- (smo/sm) Samoan
     (🇦🇸 | 016 | AS | ASM | American Samoa)
     (🇼🇸 | 882 | WS | WSM | Samoa)
-- (sn/sna) Shona
+- (sms/**) Skolt Sami
+- (sna/sn) Shona
     (🇿🇼 | 716 | ZW | ZWE | Zimbabwe)
-- (so/som) Somali
+- (snd/sd) Sindhi
+- (snk/**) Soninke
+- (sog/**) Sogdian
+- (som/so) Somali
     (🇸🇴 | 706 | SO | SOM | Somalia)
-- (sq/alb) Albanian
-    (🇦🇱 | 008 | AL | ALB | Albania)
-    (🇲🇪 | 499 | ME | MNE | Montenegro)
-- (sr/srp) Serbian
+- (son/**) Songhai languages
+- (sot/st) Sotho, Southern
+    (🇱🇸 | 426 | LS | LSO | Lesotho)
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (spa/es) Spanish; Castilian
+    (🇦🇷 | 032 | AR | ARG | Argentina)
+    (🇧🇴 | 068 | BO | BOL | Bolivia (Plurinational State of))
+    (🇧🇿 | 084 | BZ | BLZ | Belize)
+    (🇨🇱 | 152 | CL | CHL | Chile)
+    (🇨🇴 | 170 | CO | COL | Colombia)
+    (🇨🇷 | 188 | CR | CRI | Costa Rica)
+    (🇨🇺 | 192 | CU | CUB | Cuba)
+    (🇩🇴 | 214 | DO | DOM | Dominican Republic)
+    (🇪🇨 | 218 | EC | ECU | Ecuador)
+    (🇪🇭 | 732 | EH | ESH | Western Sahara)
+    (🇪🇸 | 724 | ES | ESP | Spain)
+    (🇬🇶 | 226 | GQ | GNQ | Equatorial Guinea)
+    (🇬🇹 | 320 | GT | GTM | Guatemala)
+    (🇬🇺 | 316 | GU | GUM | Guam)
+    (🇭🇳 | 340 | HN | HND | Honduras)
+    (🇲🇽 | 484 | MX | MEX | Mexico)
+    (🇳🇮 | 558 | NI | NIC | Nicaragua)
+    (🇵🇦 | 591 | PA | PAN | Panama)
+    (🇵🇪 | 604 | PE | PER | Peru)
+    (🇵🇷 | 630 | PR | PRI | Puerto Rico)
+    (🇵🇾 | 600 | PY | PRY | Paraguay)
+    (🇸🇻 | 222 | SV | SLV | El Salvador)
+    (🇺🇾 | 858 | UY | URY | Uruguay)
+    (🇻🇪 | 862 | VE | VEN | Venezuela (Bolivarian Republic of))
+- (srd/sc) Sardinian
+- (srn/**) Sranan Tongo
+- (srp/sr) Serbian
     (🇧🇦 | 070 | BA | BIH | Bosnia and Herzegovina)
     (🇲🇪 | 499 | ME | MNE | Montenegro)
     (🇷🇸 | 688 | RS | SRB | Serbia)
-- (ss/ssw) Swati
+- (srr/**) Serer
+- (ssa/**) Nilo-Saharan languages
+- (ssw/ss) Swati
     (🇸🇿 | 748 | SZ | SWZ | Eswatini)
     (🇿🇦 | 710 | ZA | ZAF | South Africa)
-- (st/sot) Sotho, Southern
-    (🇱🇸 | 426 | LS | LSO | Lesotho)
-    (🇿🇦 | 710 | ZA | ZAF | South Africa)
-- (sv/swe) Swedish
-    (🇦🇽 | 248 | AX | ALA | Åland Islands)
-    (🇫🇮 | 246 | FI | FIN | Finland)
-    (🇸🇪 | 752 | SE | SWE | Sweden)
-- (sw/swa) Swahili
+- (suk/**) Sukuma
+- (sun/su) Sundanese
+- (sus/**) Susu
+- (sux/**) Sumerian
+- (swa/sw) Swahili
     (🇨🇩 | 180 | CD | COD | Congo (Democratic Republic of the))
     (🇰🇪 | 404 | KE | KEN | Kenya)
     (🇹🇿 | 834 | TZ | TZA | Tanzania, United Republic of)
     (🇺🇬 | 800 | UG | UGA | Uganda)
-- (ta/tam) Tamil
+- (swe/sv) Swedish
+    (🇦🇽 | 248 | AX | ALA | Åland Islands)
+    (🇫🇮 | 246 | FI | FIN | Finland)
+    (🇸🇪 | 752 | SE | SWE | Sweden)
+- (syc/**) Classical Syriac
+- (syr/**) Syriac
+- (tah/ty) Tahitian
+- (tai/**) Tai languages
+- (tam/ta) Tamil
     (🇱🇰 | 144 | LK | LKA | Sri Lanka)
     (🇸🇬 | 702 | SG | SGP | Singapore)
-- (tg/tgk) Tajik
+- (tat/tt) Tatar
+- (tel/te) Telugu
+- (tem/**) Timne
+- (ter/**) Tereno
+- (tet/**) Tetum
+- (tgk/tg) Tajik
     (🇹🇯 | 762 | TJ | TJK | Tajikistan)
-- (th/tha) Thai
-    (🇹🇭 | 764 | TH | THA | Thailand)
-- (ti/tir) Tigrinya
-    (🇪🇷 | 232 | ER | ERI | Eritrea)
-- (tk/tuk) Turkmen
-    (🇦🇫 | 004 | AF | AFG | Afghanistan)
-    (🇹🇲 | 795 | TM | TKM | Turkmenistan)
-- (tl/tgl) Tagalog
+- (tgl/tl) Tagalog
     (🇵🇭 | 608 | PH | PHL | Philippines)
-- (tn/tsn) Tswana
+- (tha/th) Thai
+    (🇹🇭 | 764 | TH | THA | Thailand)
+- (tib/bo) Tibetan
+- (tig/**) Tigre
+- (tir/ti) Tigrinya
+    (🇪🇷 | 232 | ER | ERI | Eritrea)
+- (tiv/**) Tiv
+- (tkl/**) Tokelau
+- (tlh/**) Klingon; tlhIngan-Hol
+- (tli/**) Tlingit
+- (tmh/**) Tamashek
+- (tog/**) Tonga (Nyasa)
+- (ton/to) Tonga (Tonga Islands)
+    (🇹🇴 | 776 | TO | TON | Tonga)
+- (tpi/**) Tok Pisin
+- (tsi/**) Tsimshian
+- (tsn/tn) Tswana
     (🇧🇼 | 072 | BW | BWA | Botswana)
     (🇿🇦 | 710 | ZA | ZAF | South Africa)
-- (to/ton) Tonga (Tonga Islands)
-    (🇹🇴 | 776 | TO | TON | Tonga)
-- (tr/tur) Turkish
+- (tso/ts) Tsonga
+    (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (tuk/tk) Turkmen
+    (🇦🇫 | 004 | AF | AFG | Afghanistan)
+    (🇹🇲 | 795 | TM | TKM | Turkmenistan)
+- (tum/**) Tumbuka
+- (tup/**) Tupi languages
+- (tur/tr) Turkish
     (🇨🇾 | 196 | CY | CYP | Cyprus)
     (🇹🇷 | 792 | TR | TUR | Türkiye)
-- (ts/tso) Tsonga
-    (🇿🇦 | 710 | ZA | ZAF | South Africa)
-- (uk/ukr) Ukrainian
+- (tut/**) Altaic languages
+- (tvl/**) Tuvalu
+- (twi/tw) Twi
+- (tyv/**) Tuvinian
+- (udm/**) Udmurt
+- (uga/**) Ugaritic
+- (uig/ug) Uighur; Uyghur
+- (ukr/uk) Ukrainian
     (🇺🇦 | 804 | UA | UKR | Ukraine)
-- (ur/urd) Urdu
+- (umb/**) Umbundu
+- (und/**) Undetermined
+- (urd/ur) Urdu
     (🇫🇯 | 242 | FJ | FJI | Fiji)
     (🇵🇰 | 586 | PK | PAK | Pakistan)
-- (uz/uzb) Uzbek
+- (uzb/uz) Uzbek
     (🇦🇫 | 004 | AF | AFG | Afghanistan)
     (🇺🇿 | 860 | UZ | UZB | Uzbekistan)
-- (ve/ven) Venda
+- (vai/**) Vai
+- (ven/ve) Venda
     (🇿🇦 | 710 | ZA | ZAF | South Africa)
-- (vi/vie) Vietnamese
+- (vie/vi) Vietnamese
     (🇻🇳 | 704 | VN | VNM | Viet Nam)
-- (xh/xho) Xhosa
+- (vol/vo) Volapük
+- (vot/**) Votic
+- (wak/**) Wakashan languages
+- (wal/**) Wolaitta; Wolaytta
+- (war/**) Waray
+- (was/**) Washo
+- (wel/cy) Welsh
+- (wen/**) Sorbian languages
+- (wln/wa) Walloon
+- (wol/wo) Wolof
+- (xal/**) Kalmyk; Oirat
+- (xho/xh) Xhosa
     (🇿🇦 | 710 | ZA | ZAF | South Africa)
-- (zh/chi) Chinese
-    (🇨🇳 | 156 | CN | CHN | China)
-    (🇨🇽 | 162 | CX | CXR | Christmas Island)
-    (🇭🇰 | 344 | HK | HKG | Hong Kong)
-    (🇲🇴 | 446 | MO | MAC | Macao)
-    (🇹🇼 | 158 | TW | TWN | Taiwan, Province of China)
-- (zu/zul) Zulu
+- (yao/**) Yao
+- (yap/**) Yapese
+- (yid/yi) Yiddish
+- (yor/yo) Yoruba
+- (ypk/**) Yupik languages
+- (zap/**) Zapotec
+- (zbl/**) Blissymbols; Blissymbolics; Bliss
+- (zen/**) Zenaga
+- (zgh/**) Standard Moroccan Tamazight
+- (zha/za) Zhuang; Chuang
+- (znd/**) Zande languages
+- (zul/zu) Zulu
     (🇿🇦 | 710 | ZA | ZAF | South Africa)
+- (zun/**) Zuni
+- (zza/**) Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki

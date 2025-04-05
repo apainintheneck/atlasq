@@ -212,7 +212,7 @@ $ atlasq --money Surinamese\ Dollar
 ```console
 $ atlasq --language ch
 *
-* Language: (ch/cha) Chamorro
+* Language: (cha/ch) Chamorro
 * * * * * * * * * * * * * * * *
 (🇬🇺 | 316 | GU | GUM | Guam)
 (🇲🇵 | 580 | MP | MNP | Northern Mariana Islands)
@@ -224,7 +224,8 @@ $ atlasq --language greek
 *
 * Languages (Partial Match)
 * * * * * * * * * * * * * * *
-- (el/gre) Greek, Modern (1453-)
+- (grc/**) Greek, Ancient (to 1453)
+- (gre/el) Greek, Modern (1453-)
     (🇨🇾 | 196 | CY | CYP | Cyprus)
     (🇬🇷 | 300 | GR | GRC | Greece)
 

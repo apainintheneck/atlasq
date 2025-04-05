@@ -323,7 +323,7 @@ class ShellTest < Minitest::Test
   def test_language_output
     expected_output = <<~OUTPUT
       *
-      * Language: (ms/may) Malay
+      * Language: (may/ms) Malay
       * * * * * * * * * * * * * * *
       (🇧🇳 | 096 | BN | BRN | Brunei Darussalam)
       (🇨🇽 | 162 | CX | CXR | Christmas Island)
@@ -348,7 +348,7 @@ class ShellTest < Minitest::Test
       *
       * Languages (Partial Match)
       * * * * * * * * * * * * * * *
-      - (dv/div) Divehi; Dhivehi; Maldivian
+      - (div/dv) Divehi; Dhivehi; Maldivian
           (🇲🇻 | 462 | MV | MDV | Maldives)
     OUTPUT
 
