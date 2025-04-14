@@ -9,6 +9,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    bigdecimal (3.1.9)
     concurrent-ruby (1.2.3)
     countries (6.0.1)
       unaccent (~> 0.3)
@@ -79,6 +80,7 @@ PLATFORMS
 
 DEPENDENCIES
   atlasq!
+  bigdecimal
   countries
   iso-639
   minitest
