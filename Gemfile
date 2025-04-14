@@ -14,3 +14,5 @@ gem "standard"
 gem "countries"
 gem "iso-639"
 gem "money"
+
+gem "bigdecimal" # for "money" gem
