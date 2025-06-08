@@ -15,7 +15,7 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: %i[standard test readme:outdated cache:outdated]
+task default: %i[standard test readme:outdated cache:outdated lint:ruby_version]
 
 namespace "readme" do
   desc "Check if the readme needs to be regenerated"
@@ -55,5 +55,12 @@ namespace "fixture" do
   desc "Regenerate the test fixtures"
   task :generate do
     sh "bundle exec ruby script/generate_test_fixtures.rb"
+  end
+end
+
+namespace "lint" do
+  desc "Check the minimum version matches between .standard.yml and *.gemspec"
+  task :ruby_version do
+    sh "bundle exec ruby script/lint_ruby_version.rb"
   end
 end
