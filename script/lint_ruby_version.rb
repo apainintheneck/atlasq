@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+# Note: This lint is needed because the required ruby version in the gemspec
+# and the ruby version in the .standard.yml config file are defined separately
+# but need to stay aligned for linting to work correctly.
+#
+# Ideally this would happen automatically but there is a bug in the standardrb
+# version detection: https://github.com/standardrb/standard/issues/714
+
 require "yaml"
 
 STANDARD_RB_CONFIG_PATH = File.expand_path("../.standard.yml", __dir__).freeze
